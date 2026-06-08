@@ -154,11 +154,10 @@
 
     /* ── Navigation ───────────────────────────────────────────── */
     .lang-nav {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      column-gap: clamp(14px, 3.5vw, 30px);
-      row-gap: 0.65rem;
-      align-items: baseline;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.55rem;
       margin-top: clamp(0.5rem, 2vh, 1.5rem);
       opacity: 0;
       pointer-events: none;
@@ -171,21 +170,29 @@
       transform: translateY(0);
     }
 
+    .nav-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0;
+    }
+
+    .nav-sep {
+      font-family: var(--font-display);
+      font-size: clamp(13px, 1.8vw, 18px);
+      color: var(--color-text-muted);
+      padding: 0 0.55em;
+      user-select: none;
+    }
+
     .lang-nav a {
       font-family: var(--font-display);
       font-weight: 400;
-      font-size: clamp(15px, 2.1vw, 21px);
+      font-size: clamp(13px, 1.8vw, 18px);
       letter-spacing: 0.10em;
       color: var(--color-text);
       text-decoration: none;
       position: relative;
       padding-bottom: 3px;
-      justify-self: center;
-    }
-
-    /* Bottom row (items 3-5): Philosophy, Economy, Psychology */
-    .lang-nav a:nth-of-type(n+3) {
-      font-size: clamp(12px, 1.6vw, 16px);
     }
 
     .lang-nav a::after {
@@ -204,9 +211,8 @@
     .lang-nav a:visited:hover { color: var(--color-accent-hover); }
 
     @media (max-width: 540px) {
-      .lang-nav a { font-size: clamp(13px, 3.8vw, 18px); }
-      .lang-nav a:nth-of-type(n+3) { font-size: clamp(10px, 2.8vw, 14px); }
-      .lang-nav { column-gap: clamp(6px, 2.5vw, 12px); }
+      .lang-nav a, .nav-sep { font-size: clamp(10px, 3vw, 14px); }
+      .nav-sep { padding: 0 0.35em; }
     }
   </style>
 </head>
@@ -261,55 +267,45 @@
 
   <!-- Navigation revealed after language selection -->
   <nav class="lang-nav" id="main-nav" aria-label="Site navigation" aria-hidden="true">
-    <a href="/novels"       id="nav-novels">Novels</a>
-    <span aria-hidden="true"></span>
-    <a href="/spirituality" id="nav-spirituality">Spirituality</a>
-    <a href="/philosophy"   id="nav-philosophy">Philosophy &amp; New Thought</a>
-    <a href="/economy"      id="nav-economy">Economy</a>
-    <a href="/psychology"   id="nav-psychology">Psychology</a>
+    <div class="nav-row">
+      <a href="/spirituality" id="nav-spirituality">Spirituality</a>
+      <span class="nav-sep" aria-hidden="true">—</span>
+      <a href="/newthought"   id="nav-newthought">New Thought</a>
+      <span class="nav-sep" aria-hidden="true">—</span>
+      <a href="/philosophy"   id="nav-philosophy">Philosophy</a>
+    </div>
+    <div class="nav-row">
+      <a href="/novels"     id="nav-novels">Novels</a>
+      <span class="nav-sep" aria-hidden="true">—</span>
+      <a href="/psychology" id="nav-psychology">Psychology</a>
+      <span class="nav-sep" aria-hidden="true">—</span>
+      <a href="/economy"    id="nav-economy">Economy</a>
+    </div>
   </nav>
 
   <script>
     const LANGS = {
       en: {
-        novels:       'Novels',
-        spirituality: 'Spirituality',
-        philosophy:   'Philosophy & New Thought',
-        economy:      'Economy',
-        psychology:   'Psychology',
-        novelsHref:       '/novels',
-        spiritualityHref: '/spirituality',
-        philosophyHref:   '/philosophy',
-        economyHref:      '/economy',
-        psychologyHref:   '/psychology',
+        spirituality: 'Spirituality',   newthought: 'New Thought',  philosophy: 'Philosophy',
+        novels:       'Novels',         psychology: 'Psychology',    economy:    'Economy',
+        spiritualityHref: '/spirituality', newthoughtHref: '/newthought', philosophyHref: '/philosophy',
+        novelsHref:       '/novels',       psychologyHref: '/psychology', economyHref:    '/economy',
         htmlLang: 'en',
         tagline: 'Ancient wisdom · Timeless collection',
       },
       fr: {
-        novels:       'Romans',
-        spirituality: 'Spiritualité',
-        philosophy:   'Philosophie & Nouvelle Pensée',
-        economy:      'Économie',
-        psychology:   'Psychologie',
-        novelsHref:       '/romans',
-        spiritualityHref: '/spiritualite',
-        philosophyHref:   '/philosophie',
-        economyHref:      '/economie',
-        psychologyHref:   '/psychologie',
+        spirituality: 'Spiritualité',   newthought: 'Nouvelle Pensée', philosophy: 'Philosophie',
+        novels:       'Romans',         psychology: 'Psychologie',     economy:    'Économie',
+        spiritualityHref: '/spiritualite', newthoughtHref: '/nouvelle-pensee', philosophyHref: '/philosophie',
+        novelsHref:       '/romans',       psychologyHref: '/psychologie',     economyHref:    '/economie',
         htmlLang: 'fr',
         tagline: 'Sagesse ancienne · Collection intemporelle',
       },
       es: {
-        novels:       'Novelas',
-        spirituality: 'Espiritualidad',
-        philosophy:   'Filosofía y Nuevo Pensamiento',
-        economy:      'Economía',
-        psychology:   'Psicología',
-        novelsHref:       '/novelas',
-        spiritualityHref: '/espiritualidad',
-        philosophyHref:   '/filosofia',
-        economyHref:      '/economia',
-        psychologyHref:   '/psicologia',
+        spirituality: 'Espiritualidad', newthought: 'Nuevo Pensamiento', philosophy: 'Filosofía',
+        novels:       'Novelas',        psychology: 'Psicología',        economy:    'Economía',
+        spiritualityHref: '/espiritualidad', newthoughtHref: '/nuevo-pensamiento', philosophyHref: '/filosofia',
+        novelsHref:       '/novelas',        psychologyHref: '/psicologia',        economyHref:    '/economia',
         htmlLang: 'es',
         tagline: 'Sabiduría antigua · Colección intemporal',
       },
@@ -317,11 +313,12 @@
 
     const spiral          = document.querySelector('.spiral-svg');
     const nav             = document.getElementById('main-nav');
-    const navNovels       = document.getElementById('nav-novels');
     const navSpirituality = document.getElementById('nav-spirituality');
+    const navNewthought   = document.getElementById('nav-newthought');
     const navPhilosophy   = document.getElementById('nav-philosophy');
-    const navEconomy      = document.getElementById('nav-economy');
+    const navNovels       = document.getElementById('nav-novels');
     const navPsychology   = document.getElementById('nav-psychology');
+    const navEconomy      = document.getElementById('nav-economy');
     const flags           = document.querySelectorAll('.flag');
     const taglineEl       = document.getElementById('brand-tagline');
 
@@ -338,16 +335,12 @@
         f.setAttribute('aria-pressed', on ? 'true' : 'false');
       });
 
-      navNovels.textContent       = c.novels;
-      navNovels.href              = c.novelsHref;
-      navSpirituality.textContent = c.spirituality;
-      navSpirituality.href        = c.spiritualityHref;
-      navPhilosophy.textContent   = c.philosophy;
-      navPhilosophy.href          = c.philosophyHref;
-      navEconomy.textContent      = c.economy;
-      navEconomy.href             = c.economyHref;
-      navPsychology.textContent   = c.psychology;
-      navPsychology.href          = c.psychologyHref;
+      navSpirituality.textContent = c.spirituality;  navSpirituality.href = c.spiritualityHref;
+      navNewthought.textContent   = c.newthought;    navNewthought.href   = c.newthoughtHref;
+      navPhilosophy.textContent   = c.philosophy;    navPhilosophy.href   = c.philosophyHref;
+      navNovels.textContent       = c.novels;        navNovels.href       = c.novelsHref;
+      navPsychology.textContent   = c.psychology;    navPsychology.href   = c.psychologyHref;
+      navEconomy.textContent      = c.economy;       navEconomy.href      = c.economyHref;
       document.documentElement.lang = c.htmlLang;
 
       spiral.classList.add('hidden');
