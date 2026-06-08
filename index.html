@@ -183,11 +183,9 @@
       justify-self: center;
     }
 
-    /* Philosophy link spans full width */
-    #nav-philosophy {
-      grid-column: 1 / -1;
-      justify-self: center;
-      font-size: clamp(13px, 1.8vw, 18px);
+    /* Bottom row (items 3-5): Philosophy, Economy, Psychology */
+    .lang-nav a:nth-of-type(n+3) {
+      font-size: clamp(12px, 1.6vw, 16px);
     }
 
     .lang-nav a::after {
@@ -207,8 +205,8 @@
 
     @media (max-width: 540px) {
       .lang-nav a { font-size: clamp(13px, 3.8vw, 18px); }
-      #nav-philosophy { font-size: clamp(11px, 3.2vw, 16px); }
-      .lang-nav { column-gap: clamp(8px, 3vw, 14px); }
+      .lang-nav a:nth-of-type(n+3) { font-size: clamp(10px, 2.8vw, 14px); }
+      .lang-nav { column-gap: clamp(6px, 2.5vw, 12px); }
     }
   </style>
 </head>
@@ -267,6 +265,8 @@
     <span aria-hidden="true"></span>
     <a href="/spirituality" id="nav-spirituality">Spirituality</a>
     <a href="/philosophy"   id="nav-philosophy">Philosophy &amp; New Thought</a>
+    <a href="/economy"      id="nav-economy">Economy</a>
+    <a href="/psychology"   id="nav-psychology">Psychology</a>
   </nav>
 
   <script>
@@ -275,9 +275,13 @@
         novels:       'Novels',
         spirituality: 'Spirituality',
         philosophy:   'Philosophy & New Thought',
+        economy:      'Economy',
+        psychology:   'Psychology',
         novelsHref:       '/novels',
         spiritualityHref: '/spirituality',
         philosophyHref:   '/philosophy',
+        economyHref:      '/economy',
+        psychologyHref:   '/psychology',
         htmlLang: 'en',
         tagline: 'Ancient wisdom · Timeless collection',
       },
@@ -285,9 +289,13 @@
         novels:       'Romans',
         spirituality: 'Spiritualité',
         philosophy:   'Philosophie & Nouvelle Pensée',
+        economy:      'Économie',
+        psychology:   'Psychologie',
         novelsHref:       '/romans',
         spiritualityHref: '/spiritualite',
         philosophyHref:   '/philosophie',
+        economyHref:      '/economie',
+        psychologyHref:   '/psychologie',
         htmlLang: 'fr',
         tagline: 'Sagesse ancienne · Collection intemporelle',
       },
@@ -295,21 +303,27 @@
         novels:       'Novelas',
         spirituality: 'Espiritualidad',
         philosophy:   'Filosofía y Nuevo Pensamiento',
+        economy:      'Economía',
+        psychology:   'Psicología',
         novelsHref:       '/novelas',
         spiritualityHref: '/espiritualidad',
         philosophyHref:   '/filosofia',
+        economyHref:      '/economia',
+        psychologyHref:   '/psicologia',
         htmlLang: 'es',
         tagline: 'Sabiduría antigua · Colección intemporal',
       },
     };
 
-    const spiral      = document.querySelector('.spiral-svg');
-    const nav         = document.getElementById('main-nav');
-    const navNovels   = document.getElementById('nav-novels');
+    const spiral          = document.querySelector('.spiral-svg');
+    const nav             = document.getElementById('main-nav');
+    const navNovels       = document.getElementById('nav-novels');
     const navSpirituality = document.getElementById('nav-spirituality');
     const navPhilosophy   = document.getElementById('nav-philosophy');
-    const flags       = document.querySelectorAll('.flag');
-    const taglineEl   = document.getElementById('brand-tagline');
+    const navEconomy      = document.getElementById('nav-economy');
+    const navPsychology   = document.getElementById('nav-psychology');
+    const flags           = document.querySelectorAll('.flag');
+    const taglineEl       = document.getElementById('brand-tagline');
 
     let activeLang = null;
 
@@ -330,6 +344,10 @@
       navSpirituality.href        = c.spiritualityHref;
       navPhilosophy.textContent   = c.philosophy;
       navPhilosophy.href          = c.philosophyHref;
+      navEconomy.textContent      = c.economy;
+      navEconomy.href             = c.economyHref;
+      navPsychology.textContent   = c.psychology;
+      navPsychology.href          = c.psychologyHref;
       document.documentElement.lang = c.htmlLang;
 
       spiral.classList.add('hidden');
