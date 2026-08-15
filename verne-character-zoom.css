@@ -1,0 +1,70 @@
+.char-card img.verne-zoomable {
+  cursor: zoom-in;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.char-card img.verne-zoomable:hover,
+.char-card img.verne-zoomable:focus-visible {
+  transform: scale(1.035);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+  outline: 2px solid var(--color-accent, #c9a84c);
+  outline-offset: 3px;
+}
+body.verne-zoom-open { overflow: hidden; }
+.verne-zoom {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: none;
+  place-items: center;
+  padding: 34px;
+  background: rgba(12, 10, 8, .88);
+  backdrop-filter: blur(5px);
+}
+.verne-zoom.is-open { display: grid; }
+.verne-zoom figure {
+  margin: 0;
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  max-width: min(92vw, 900px);
+  max-height: 92vh;
+}
+.verne-zoom figure img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(90vw, 900px);
+  max-height: 82vh;
+  object-fit: contain;
+  border: 1px solid rgba(255, 255, 255, .35);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .55);
+}
+.verne-zoom figcaption {
+  color: #fff;
+  font: 400 clamp(18px, 2.2vw, 26px)/1.25 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: .04em;
+  text-align: center;
+}
+.verne-zoom-close {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255, 255, 255, .55);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .25);
+  color: #fff;
+  font: 300 34px/1 Arial, sans-serif;
+  cursor: pointer;
+}
+.verne-zoom-close:hover,
+.verne-zoom-close:focus-visible {
+  background: rgba(201, 168, 76, .8);
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+@media (max-width: 720px) {
+  .verne-zoom { padding: 20px; }
+  .verne-zoom figure img { max-width: 94vw; max-height: 80vh; }
+}

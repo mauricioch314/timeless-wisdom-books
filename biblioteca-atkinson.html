@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>William Walker Atkinson - Biblioteca completa</title>
+  <meta name="description" content="Una biblioteca ordenada de las obras de Atkinson bajo su propio nombre y bajo los seudónimos Yogi Ramacharaka, Theron Q. Dumont, Swami Panchadasi, Three Iniciados, Magus Incognito y Edward Beals.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#fbfaf7;--paper:#fffdfa;--ink:#1e1c18;--muted:#70685d;--line:#e4d8c5;--gold:#b78b2f;--gold-soft:#f4ead7;--font:'Cormorant Garamond',Georgia,serif}
+    *,*::before,*::after{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.55}
+    a{color:inherit}header{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 42px;border-bottom:1px solid var(--line);background:rgba(255,253,250,.88);position:sticky;top:0;z-index:5;backdrop-filter:blur(8px)}
+    .brand{text-decoration:none;font-size:18px;letter-spacing:.13em;text-transform:uppercase}.nav{display:flex;gap:22px;flex-wrap:wrap}.nav a{text-decoration:none;color:var(--muted);font-size:15px;letter-spacing:.08em}.nav a.active,.nav a:hover{color:var(--gold)}
+    .hero{text-align:center;padding:58px 28px 36px;border-bottom:1px solid var(--line)}.kicker{color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-size:14px;margin:0 0 10px}.hero h1{font-size:clamp(38px,6vw,72px);font-weight:300;letter-spacing:.08em;line-height:1;margin:0 0 18px}.hero p{max-width:850px;margin:0 auto;color:var(--muted);font-size:20px;font-style:italic}
+    .tools{max-width:1180px;margin:0 auto;padding:24px 28px 0;display:grid;grid-template-columns:minmax(300px,380px) 1fr;gap:16px;align-items:center}.search{width:100%;border:1px solid var(--line);background:var(--paper);padding:12px 14px;font:18px var(--font);color:var(--ink)}.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.chips a{text-decoration:none;border:1px solid var(--line);padding:8px 12px;font-size:13px;letter-spacing:.08em;color:var(--muted);background:var(--paper)}.chips a:hover{border-color:var(--gold);color:var(--ink)}
+    main{max-width:1180px;margin:0 auto;padding:18px 28px 74px}.section{padding-top:34px}.section h2{font-size:clamp(24px,3vw,38px);font-weight:300;letter-spacing:.1em;text-align:center;margin:0 0 6px}.section-desc{max-width:760px;margin:0 auto 24px;text-align:center;color:var(--muted);font-size:17px;font-style:italic}
+    .volume-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:22px 0 32px}.volume-card{text-decoration:none;border:1px solid var(--line);background:var(--paper);padding:14px;min-height:112px;display:flex;flex-direction:column;justify-content:space-between}.volume-card:hover{border-color:var(--gold);box-shadow:0 10px 24px rgba(90,62,20,.08)}.volume-card b{color:var(--gold);letter-spacing:.14em;text-transform:uppercase;font-size:12px}.volume-card span{font-size:17px;line-height:1.2}.volume-card small{color:var(--muted);font-size:13px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:30px 22px}.book-card{display:flex;flex-direction:column;min-width:0}.cover-link{display:block;text-decoration:none}.cover{aspect-ratio:2/3;background:#eee4d5;border:1px solid var(--line);overflow:hidden;box-shadow:0 12px 30px rgba(32,22,10,.09);transition:transform .18s ease,box-shadow .18s ease}.cover img{width:100%;height:100%;object-fit:cover;display:block}.cover-link:hover .cover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(32,22,10,.14)}
+    .book-meta{color:var(--gold);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-top:13px}.book-card h3{font-size:20px;line-height:1.18;font-weight:500;margin:4px 0 8px}.book-card p{font-size:15px;color:var(--muted);margin:0 0 12px}.actions{display:flex;flex-direction:column;gap:8px;margin-top:auto}.btn{display:inline-flex;justify-content:center;align-items:center;text-decoration:none;border:1px solid var(--line);background:var(--paper);padding:8px 10px;font-size:14px;letter-spacing:.05em}.btn.primary{border-color:var(--gold);background:var(--gold-soft)}.btn:hover{border-color:var(--gold)}
+    .detail{display:grid;grid-template-columns:minmax(220px,340px) minmax(0,1fr);gap:42px;align-items:start;max-width:1060px;margin:0 auto;padding-top:48px}.detail-cover img{width:100%;height:auto;border:1px solid var(--line);box-shadow:0 18px 40px rgba(32,22,10,.14)}.detail h1{font-size:clamp(34px,5vw,62px);font-weight:300;line-height:1.02;letter-spacing:.04em;margin:0 0 12px}.detail .meta{color:var(--gold);letter-spacing:.13em;text-transform:uppercase;font-size:13px;margin-bottom:20px}.synopsis p{font-size:20px;color:var(--muted);margin:0 0 16px}.detail-actions{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}.panel{border-top:1px solid var(--line);padding-top:22px;margin-top:24px}.panel h2{font-size:26px;font-weight:400;letter-spacing:.08em;margin:0 0 12px}.panel p{font-size:18px;color:var(--muted)}.embedded-preview{max-height:760px;overflow:auto;border:1px solid var(--line);background:var(--paper);padding:24px 26px;box-shadow:inset 0 0 0 1px rgba(183,139,47,.08)}.embedded-preview h2{font-size:21px;font-style:italic;color:var(--gold);letter-spacing:.04em;margin:28px 0 12px}.embedded-preview p{font-size:18px;color:var(--ink);text-align:justify;margin:0 0 13px}.guide-preview{width:100%;min-height:620px;border:1px solid var(--line);background:var(--paper);box-shadow:0 14px 32px rgba(32,22,10,.08)}
+    footer{text-align:center;border-top:1px solid var(--line);padding:30px;color:var(--muted);font-size:15px}
+    @media(max-width:760px){header{position:static;padding:20px 22px;flex-direction:column}.tools{grid-template-columns:1fr}.chips{justify-content:center}.detail{grid-template-columns:1fr;padding-top:30px}.detail-cover{max-width:280px;margin:0 auto}.hero{padding-top:42px}.grid{grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:24px 14px}.book-card h3{font-size:17px}.book-card p{font-size:14px}}
+</style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">Timeless Wisdom Books</a>
+    <nav class="nav">
+      <a class="active" href="biblioteca-atkinson.html">W.W. Atkinson</a>
+      <a href="biblioteca-es.html">Biblioteca en español</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <p class="kicker">Biblioteca Esotérica</p>
+    <h1>William Walker Atkinson</h1>
+    <p>Una biblioteca ordenada de las obras de Atkinson bajo su propio nombre y bajo los seudónimos Yogi Ramacharaka, Theron Q. Dumont, Swami Panchadasi, Three Iniciados, Magus Incognito y Edward Beals.</p>
+  </section>
+  <div class="tools">
+    <input class="search" data-atkinson-search type="search" placeholder="Buscar por título, autor o tema">
+    <nav class="chips"><a href="#atkinson">William Walker Atkinson</a>
+<a href="#swamis">Swamis</a>
+<a href="#yogi">Yogi Ramacharaka</a>
+<a href="#theron">Theron Q. Dumont</a>
+<a href="#occult">Three Iniciados / Magus Incognito</a>
+<a href="#beals">Edward Beals</a></nav>
+  </div>
+  <main>
+    <section class="section" id="atkinson">
+      <h2>William Walker Atkinson</h2>
+      <p class="section-desc">Selección de obras centradas en mente, pensamiento y conciencia, reunidas para leer a Atkinson y sus seudónimos como una biblioteca coherente.</p>
+
+      <div class="grid">
+        <article class="book-card" data-search="la-nueva-psicologia-william-walker-atkinson-esta-guia-acompana-una-de-las-entradas-mas-claras-de-atkinson-al-territorio-de-la-mente-moderna">
+          <a class="cover-link" href="atkinson-421.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/421.jpg" alt="La nueva psicología"></div>
+          </a>
+          <div class="book-meta">421 · Vol. 1</div>
+          <h3>La nueva psicología</h3>
+          <p>Esta guía acompaña una de las entradas más claras de Atkinson al territorio de la mente moderna.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-421.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="tu-mente-y-como-usarla-william-walker-atkinson-este-libro-es-un-manual-de-uso-atkinson-no-pregunta-que-es-la-mente-en-abstracto-sino-como-se-emplea-como-se-desperdicia-y-como-puede-educarse-para-servir-a-una-vida-mas-lucida">
+          <a class="cover-link" href="atkinson-422.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/422.jpg" alt="Tu mente y cómo usarla"></div>
+          </a>
+          <div class="book-meta">422 · Vol. 1</div>
+          <h3>Tu mente y cómo usarla</h3>
+          <p>Este libro es un manual de uso. Atkinson no pregunta qué es la mente en abstracto, sino cómo se emplea, cómo se desperdicia y cómo puede educarse para servir a una vida más lúcida.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-422.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="los-planos-mentales-subconsciente-y-supraconsciente-william-walker-atkinson-este-texto-lleva-al-lector-a-explorar-regiones-de-la-mente-que-no-suelen-estar-en-primer-plano-el-subconsciente-y-el-supraconsciente">
+          <a class="cover-link" href="atkinson-423.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/423.jpg" alt="Los planos mentales subconsciente y supraconsciente"></div>
+          </a>
+          <div class="book-meta">423 · Vol. 1</div>
+          <h3>Los planos mentales subconsciente y supraconsciente</h3>
+          <p>Este texto lleva al lector a explorar regiones de la mente que no suelen estar en primer plano: el subconsciente y el supraconsciente.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-423.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="mente-y-cuerpo-estados-mentales-y-condicion-fisica-william-walker-atkinson-este-libro-nos-invita-a-explorar-la-interaccion-constante-entre-la-mente-y-el-cuerpo-atkinson-desmonta-la-vieja-idea-de-que-lo-mental-y-lo-fisico-son-mundos-separados">
+          <a class="cover-link" href="atkinson-424.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/424.jpg" alt="Mente y cuerpo: estados mentales y condición física"></div>
+          </a>
+          <div class="book-meta">424 · Vol. 1</div>
+          <h3>Mente y cuerpo: estados mentales y condición física</h3>
+          <p>Este libro nos invita a explorar la interacción constante entre la mente y el cuerpo. Atkinson desmonta la vieja idea de que lo mental y lo físico son mundos separados.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-424.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="autosanacion-por-la-energia-del-pensamiento-william-walker-atkinson-la-energia-mental-no-es-un-remedio-milagroso-sino-una-fuerza-natural-que-puede-despertar-y-dirigir-procesos-internos-de-recuperacion">
+          <a class="cover-link" href="atkinson-425.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/425.jpg" alt="Autosanación por la energía del pensamiento"></div>
+          </a>
+          <div class="book-meta">425 · Vol. 1</div>
+          <h3>Autosanación por la energía del pensamiento</h3>
+          <p>La energía mental no es un remedio milagroso, sino una fuerza natural que puede despertar y dirigir procesos internos de recuperación.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-425.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="cultivo-del-pensamiento-o-entrenamiento-mental-practico-william-walker-atkinson-la-propuesta-de-atkinson-en-este-libro-no-es-teoria-abstracta-sino-una-invitacion-al-autoentrenamiento">
+          <a class="cover-link" href="atkinson-426.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/426.jpg" alt="Cultivo del pensamiento o entrenamiento mental práctico"></div>
+          </a>
+          <div class="book-meta">426 · Vol. 1</div>
+          <h3>Cultivo del pensamiento o entrenamiento mental práctico</h3>
+          <p>La propuesta de Atkinson en este libro no es teoría abstracta, sino una invitación al autoentrenamiento.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-426.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="la-consciencia-interna-william-walker-atkinson-esta-guia-acompana-un-texto-donde-atkinson-despliega-con-rigor-y-metafora-el-mapa-de-la-consciencia-interna-ese-territorio-mas-alla-del-pensamiento-cotidiano-donde-operan-fuerzas-intuitivas-automaticas-y-profundas">
+          <a class="cover-link" href="atkinson-427.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/427.jpg" alt="La consciencia interna"></div>
+          </a>
+          <div class="book-meta">427 · Vol. 1</div>
+          <h3>La consciencia interna</h3>
+          <p>Esta guía acompaña un texto donde Atkinson despliega, con rigor y metáfora, el mapa de la consciencia interna: ese territorio más allá del pensamiento cotidiano, donde operan fuerzas intuitivas, automáticas y profundas.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-427.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="como-leer-la-naturaleza-humana-sus-estados-internos-y-formas-externas-william-walker-atkinson-este-libro-de-william-walker-atkinson-propone-una-psicologia-concreta-no-la-mente-en-abstracto-sino-el-arte-de-percibir-la-naturaleza-humana-tal-como-se-manifiesta-en-gestos-posturas-tono-de-voz-y-habitos">
+          <a class="cover-link" href="atkinson-428.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/428.jpg" alt="Cómo leer la naturaleza humana: sus estados internos y formas externas"></div>
+          </a>
+          <div class="book-meta">428 · Vol. 1</div>
+          <h3>Cómo leer la naturaleza humana: sus estados internos y formas externas</h3>
+          <p>Este libro de William Walker Atkinson propone una psicología concreta: no la mente en abstracto, sino el arte de percibir la naturaleza humana tal como se manifiesta en gestos, posturas, tono de voz y hábitos.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-428.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="serie-de-lecciones-en-magnetismo-personal-william-walker-atkinson-esta-guia-acompana-una-de-las-obras-mas-pragmaticas-y-directas-de-william-walker-atkinson-sobre-el-magnetismo-personal">
+          <a class="cover-link" href="atkinson-429.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/429.jpg" alt="Serie de lecciones en magnetismo personal"></div>
+          </a>
+          <div class="book-meta">429 · Vol. 2</div>
+          <h3>Serie de lecciones en magnetismo personal</h3>
+          <p>Esta guía acompaña una de las obras más pragmáticas y directas de William Walker Atkinson sobre el magnetismo personal.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-429.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="pensamiento-dinamico-la-ley-de-la-energia-vibrante-william-walker-atkinson-este-libro-considerado-uno-de-los-experimentos-mas-audaces-de-atkinson-busca-tender-un-puente-entre-las-antiguas-ensenanzas-ocultas-y-las-teorias-cientificas-modernas">
+          <a class="cover-link" href="atkinson-430.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/430.jpg" alt="Pensamiento dinámico: la ley de la energía vibrante"></div>
+          </a>
+          <div class="book-meta">430 · Vol. 2</div>
+          <h3>Pensamiento dinámico: la ley de la energía vibrante</h3>
+          <p>Este libro, considerado uno de los experimentos más audaces de Atkinson, busca tender un puente entre las antiguas enseñanzas ocultas y las teorías científicas modernas.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-430.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="la-ley-de-la-atraccion-en-el-mundo-del-pensamiento-william-walker-atkinson-este-libro-es-uno-de-los-textos-centrales-del-llamado-nuevo-pensamiento-pero-atkinson-abre-dejando-claro-que-su-proposito-no-es-formar-discipulos-pasivos-sino-lectores-capaces-de-practicar-y-verificar-lo-que-estudian-por-si-mismos">
+          <a class="cover-link" href="atkinson-431.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/431.jpg" alt="La ley de la atracción en el mundo del pensamiento"></div>
+          </a>
+          <div class="book-meta">431 · Vol. 2</div>
+          <h3>La ley de la atracción en el mundo del pensamiento</h3>
+          <p>Este libro es uno de los textos centrales del llamado Nuevo Pensamiento, pero Atkinson abre dejando claro que su propósito no es formar discípulos pasivos, sino lectores capaces de practicar y verificar lo que estudian por sí mismos.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-431.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="poder-mental-el-secreto-de-la-magia-mental-william-walker-atkinson-este-libro-de-william-walker-atkinson-ofrece-una-vision-amplia-y-sugerente-la-existencia-de-un-principio-mental-dinamico-que-atraviesa-toda-la-naturaleza-y-que-puede-si-se-comprende-ponerse-al-servicio-de-la-vida-consciente">
+          <a class="cover-link" href="atkinson-432.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/432.jpg" alt="Poder mental: el secreto de la magia mental"></div>
+          </a>
+          <div class="book-meta">432 · Vol. 2</div>
+          <h3>Poder mental: el secreto de la magia mental</h3>
+          <p>Este libro de William Walker Atkinson ofrece una visión amplia y sugerente: la existencia de un principio mental dinámico que atraviesa toda la naturaleza y que puede, si se comprende, ponerse al servicio de la vida consciente.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-432.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="fascinacion-mental-william-walker-atkinson-esta-guia-esta-disenada-para-acompanar-tu-lectura-de-fascinacion-mental-un-manual-donde-atkinson-analiza-como-la-mente-puede-influir-intensamente-sobre-otra-mediante-lo-que-el-denomina-fascinacion-o-magnetismo-personal">
+          <a class="cover-link" href="atkinson-433.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/433.jpg" alt="Fascinación mental"></div>
+          </a>
+          <div class="book-meta">433 · Vol. 2</div>
+          <h3>Fascinación mental</h3>
+          <p>Esta guía está diseñada para acompañar tu lectura de &#x27;Fascinación mental&#x27;, un manual donde Atkinson analiza cómo la mente puede influir intensamente sobre otra mediante lo que él denomina fascinación o magnetismo personal.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-433.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="influencia-mental-practica-william-walker-atkinson-esta-guia-acompana-uno-de-los-textos-clave-de-atkinson-sobre-la-influencia-mental-entendida-como-vibracion-comunicacion-y-accion-etica-en-la-vida-diaria">
+          <a class="cover-link" href="atkinson-434.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/434.jpg" alt="Influencia mental práctica"></div>
+          </a>
+          <div class="book-meta">434 · Vol. 2</div>
+          <h3>Influencia mental práctica</h3>
+          <p>Esta guía acompaña uno de los textos clave de Atkinson sobre la influencia mental entendida como vibración, comunicación y acción ética en la vida diaria.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-434.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="el-secreto-del-exito-y-la-ley-de-la-atraccion-william-walker-atkinson-esta-guia-acompana-uno-de-los-textos-mas-francos-de-atkinson-dedicado-a-desmitificar-las-ideas-convencionales-sobre-el-exito">
+          <a class="cover-link" href="atkinson-435.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/435.jpg" alt="El secreto del éxito y la ley de la atracción"></div>
+          </a>
+          <div class="book-meta">435 · Vol. 3</div>
+          <h3>El secreto del éxito y la ley de la atracción</h3>
+          <p>Esta guía acompaña uno de los textos más francos de Atkinson, dedicado a desmitificar las ideas convencionales sobre el éxito.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-435.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="la-ley-del-exito-financiero-william-walker-atkinson-esta-guia-acompana-uno-de-los-textos-mas-pragmaticos-y-reflexivos-de-atkinson-sobre-el-exito-y-la-prosperidad">
+          <a class="cover-link" href="atkinson-436.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/436.jpg" alt="La ley del éxito financiero"></div>
+          </a>
+          <div class="book-meta">436 · Vol. 3</div>
+          <h3>La ley del éxito financiero</h3>
+          <p>Esta guía acompaña uno de los textos más pragmáticos y reflexivos de Atkinson sobre el éxito y la prosperidad.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-436.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="la-psicologia-de-las-ventas-william-walker-atkinson-esta-guia-acompana-uno-de-los-textos-clasicos-de-william-walker-atkinson-sobre-el-arte-y-la-ciencia-de-vender">
+          <a class="cover-link" href="atkinson-437.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/437.jpg" alt="La psicología de las ventas"></div>
+          </a>
+          <div class="book-meta">437 · Vol. 3</div>
+          <h3>La psicología de las ventas</h3>
+          <p>Esta guía acompaña uno de los textos clásicos de William Walker Atkinson sobre el arte y la ciencia de vender.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-437.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="la-fuerza-del-pensamiento-en-los-negocios-y-la-vida-cotidiana-william-walker-atkinson-este-libro-inaugura-la-obra-de-atkinson-con-una-propuesta-radicalmente-practica-el-magnetismo-personal-y-la-influencia-psiquica-son-herramientas-reales-no-misterios-inalcanzables">
+          <a class="cover-link" href="atkinson-438.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/438.jpg" alt="La fuerza del pensamiento en los negocios y la vida cotidiana"></div>
+          </a>
+          <div class="book-meta">438 · Vol. 3</div>
+          <h3>La fuerza del pensamiento en los negocios y la vida cotidiana</h3>
+          <p>Este libro inaugura la obra de Atkinson con una propuesta radicalmente práctica: el magnetismo personal y la influencia psíquica son herramientas reales, no misterios inalcanzables.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-438.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="sugestion-y-autosugestion-la-clave-de-la-salud-la-felicidad-y-la-prosperidad-william-walker-atkinson-esta-guia-acompana-un-texto-crucial-de-atkinson-en-el-ambito-del-exito-y-la-formacion-practica-de-la-mente">
+          <a class="cover-link" href="atkinson-439.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/439.jpg" alt="Sugestión y autosugestión: la clave de la salud, la felicidad y la prosperidad"></div>
+          </a>
+          <div class="book-meta">439 · Vol. 3</div>
+          <h3>Sugestión y autosugestión: la clave de la salud, la felicidad y la prosperidad</h3>
+          <p>Esta guía acompaña un texto crucial de Atkinson en el ámbito del éxito y la formación práctica de la mente.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-439.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="el-dominio-del-ser-william-walker-atkinson-esta-guia-acompana-uno-de-los-libros-mas-reflexivos-de-atkinson-centrado-en-la-gran-pregunta-filosofica-que-es-la-realidad">
+          <a class="cover-link" href="atkinson-440.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/440.jpg" alt="El dominio del ser"></div>
+          </a>
+          <div class="book-meta">440 · Vol. 4</div>
+          <h3>El dominio del ser</h3>
+          <p>Esta guía acompaña uno de los libros más reflexivos de Atkinson, centrado en la gran pregunta filosófica: ¿qué es la Realidad?</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-440.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="el-arte-del-pensamiento-logico-william-walker-atkinson-la-logica-para-atkinson-no-es-disciplina-academica-reservada-a-especialistas-sino-arte-vital-que-permite-pensar-con-mas-claridad-y-vivir-con-mayor-acierto">
+          <a class="cover-link" href="atkinson-441.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/441.jpg" alt="El arte del pensamiento lógico"></div>
+          </a>
+          <div class="book-meta">441 · Vol. 4</div>
+          <h3>El arte del pensamiento lógico</h3>
+          <p>La lógica, para Atkinson, no es disciplina académica reservada a especialistas, sino arte vital que permite pensar con más claridad y vivir con mayor acierto.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-441.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="el-arte-de-la-expresion-william-walker-atkinson-el-arte-de-la-expresion-segun-atkinson-no-es-un-adorno-intelectual-ni-un-privilegio-de-oradores-profesionales-sino-una-herramienta-necesaria-para-toda-persona-que-quiera-traducir-sus-ideas-y-sentimientos-en-acciones-acuerdos-y-relaciones">
+          <a class="cover-link" href="atkinson-442.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/442.jpg" alt="El arte de la expresión"></div>
+          </a>
+          <div class="book-meta">442 · Vol. 4</div>
+          <h3>El arte de la expresión</h3>
+          <p>El arte de la expresión, según Atkinson, no es un adorno intelectual ni un privilegio de oradores profesionales, sino una herramienta necesaria para toda persona que quiera traducir sus ideas y sentimientos en acciones, acuerdos y relaciones.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-442.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="cultivo-de-la-memoria-william-walker-atkinson-esta-guia-acompana-un-texto-fundamental-para-quien-busca-cultivar-una-memoria-despierta-flexible-y-fiel-a-la-experiencia">
+          <a class="cover-link" href="atkinson-443.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/443.jpg" alt="Cultivo de la memoria"></div>
+          </a>
+          <div class="book-meta">443 · Vol. 4</div>
+          <h3>Cultivo de la memoria</h3>
+          <p>Esta guía acompaña un texto fundamental para quien busca cultivar una memoria despierta, flexible y fiel a la experiencia.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-443.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="memoria-como-desarrollarla-entrenarla-y-usarla-william-walker-atkinson-esta-guia-acompana-el-texto-clasico-de-atkinson-sobre-una-de-las-facultades-mas-decisivas-de-la-mente-la-memoria">
+          <a class="cover-link" href="atkinson-444.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/444.jpg" alt="Memoria: cómo desarrollarla, entrenarla y usarla"></div>
+          </a>
+          <div class="book-meta">444 · Vol. 4</div>
+          <h3>Memoria: cómo desarrollarla, entrenarla y usarla</h3>
+          <p>Esta guía acompaña el texto clásico de Atkinson sobre una de las facultades más decisivas de la mente: la memoria.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-444.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="la-ley-del-nuevo-pensamiento-william-walker-atkinson-esta-guia-acompana-uno-de-los-textos-mas-vitales-de-atkinson-donde-el-nuevo-pensamiento-no-es-solo-una-coleccion-de-ideas-optimistas-sino-una-herramienta-para-descubrir-y-refinar-la-fuerza-interior">
+          <a class="cover-link" href="atkinson-445.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/445.jpg" alt="La ley del Nuevo Pensamiento"></div>
+          </a>
+          <div class="book-meta">445 · Vol. 5</div>
+          <h3>La ley del Nuevo Pensamiento</h3>
+          <p>Esta guía acompaña uno de los textos más vitales de Atkinson, donde el &quot;Nuevo Pensamiento&quot; no es solo una colección de ideas optimistas, sino una herramienta para descubrir y refinar la fuerza interior.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-445.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="el-crisol-del-pensamiento-moderno-william-walker-atkinson-esta-guia-acompana-la-exploracion-de-atkinson-sobre-el-crisol-donde-las-corrientes-filosoficas-y-espirituales-modernas-son-fundidas-reexaminadas-y-reformuladas">
+          <a class="cover-link" href="atkinson-446.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/446.jpg" alt="El crisol del pensamiento moderno"></div>
+          </a>
+          <div class="book-meta">446 · Vol. 5</div>
+          <h3>El crisol del pensamiento moderno</h3>
+          <p>Esta guía acompaña la exploración de Atkinson sobre el &quot;crisol&quot; donde las corrientes filosóficas y espirituales modernas son fundidas, reexaminadas y reformuladas.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-446.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="fragmentos-del-nuevo-pensamiento-william-walker-atkinson-fragmentos-del-nuevo-pensamiento-es-una-coleccion-de-ideas-que-atkinson-recopila-para-aterrizar-el-nuevo-pensamiento-como-una-filosofia-practica-y-flexible">
+          <a class="cover-link" href="atkinson-447.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/447.jpg" alt="Fragmentos del Nuevo Pensamiento"></div>
+          </a>
+          <div class="book-meta">447 · Vol. 5</div>
+          <h3>Fragmentos del Nuevo Pensamiento</h3>
+          <p>Fragmentos del Nuevo Pensamiento es una colección de ideas que Atkinson recopila para aterrizar el &#x27;Nuevo Pensamiento&#x27; como una filosofía práctica y flexible.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-447.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="historia-y-principios-del-nuevo-pensamiento-william-walker-atkinson-esta-guia-acompana-una-de-las-aproximaciones-mas-articuladas-de-atkinson-al-nuevo-pensamiento-explorando-sus-raices-filosoficas-y-las-practicas-que-propone-para-el-desarrollo-espiritual-y-mental">
+          <a class="cover-link" href="atkinson-448.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/448.jpg" alt="Historia y principios del Nuevo Pensamiento"></div>
+          </a>
+          <div class="book-meta">448 · Vol. 5</div>
+          <h3>Historia y principios del Nuevo Pensamiento</h3>
+          <p>Esta guía acompaña una de las aproximaciones más articuladas de Atkinson al Nuevo Pensamiento, explorando sus raíces filosóficas y las prácticas que propone para el desarrollo espiritual y mental.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-448.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="reencarnacion-y-la-ley-del-karma-william-walker-atkinson-este-libro-de-william-walker-atkinson-explora-dos-ideas-centrales-del-pensamiento-esoterico-que-el-alma-atraviesa-multiples-existencias-y-que-cada-vida-esta-tejida-por-las-consecuencias-karma-de-nuestras-acciones-pasadas">
+          <a class="cover-link" href="atkinson-450.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/450.jpg" alt="Reencarnación y la ley del karma"></div>
+          </a>
+          <div class="book-meta">450 · Vol. 6</div>
+          <h3>Reencarnación y la ley del karma</h3>
+          <p>Este libro de William Walker Atkinson explora dos ideas centrales del pensamiento esotérico: que el alma atraviesa múltiples existencias y que cada vida está tejida por las consecuencias —karma— de nuestras acciones pasadas.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-450.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="psicomancia-practica-y-observacion-de-cristales-william-walker-atkinson-este-libro-introduce-al-lector-en-la-tradicion-de-la-psicomancia-el-arte-de-percibir-informacion-sutil-oculta-o-distante-mediante-los-llamados-sentidos-astrales-y-herramientas-como-la-bola-de-cristal">
+          <a class="cover-link" href="atkinson-451.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/451.jpg" alt="Psicomancia práctica y observación de cristales"></div>
+          </a>
+          <div class="book-meta">451 · Vol. 6</div>
+          <h3>Psicomancia práctica y observación de cristales</h3>
+          <p>Este libro introduce al lector en la tradición de la psicomancia: el arte de percibir información sutil, oculta o distante mediante los llamados &quot;sentidos astrales&quot; y herramientas como la bola de cristal.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-451.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="telepatia-su-teoria-hechos-y-pruebas-william-walker-atkinson-este-texto-de-atkinson-pionero-en-la-exploracion-psiquica-intenta-situar-la-telepatia-entre-el-misterio-y-la-investigacion-seria">
+          <a class="cover-link" href="atkinson-452.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/452.jpg" alt="Telepatía: su teoría, hechos y pruebas"></div>
+          </a>
+          <div class="book-meta">452 · Vol. 6</div>
+          <h3>Telepatía: su teoría, hechos y pruebas</h3>
+          <p>Este texto de Atkinson, pionero en la exploración psíquica, intenta situar la telepatía entre el misterio y la investigación seria.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-452.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="los-pensamientos-son-cosas-william-walker-atkinson-este-libro-escrito-bajo-el-seudonimo-de-edward-walker-afirma-una-idea-perturbadora-y-poderosa-no-hay-pensamientos-inocuos">
+          <a class="cover-link" href="atkinson-453.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/453.jpg" alt="Los pensamientos son cosas"></div>
+          </a>
+          <div class="book-meta">453 · Vol. 6</div>
+          <h3>Los pensamientos son cosas</h3>
+          <p>Este libro, escrito bajo el seudónimo de Edward Walker, afirma una idea perturbadora y poderosa: no hay pensamientos inocuos.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-453.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="el-secreto-interior-o-ese-algo-que-llevas-dentro-william-walker-atkinson-este-libro-tan-singular-de-atkinson-escrito-bajo-pseudonimo-entrelaza-relato-personal-parabola-y-manual-de-busqueda">
+          <a class="cover-link" href="atkinson-454.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/454.jpg" alt="El secreto interior o ese algo que llevas dentro"></div>
+          </a>
+          <div class="book-meta">454 · Vol. 6</div>
+          <h3>El secreto interior o ese algo que llevas dentro</h3>
+          <p>Este libro tan singular de Atkinson, escrito bajo pseudónimo, entrelaza relato personal, parábola y manual de búsqueda.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-454.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="lectura-practica-de-mentes-william-walker-atkinson-esta-guia-acompana-el-recorrido-de-atkinson-por-la-telepatia-y-la-transferencia-de-pensamiento-desde-una-perspectiva-practica-y-reflexiva">
+          <a class="cover-link" href="atkinson-455.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/455.jpg" alt="Lectura práctica de mentes"></div>
+          </a>
+          <div class="book-meta">455 · Vol. 6</div>
+          <h3>Lectura práctica de mentes</h3>
+          <p>Esta guía acompaña el recorrido de Atkinson por la telepatía y la transferencia de pensamiento desde una perspectiva práctica y reflexiva.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-455.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="section" id="swamis">
+      <h2>Swamis</h2>
+      <p class="section-desc">Selección de obras centradas en aura, clarividencia y mediumnidad, reunidas para leer a Atkinson y sus seudónimos como una biblioteca coherente.</p>
+
+      <div class="grid">
+        <article class="book-card" data-search="el-aura-humana-colores-astrales-y-formas-de-pensamiento-william-walker-atkinson-writing-as-swami-panchadasi-esta-guia-acompana-uno-de-los-textos-mas-visuales-y-sugestivos-de-atkinson-bajo-el-nombre-de-swami-panchadasi-el-aura-aparece-como-un-lenguaje-sutil-colores-vibraciones-y-formas-que-expresan-estados-fisicos-emocionales-y-mentales">
+          <a class="cover-link" href="atkinson-456.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/456.jpg" alt="El aura humana: colores astrales y formas de pensamiento"></div>
+          </a>
+          <div class="book-meta">456 · Vol. 7</div>
+          <h3>El aura humana: colores astrales y formas de pensamiento</h3>
+          <p>Esta guía acompaña uno de los textos más visuales y sugestivos de Atkinson bajo el nombre de Swami Panchadasi. El aura aparece como un lenguaje sutil: colores, vibraciones y formas que expresan estados físicos, emocionales y mentales.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-456.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="clarividencia-y-poderes-ocultos-william-walker-atkinson-writing-as-swami-panchadasi-este-libro-surge-de-la-tradicion-esoterica-de-la-india-adaptada-para-mentes-occidentales-por-william-walker-atkinson-bajo-el-nombre-de-swami-panchadasi">
+          <a class="cover-link" href="atkinson-457.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/457.jpg" alt="Clarividencia y poderes ocultos"></div>
+          </a>
+          <div class="book-meta">457 · Vol. 7</div>
+          <h3>Clarividencia y poderes ocultos</h3>
+          <p>Este libro surge de la tradición esotérica de la India, adaptada para mentes occidentales por William Walker Atkinson bajo el nombre de Swami Panchadasi.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-457.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="el-mundo-astral-sus-paisajes-habitantes-y-fenomenos-william-walker-atkinson-writing-as-swami-panchadasi-esta-guia-propone-al-lector-un-itinerario-para-leer-el-mundo-astral-no-como-una-coleccion-de-relatos-fantasticos-sino-como-una-invitacion-a-afinar-la-percepcion-el-discernimiento-y-la-etica-respecto-a-las-dimensiones-sutiles-de-la-existencia">
+          <a class="cover-link" href="atkinson-458.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/458.jpg" alt="El mundo astral: sus paisajes, habitantes y fenómenos"></div>
+          </a>
+          <div class="book-meta">458 · Vol. 7</div>
+          <h3>El mundo astral: sus paisajes, habitantes y fenómenos</h3>
+          <p>Esta guía propone al lector un itinerario para leer El mundo astral, no como una colección de relatos fantásticos, sino como una invitación a afinar la percepción, el discernimiento y la ética respecto a las dimensiones sutiles de la existencia.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-458.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="la-ciencia-de-conocer-el-futuro-william-walker-atkinson-writing-as-swami-bhakta-vishita-este-libro-firmado-por-william-walker-atkinson-bajo-el-nombre-de-swami-bhakta-vishita-propone-un-encuentro-directo-con-la-clarividencia-no-como-fenomeno-fantastico-sino-como-una-facultad-humana-natural-que-puede-desarrollarse-con-atencion">
+          <a class="cover-link" href="atkinson-459.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/459.jpg" alt="La ciencia de conocer el futuro"></div>
+          </a>
+          <div class="book-meta">459 · Vol. 7</div>
+          <h3>La ciencia de conocer el futuro</h3>
+          <p>Este libro, firmado por William Walker Atkinson bajo el nombre de Swami Bhakta Vishita, propone un encuentro directo con la clarividencia, no como fenómeno fantástico, sino como una facultad humana natural que puede desarrollarse con atención.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-459.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="la-mediumnidad-genuina-o-los-poderes-invisibles-william-walker-atkinson-writing-as-swami-panchadasi-este-libro-invita-a-repensar-la-mediumnidad-como-una-capacidad-humana-natural-no-como-algo-sobrenatural-ni-reservado-a-unos-pocos-elegidos">
+          <a class="cover-link" href="atkinson-460.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/460.jpg" alt="La mediumnidad genuina o los poderes invisibles"></div>
+          </a>
+          <div class="book-meta">460 · Vol. 7</div>
+          <h3>La mediumnidad genuina o los poderes invisibles</h3>
+          <p>Este libro invita a repensar la mediumnidad como una capacidad humana natural, no como algo sobrenatural ni reservado a unos pocos elegidos.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-460.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="section" id="yogi">
+      <h2>Yogi Ramacharaka</h2>
+      <p class="section-desc">Selección de obras centradas en filosofía yogui, reunidas para leer a Atkinson y sus seudónimos como una biblioteca coherente.</p>
+
+      <div class="grid">
+        <article class="book-card" data-search="catorce-lecciones-en-filosofia-yogui-y-ocultismo-oriental-william-walker-atkinson-writing-as-yogi-ramacharaka-esta-guia-acompana-un-texto-fundacional-del-nuevo-pensamiento-orientalista-bajo-el-seudonimo-de-yogi-ramacharaka-atkinson-organiza-catorce-lecciones-que-exploran-la-constitucion-humana-el-desarrollo-interior-y-los-principios-practicos">
+          <a class="cover-link" href="atkinson-488.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/488.jpg" alt="Catorce lecciones en filosofía yogui y ocultismo oriental"></div>
+          </a>
+          <div class="book-meta">488 · Vol. 8</div>
+          <h3>Catorce lecciones en filosofía yogui y ocultismo oriental</h3>
+          <p>Esta guía acompaña un texto fundacional del Nuevo Pensamiento orientalista. Bajo el seudónimo de Yogi Ramacharaka, Atkinson organiza catorce lecciones que exploran la constitución humana, el desarrollo interior y los principios prácticos.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-488.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="curso-avanzado-de-filosofia-yogui-william-walker-atkinson-writing-as-yogi-ramacharaka-este-curso-avanzado-invita-a-una-exploracion-mas-profunda-y-comprometida-del-sendero-yogui-integrando-ensenanzas-de-la-filosofia-oriental-y-el-hermetismo-moderno">
+          <a class="cover-link" href="atkinson-489.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/489.jpg" alt="Curso avanzado de filosofía yogui"></div>
+          </a>
+          <div class="book-meta">489 · Vol. 8</div>
+          <h3>Curso avanzado de filosofía yogui</h3>
+          <p>Este curso avanzado invita a una exploración más profunda y comprometida del sendero yogui, integrando enseñanzas de la filosofía oriental y el hermetismo moderno.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-489.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="la-ciencia-hindu-yogui-de-la-respiracion-william-walker-atkinson-writing-as-yogi-ramacharaka-este-libro-de-william-walker-atkinson-bajo-el-nombre-yogi-ramacharaka-invita-a-desaprender-habitos-inconscientes-sobre-la-respiracion-y-a-reconstruirla-como-un-arte-consciente-fuente-de-salud-energia-mental-y-apertura-interior">
+          <a class="cover-link" href="atkinson-490.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/490.jpg" alt="La ciencia hindú-yogui de la respiración"></div>
+          </a>
+          <div class="book-meta">490 · Vol. 8</div>
+          <h3>La ciencia hindú-yogui de la respiración</h3>
+          <p>Este libro de William Walker Atkinson (bajo el nombre Yogi Ramacharaka) invita a desaprender hábitos inconscientes sobre la respiración y a reconstruirla como un arte consciente, fuente de salud, energía mental y apertura interior.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-490.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="la-vida-despues-de-la-muerte-william-walker-atkinson-writing-as-yogi-ramacharaka-este-libro-escrito-por-atkinson-bajo-el-nombre-de-yogi-ramacharaka-no-promete-verdades-absolutas-sobre-lo-invisible-sino-una-invitacion-honesta-a-contemplar-el-otro-lado-de-la-existencia">
+          <a class="cover-link" href="atkinson-491.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/491.jpg" alt="La vida después de la muerte"></div>
+          </a>
+          <div class="book-meta">491 · Vol. 8</div>
+          <h3>La vida después de la muerte</h3>
+          <p>Este libro, escrito por Atkinson bajo el nombre de Yogi Ramacharaka, no promete verdades absolutas sobre lo invisible, sino una invitación honesta a contemplar el &quot;otro lado&quot; de la existencia.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-491.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="la-ciencia-de-la-sanacion-psiquica-william-walker-atkinson-writing-as-yogi-ramacharaka-esta-guia-acompana-uno-de-los-textos-mas-practicos-y-directos-de-atkinson-bajo-el-seudonimo-de-yogi-ramacharaka">
+          <a class="cover-link" href="atkinson-492.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/492.jpg" alt="La ciencia de la sanación psíquica"></div>
+          </a>
+          <div class="book-meta">492 · Vol. 9</div>
+          <h3>La ciencia de la sanación psíquica</h3>
+          <p>Esta guía acompaña uno de los textos más prácticos y directos de Atkinson, bajo el seudónimo de Yogi Ramacharaka.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-492.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="hatha-yoga-la-filosofia-del-bienestar-fisico-del-yogui-william-walker-atkinson-writing-as-yogi-ramacharaka-este-libro-guia-al-lector-a-reconsiderar-la-relacion-cotidiana-con-el-cuerpo-no-como-un-instrumento-secundario-sino-como-la-base-de-toda-disciplina-superior">
+          <a class="cover-link" href="atkinson-493.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/493.jpg" alt="Hatha Yoga: la filosofía del bienestar físico del yogui"></div>
+          </a>
+          <div class="book-meta">493 · Vol. 9</div>
+          <h3>Hatha Yoga: la filosofía del bienestar físico del yogui</h3>
+          <p>Este libro guía al lector a reconsiderar la relación cotidiana con el cuerpo, no como un instrumento secundario, sino como la base de toda disciplina superior.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-493.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="raja-yoga-desarrollo-mental-william-walker-atkinson-writing-as-yogi-ramacharaka-este-libro-escrito-por-william-walker-atkinson-bajo-el-nombre-de-yogi-ramacharaka-introduce-los-principios-fundamentales-del-raja-yoga-el-arte-del-desarrollo-y-control-mental">
+          <a class="cover-link" href="atkinson-494.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/494.jpg" alt="Raja Yoga: desarrollo mental"></div>
+          </a>
+          <div class="book-meta">494 · Vol. 9</div>
+          <h3>Raja Yoga: desarrollo mental</h3>
+          <p>Este libro, escrito por William Walker Atkinson bajo el nombre de Yogi Ramacharaka, introduce los principios fundamentales del Raja Yoga: el arte del desarrollo y control mental.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-494.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="gnani-yoga-una-serie-de-lecciones-william-walker-atkinson-writing-as-yogi-ramacharaka-esta-guia-acompana-uno-de-los-textos-mas-profundos-de-william-walker-atkinson-publicado-bajo-el-nombre-de-yogi-ramacharaka">
+          <a class="cover-link" href="atkinson-495.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/495.jpg" alt="Gnani Yoga: una serie de lecciones"></div>
+          </a>
+          <div class="book-meta">495 · Vol. 9</div>
+          <h3>Gnani Yoga: una serie de lecciones</h3>
+          <p>Esta guía acompaña uno de los textos más profundos de William Walker Atkinson, publicado bajo el nombre de Yogi Ramacharaka.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-495.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="curacion-practica-con-agua-william-walker-atkinson-writing-as-yogi-ramacharaka-esta-guia-acompana-el-pequeno-pero-preciso-tratado-de-william-walker-atkinson-escrito-como-yogi-ramacharaka-sobre-el-papel-esencial-del-agua-en-el-sistema-de-autosanacion-y-vitalidad-que-difunde-la-tradicion-del-hatha-yoga">
+          <a class="cover-link" href="atkinson-496.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/496.jpg" alt="Curación práctica con agua"></div>
+          </a>
+          <div class="book-meta">496 · Vol. 9</div>
+          <h3>Curación práctica con agua</h3>
+          <p>Esta guía acompaña el pequeño pero preciso tratado de William Walker Atkinson, escrito como Yogi Ramacharaka, sobre el papel esencial del agua en el sistema de autosanación y vitalidad que difunde la tradición del Hatha Yoga.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-496.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="cristianismo-mistico-las-ensenanzas-internas-william-walker-atkinson-writing-as-yogi-ramacharaka-este-libro-invita-a-explorar-el-cristianismo-desde-su-vena-esoterica-y-profunda-lejos-de-doctrinas-externas-y-disputas-de-credos">
+          <a class="cover-link" href="atkinson-497.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/497.jpg" alt="Cristianismo místico: las enseñanzas internas"></div>
+          </a>
+          <div class="book-meta">497 · Vol. 10</div>
+          <h3>Cristianismo místico: las enseñanzas internas</h3>
+          <p>Este libro invita a explorar el cristianismo desde su vena esotérica y profunda, lejos de doctrinas externas y disputas de credos.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-497.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="las-ensenanzas-internas-de-las-filosofias-y-religiones-de-la-india-william-walker-atkinson-writing-as-yogi-ramacharaka-este-libro-acerca-al-lector-occidental-a-las-raices-filosoficas-y-espirituales-de-la-india">
+          <a class="cover-link" href="atkinson-498.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/498.jpg" alt="Las enseñanzas internas de las filosofías y religiones de la India"></div>
+          </a>
+          <div class="book-meta">498 · Vol. 10</div>
+          <h3>Las enseñanzas internas de las filosofías y religiones de la India</h3>
+          <p>Este libro acerca al lector occidental a las raíces filosóficas y espirituales de la India.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-498.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="el-espiritu-de-los-upanishads-william-walker-atkinson-writing-as-yogi-ramacharaka-esta-guia-acompana-uno-de-los-textos-mas-meditativos-del-ciclo-yogi-ramacharaka-el-espiritu-de-los-upanishads-no-es-una-serie-de-dogmas-sino-una-invitacion-a-la-autoinvestigacion-y-al-contacto-directo-con-el-sentido-profundo-del-ser-segun">
+          <a class="cover-link" href="atkinson-499.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/499.jpg" alt="El espíritu de los Upanishads"></div>
+          </a>
+          <div class="book-meta">499 · Vol. 10</div>
+          <h3>El espíritu de los Upanishads</h3>
+          <p>Esta guía acompaña uno de los textos más meditativos del ciclo Yogi Ramacharaka. &#x27;El espíritu de los Upanishads&#x27; no es una serie de dogmas, sino una invitación a la autoinvestigación y al contacto directo con el sentido profundo del Ser según.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-499.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="el-bhagavad-gita-william-walker-atkinson-writing-as-yogi-ramacharaka-esta-guia-acompana-la-version-y-comentarios-de-atkinson-bajo-el-nombre-de-yogi-ramacharaka-sobre-uno-de-los-textos-mas-reverenciados-de-la-tradicion-hindu">
+          <a class="cover-link" href="atkinson-500.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/500.jpg" alt="El Bhagavad Gita"></div>
+          </a>
+          <div class="book-meta">500 · Vol. 10</div>
+          <h3>El Bhagavad Gita</h3>
+          <p>Esta guía acompaña la versión y comentarios de Atkinson (bajo el nombre de Yogi Ramacharaka) sobre uno de los textos más reverenciados de la tradición hindú.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-500.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="section" id="theron">
+      <h2>Theron Q. Dumont</h2>
+      <p class="section-desc">Selección de obras centradas en magnetismo personal, reunidas para leer a Atkinson y sus seudónimos como una biblioteca coherente.</p>
+
+      <div class="grid">
+        <article class="book-card" data-search="arte-y-ciencia-del-magnetismo-personal-william-walker-atkinson-writing-as-theron-q-dumont-esta-guia-acompana-una-de-las-obras-mas-buscadas-de-atkinson-bajo-el-pseudonimo-de-theron-q-dumont">
+          <a class="cover-link" href="atkinson-471.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/471.jpg" alt="Arte y ciencia del magnetismo personal"></div>
+          </a>
+          <div class="book-meta">471 · Vol. 11</div>
+          <h3>Arte y ciencia del magnetismo personal</h3>
+          <p>Esta guía acompaña una de las obras más buscadas de Atkinson bajo el pseudónimo de Theron Q. Dumont.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-471.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="curso-avanzado-de-magnetismo-personal-william-walker-atkinson-writing-as-theron-q-dumont-este-libro-es-el-corazon-practico-del-sistema-de-magnetismo-personal-de-atkinson-bajo-el-seudonimo-theron-q">
+          <a class="cover-link" href="atkinson-472.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/472.jpg" alt="Curso avanzado de magnetismo personal"></div>
+          </a>
+          <div class="book-meta">472 · Vol. 11</div>
+          <h3>Curso avanzado de magnetismo personal</h3>
+          <p>Este libro es el corazón práctico del sistema de magnetismo personal de Atkinson. Bajo el seudónimo Theron Q.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-472.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="la-mente-maestra-william-walker-atkinson-writing-as-theron-q-dumont-este-libro-bajo-el-sello-de-theron-q-dumont-invita-a-abandonar-la-especulacion-metafisica-para-adentrarse-en-el-terreno-de-la-psicologia-viva-y-aplicada">
+          <a class="cover-link" href="atkinson-473.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/473.jpg" alt="La mente maestra"></div>
+          </a>
+          <div class="book-meta">473 · Vol. 11</div>
+          <h3>La mente maestra</h3>
+          <p>Este libro, bajo el sello de Theron Q. Dumont, invita a abandonar la especulación metafísica para adentrarse en el terreno de la psicología viva y aplicada.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-473.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="el-plexo-solar-o-cerebro-abdominal-william-walker-atkinson-writing-as-theron-q-dumont-este-libro-bajo-el-seudonimo-theron-q-dumont-descompone-la-fisiologia-y-el-misterio-practico-del-plexo-solar-lo-llama-el-centro-de-la-vida-vegetativa-el-cerebro-abdominal-y-la-casa-de-la-energia-vital">
+          <a class="cover-link" href="atkinson-474.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/474.jpg" alt="El plexo solar o cerebro abdominal"></div>
+          </a>
+          <div class="book-meta">474 · Vol. 11</div>
+          <h3>El plexo solar o cerebro abdominal</h3>
+          <p>Este libro, bajo el seudónimo Theron Q. Dumont, descompone la fisiología y el misterio práctico del plexo solar: lo llama el centro de la vida vegetativa, el &#x27;cerebro abdominal&#x27; y la casa de la energía vital.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-474.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="terapeutica-mental-como-curarse-a-uno-mismo-y-a-los-demas-william-walker-atkinson-writing-as-theron-q-dumont-esta-guia-acompana-una-de-las-exposiciones-mas-claras-y-practicas-de-atkinson-sobre-el-poder-mental-aplicado-a-la-salud">
+          <a class="cover-link" href="atkinson-475.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/475.jpg" alt="Terapéutica mental: cómo curarse a uno mismo y a los demás"></div>
+          </a>
+          <div class="book-meta">475 · Vol. 12</div>
+          <h3>Terapéutica mental: cómo curarse a uno mismo y a los demás</h3>
+          <p>Esta guía acompaña una de las exposiciones más claras y prácticas de Atkinson sobre el poder mental aplicado a la salud.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-475.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="el-poder-de-la-concentracion-william-walker-atkinson-writing-as-theron-q-dumont-esta-guia-acompana-un-libro-fundamental-para-quienes-desean-desarrollar-la-autodisciplina-enfocada-y-la-fuerza-de-voluntad-atkinson-bajo-el-seudonimo-de-theron-q">
+          <a class="cover-link" href="atkinson-476.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/476.jpg" alt="El poder de la concentración"></div>
+          </a>
+          <div class="book-meta">476 · Vol. 12</div>
+          <h3>El poder de la concentración</h3>
+          <p>Esta guía acompaña un libro fundamental para quienes desean desarrollar la autodisciplina enfocada y la fuerza de voluntad. Atkinson, bajo el seudónimo de Theron Q.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-476.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="entrenamiento-practico-de-la-memoria-william-walker-atkinson-writing-as-theron-q-dumont-esta-guia-te-acompana-en-la-lectura-de-uno-de-los-tratados-mas-lucidos-sobre-la-memoria-en-la-tradicion-del-nuevo-pensamiento-atkinson-bajo-el-nombre-de-theron-q">
+          <a class="cover-link" href="atkinson-477.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/477.jpg" alt="Entrenamiento práctico de la memoria"></div>
+          </a>
+          <div class="book-meta">477 · Vol. 12</div>
+          <h3>Entrenamiento práctico de la memoria</h3>
+          <p>Esta guía te acompaña en la lectura de uno de los tratados más lúcidos sobre la memoria en la tradición del Nuevo Pensamiento. Atkinson, bajo el nombre de Theron Q.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-477.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="section" id="occult">
+      <h2>Three Iniciados / Magus Incognito</h2>
+      <p class="section-desc">Selección de obras centradas en kybalion, rosacruces y arcanos, reunidas para leer a Atkinson y sus seudónimos como una biblioteca coherente.</p>
+
+      <div class="grid">
+        <article class="book-card" data-search="la-doctrina-secreta-de-los-rosacruces-william-walker-atkinson-three-initiates-este-libro-atribuido-a-william-walker-atkinson-bajo-el-nombre-de-magus-incognito-presenta-la-ensenanza-esencial-del-rosacrucismo-una-tradicion-que-se-mueve-entre-el-hermetismo-el-misticismo-y-la-alquimia-interior">
+          <a class="cover-link" href="atkinson-480.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/480.jpg" alt="La doctrina secreta de los rosacruces"></div>
+          </a>
+          <div class="book-meta">480 · Vol. 13</div>
+          <h3>La doctrina secreta de los rosacruces</h3>
+          <p>Este libro, atribuido a William Walker Atkinson bajo el nombre de &#x27;Magus Incógnito&#x27;, presenta la enseñanza esencial del rosacrucismo: una tradición que se mueve entre el hermetismo, el misticismo y la alquimia interior.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-480.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="la-ensenanza-arcana-william-walker-atkinson-three-initiates-este-libro-bajo-la-pluma-de-atkinson-y-atribuido-a-los-tres-iniciados-no-ofrece-una-filosofia-concluyente-sino-una-invitacion-a-examinar-los-fundamentos-de-la-tradicion-arcana">
+          <a class="cover-link" href="atkinson-481.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/481.jpg" alt="La enseñanza arcana"></div>
+          </a>
+          <div class="book-meta">481 · Vol. 13</div>
+          <h3>La enseñanza arcana</h3>
+          <p>Este libro, bajo la pluma de Atkinson y atribuido a los &#x27;Tres Iniciados&#x27;, no ofrece una filosofía concluyente sino una invitación a examinar los fundamentos de la tradición arcana.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-481.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="las-formulas-arcanas-william-walker-atkinson-three-initiates-las-formulas-arcanas-atribuidas-a-william-walker-atkinson-bajo-el-seudonimo-de-los-tres-iniciados-son-mucho-mas-que-una-coleccion-de-principios-ocultos-o-juegos-mentales">
+          <a class="cover-link" href="atkinson-482.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/482.jpg" alt="Las fórmulas arcanas"></div>
+          </a>
+          <div class="book-meta">482 · Vol. 13</div>
+          <h3>Las fórmulas arcanas</h3>
+          <p>Las fórmulas arcanas, atribuidas a William Walker Atkinson bajo el seudónimo de los Tres Iniciados, son mucho más que una colección de principios ocultos o juegos mentales.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-482.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="vril-magnetismo-vital-william-walker-atkinson-three-initiates-vril-magnetismo-vital-es-una-invitacion-a-observar-la-energia-vital-que-subyace-en-todos-los-procesos-de-la-vida-segun-las-ensenanzas-esotericas-recogidas-por-atkinson">
+          <a class="cover-link" href="atkinson-483.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/483.jpg" alt="Vril: magnetismo vital"></div>
+          </a>
+          <div class="book-meta">483 · Vol. 13</div>
+          <h3>Vril: magnetismo vital</h3>
+          <p>&#x27;Vril: magnetismo vital&#x27; es una invitación a observar la energía vital que subyace en todos los procesos de la vida, según las enseñanzas esotéricas recogidas por Atkinson.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-483.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="el-misterio-del-sexo-william-walker-atkinson-three-initiates-este-libro-atribuido-a-atkinson-y-los-tres-iniciados-invita-a-descubrir-el-principio-de-sexo-o-polaridad-como-una-ley-universal-mas-alla-de-la-biologia-y-la-moral-habitual">
+          <a class="cover-link" href="atkinson-484.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/484.jpg" alt="El misterio del sexo"></div>
+          </a>
+          <div class="book-meta">484 · Vol. 13</div>
+          <h3>El misterio del sexo</h3>
+          <p>Este libro, atribuido a Atkinson y los Tres Iniciados, invita a descubrir el principio de sexo o polaridad como una ley universal, más allá de la biología y la moral habitual.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-484.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="el-kybalion-william-walker-atkinson-three-initiates-el-kybalion-ocupa-un-lugar-singular-dentro-de-la-literatura-esoterica-mas-que-prometer-poderes-ocultos-su-invitacion-es-al-estudio-reflexivo-y-al-entrenamiento-constante">
+          <a class="cover-link" href="atkinson-485.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/485.jpg" alt="El Kybalion"></div>
+          </a>
+          <div class="book-meta">485 · Vol. 13</div>
+          <h3>El Kybalion</h3>
+          <p>El Kybalion ocupa un lugar singular dentro de la literatura esotérica: más que prometer poderes ocultos, su invitación es al estudio reflexivo y al entrenamiento constante.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-485.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="section" id="beals">
+      <h2>Edward Beals</h2>
+      <p class="section-desc">Selección de obras centradas en poder personal y creativo, reunidas para leer a Atkinson y sus seudónimos como una biblioteca coherente.</p>
+
+      <div class="grid">
+        <article class="book-card" data-search="poder-personal-tu-yo-maestro-william-walker-atkinson-writing-as-edward-beals-este-libro-invita-a-mirar-hacia-el-centro-de-uno-mismo-ahi-donde-atkinson-bajo-el-nombre-de-edward-beals-sostiene-que-habita-tu-yo-maestro">
+          <a class="cover-link" href="atkinson-501.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/501.jpg" alt="Poder personal: tu yo maestro"></div>
+          </a>
+          <div class="book-meta">501 · Vol. 14</div>
+          <h3>Poder personal: tu yo maestro</h3>
+          <p>Este libro invita a mirar hacia el centro de uno mismo: ahí donde Atkinson, bajo el nombre de Edward Beals, sostiene que habita tu Yo Maestro.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-501.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="poder-creativo-tus-fuerzas-constructivas-william-walker-atkinson-writing-as-edward-beals-esta-guia-acompana-una-obra-central-de-atkinson-sobre-el-poder-de-la-imaginacion-como-fuerza-constructiva">
+          <a class="cover-link" href="atkinson-502.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/502.jpg" alt="Poder creativo: tus fuerzas constructivas"></div>
+          </a>
+          <div class="book-meta">502 · Vol. 14</div>
+          <h3>Poder creativo: tus fuerzas constructivas</h3>
+          <p>Esta guía acompaña una obra central de Atkinson sobre el poder de la imaginación como fuerza constructiva.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-502.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="poder-del-deseo-tus-fuerzas-energizantes-william-walker-atkinson-writing-as-edward-beals-esta-guia-acompana-un-texto-esencial-del-ciclo-del-poder-personal-donde-atkinson-presenta-el-deseo-como-el-motor-central-de-la-energia-humana">
+          <a class="cover-link" href="atkinson-503.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/503.jpg" alt="Poder del deseo: tus fuerzas energizantes"></div>
+          </a>
+          <div class="book-meta">503 · Vol. 14</div>
+          <h3>Poder del deseo: tus fuerzas energizantes</h3>
+          <p>Esta guía acompaña un texto esencial del ciclo del &#x27;Poder Personal&#x27;, donde Atkinson presenta el deseo como el motor central de la energía humana.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-503.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="poder-de-la-fe-tus-fuerzas-inspiradoras-william-walker-atkinson-writing-as-edward-beals-esta-guia-te-acompana-en-una-exploracion-practica-del-poder-de-la-fe-entendido-por-atkinson-no-como-algo-mistico-ni-dogmatico-sino-como-una-fuerza-activa-de-la-conciencia-la-expectativa-confiada">
+          <a class="cover-link" href="atkinson-504.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/504.jpg" alt="Poder de la fe: tus fuerzas inspiradoras"></div>
+          </a>
+          <div class="book-meta">504 · Vol. 14</div>
+          <h3>Poder de la fe: tus fuerzas inspiradoras</h3>
+          <p>Esta guía te acompaña en una exploración práctica del &#x27;Poder de la fe&#x27;, entendido por Atkinson no como algo místico ni dogmático, sino como una fuerza activa de la conciencia: la expectativa confiada.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-504.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="poder-de-la-voluntad-william-walker-atkinson-writing-as-edward-beals-el-poder-de-la-voluntad-de-atkinson-bajo-el-seudonimo-de-edward-beals-es-una-exploracion-seria-y-directa-de-esa-fuerza-central-que-atraviesa-todas-las-grandes-transformaciones-personales-la-voluntad">
+          <a class="cover-link" href="atkinson-505.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/505.jpg" alt="Poder de la voluntad"></div>
+          </a>
+          <div class="book-meta">505 · Vol. 14</div>
+          <h3>Poder de la voluntad</h3>
+          <p>El &#x27;Poder de la voluntad&#x27; de Atkinson (bajo el seudónimo de Edward Beals) es una exploración seria y directa de esa fuerza central que atraviesa todas las grandes transformaciones personales: la voluntad.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-505.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="poder-subconsciente-william-walker-atkinson-writing-as-edward-beals-este-libro-escrito-por-william-walker-atkinson-bajo-el-seudonimo-de-edward-beals-invita-al-lector-a-reconocer-que-la-mayor-parte-de-su-vida-mental-transcurre-fuera-de-la-conciencia-ordinaria">
+          <a class="cover-link" href="atkinson-506.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/506.jpg" alt="Poder subconsciente"></div>
+          </a>
+          <div class="book-meta">506 · Vol. 14</div>
+          <h3>Poder subconsciente</h3>
+          <p>Este libro —escrito por William Walker Atkinson bajo el seudónimo de Edward Beals— invita al lector a reconocer que la mayor parte de su vida mental transcurre fuera de la conciencia ordinaria.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-506.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="poder-espiritual-la-fuente-infinita-william-walker-atkinson-writing-as-edward-beals-esta-guia-esta-disenada-para-acompanar-la-lectura-de-poder-espiritual-la-fuente-infinita-donde-atkinson-bajo-el-seudonimo-de-edward-beals-invita-a-indagar-mas-alla-de-la-superficie-de-la-naturaleza-hasta-la-raiz-invisible-del-poder">
+          <a class="cover-link" href="atkinson-507.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/507.jpg" alt="Poder espiritual: la fuente infinita"></div>
+          </a>
+          <div class="book-meta">507 · Vol. 15</div>
+          <h3>Poder espiritual: la fuente infinita</h3>
+          <p>Esta guía está diseñada para acompañar la lectura de &#x27;Poder espiritual: la fuente infinita&#x27;, donde Atkinson—bajo el seudónimo de Edward Beals—invita a indagar más allá de la superficie de la naturaleza hasta la raíz invisible del poder.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-507.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="poder-del-pensamiento-radio-mentalismo-william-walker-atkinson-writing-as-edward-beals-esta-guia-te-acompana-a-traves-del-planteamiento-claro-y-directo-de-atkinson-sobre-el-poder-radiante-del-pensamiento">
+          <a class="cover-link" href="atkinson-508.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/508.jpg" alt="Poder del pensamiento: radio-mentalismo"></div>
+          </a>
+          <div class="book-meta">508 · Vol. 15</div>
+          <h3>Poder del pensamiento: radio-mentalismo</h3>
+          <p>Esta guía te acompaña a través del planteamiento claro y directo de Atkinson sobre el poder radiante del pensamiento.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-508.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="poder-perceptivo-el-arte-de-la-observacion-william-walker-atkinson-writing-as-edward-beals-este-libro-invita-a-observar-la-mente-no-como-un-reflejo-pasivo-sino-como-un-arquitecto-que-construye-limita-y-expande-tu-propio-mundo-de-experiencia">
+          <a class="cover-link" href="atkinson-509.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/509.jpg" alt="Poder perceptivo: el arte de la observación"></div>
+          </a>
+          <div class="book-meta">509 · Vol. 15</div>
+          <h3>Poder perceptivo: el arte de la observación</h3>
+          <p>Este libro invita a observar la mente no como un reflejo pasivo, sino como un arquitecto que construye, limita y expande tu propio mundo de experiencia.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-509.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="poder-razonador-logica-practica-william-walker-atkinson-writing-as-edward-beals-este-libro-presentado-por-atkinson-bajo-el-nombre-de-edward-beals-muestra-la-logica-no-como-una-materia-arida-o-puramente-academica-sino-como-la-clave-para-pensar-mejor-y-actuar-con-mas-certeza">
+          <a class="cover-link" href="atkinson-510.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/510.jpg" alt="Poder razonador: lógica práctica"></div>
+          </a>
+          <div class="book-meta">510 · Vol. 15</div>
+          <h3>Poder razonador: lógica práctica</h3>
+          <p>Este libro, presentado por Atkinson bajo el nombre de Edward Beals, muestra la lógica no como una materia árida o puramente académica, sino como la clave para pensar mejor y actuar con más certeza.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-510.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="poder-del-caracter-william-walker-atkinson-writing-as-edward-beals-esta-guia-acompana-poder-del-caracter-un-libro-fundamental-dentro-de-la-serie-personal-power-de-atkinson-bajo-el-seudonimo-edward-beals">
+          <a class="cover-link" href="atkinson-511.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/511.jpg" alt="Poder del carácter"></div>
+          </a>
+          <div class="book-meta">511 · Vol. 15</div>
+          <h3>Poder del carácter</h3>
+          <p>Esta guía acompaña &#x27;Poder del carácter&#x27;, un libro fundamental dentro de la serie &#x27;Personal Power&#x27; de Atkinson bajo el seudónimo Edward Beals.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-511.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+        <article class="book-card" data-search="poder-regenerador-william-walker-atkinson-writing-as-edward-beals-esta-guia-acompana-uno-de-los-textos-mas-peculiares-de-atkinson-quien-aqui-bajo-el-seudonimo-de-edward-beals-explora-la-potencia-regeneradora-de-la-energia-vital">
+          <a class="cover-link" href="atkinson-512.html">
+            <div class="cover"><img loading="lazy" src="traducciones/atkinson/books/es/512.jpg" alt="Poder regenerador"></div>
+          </a>
+          <div class="book-meta">512 · Vol. 15</div>
+          <h3>Poder regenerador</h3>
+          <p>Esta guía acompaña uno de los textos más peculiares de Atkinson, quien aquí, bajo el seudónimo de Edward Beals, explora la potencia regeneradora de la energía vital.</p>
+          <div class="actions">
+            <a class="btn primary" href="atkinson-512.html">Descripción, guías y más</a>
+
+          </div>
+        </article>
+      </div>
+    </section></main>
+
+  <script>
+    const input = document.querySelector('[data-atkinson-search]');
+    const cards = [...document.querySelectorAll('[data-search]')];
+    const normalizeSearch = (value) => value
+      .trim()
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+    input?.addEventListener('input', () => {
+      const q = normalizeSearch(input.value);
+      cards.forEach(card => { card.style.display = !q || card.dataset.search.includes(q) ? '' : 'none'; });
+    });
+  </script>
+
+  <footer>© Timeless Wisdom Books · <a href="biblioteca-es.html">Biblioteca en español</a></footer>
+</body>
+</html>

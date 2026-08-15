@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keraban el Testarudo — Biblioteca de Julio Verne</title>
+  <meta name="description" content="Keraban el Testarudo, No. 24 de los Viajes Extraordinarios.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root { --color-bg: #ffffff; --color-text: #1a1a1a; --color-muted: #6b6b6b; --color-accent: #C9A84C; --color-border: #e8e4dc; --font: 'Cormorant Garamond', Georgia, serif; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--color-bg); color: var(--color-text); font-family: var(--font); line-height: 1.6; }
+    header { padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--color-border); }
+    .site-title { font-size: 18px; font-weight: 300; letter-spacing: 0.12em; text-decoration: none; color: var(--color-text); }
+    .site-title:hover { color: var(--color-accent); }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; padding: 20px 40px; font-size: 13px; letter-spacing: 0.08em; color: var(--color-muted); text-decoration: none; }
+    .back-link:hover { color: var(--color-accent); }
+    .back-link::before { content: '←'; }
+    .book-hero { display: grid; grid-template-columns: 260px 1fr; gap: 48px; max-width: 1000px; margin: 0 auto; padding: 0 40px 60px; }
+    .hero-cover { position: sticky; top: 32px; }
+    .hero-cover img { width: 100%; display: block; box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+    .hero-meta { padding-top: 8px; }
+    .series-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 10px; }
+    .book-title { font-size: clamp(32px, 4vw, 52px); font-weight: 300; letter-spacing: 0.08em; line-height: 1.1; margin-bottom: 20px; }
+    .presentation { font-size: clamp(16px, 1.8vw, 19px); font-weight: 300; line-height: 1.85; color: var(--color-text); max-width: 620px; }
+    .presentation p { margin-bottom: 1.2em; }
+    hr.divider { border: none; border-top: 1px solid var(--color-border); margin: 0; }
+    .panel { max-width: 1000px; margin: 0 auto; padding: 60px 40px; }
+    .panel + .panel { border-top: 1px solid var(--color-border); }
+    .panel-title { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 32px; }
+    .chars-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 1000px; }
+    .char-card { display: flex; gap: 20px; align-items: flex-start; padding: 20px; border: 1px solid var(--color-border); border-radius: 0; background: var(--color-bg); }
+    .char-card img { width: 100px; height: 130px; object-fit: cover; flex-shrink: 0; border: 1px solid var(--color-border); }
+    .char-info { flex: 1; min-width: 0; }
+    .char-name { font-size: 18px; font-weight: 500; letter-spacing: 0.04em; margin-bottom: 6px; color: var(--color-text); }
+    .char-role { font-size: 12px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 8px; }
+    .char-desc { font-size: 15px; font-weight: 300; line-height: 1.6; color: var(--color-text); }
+    .buy-section { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+    .btn-buy { display: inline-block; font-family: var(--font); font-size: 13px; letter-spacing: 0.06em; color: var(--color-text); text-decoration: none; border: 1px solid var(--color-accent); padding: 8px 18px; text-align: center; transition: background 180ms ease, color 180ms ease; }
+    .btn-buy:hover { background: var(--color-accent); color: #fff; }
+    .placeholder-note { font-size: 17px; font-style: italic; color: var(--color-muted); font-weight: 300; max-width: 660px; line-height: 1.7; }
+    footer { text-align: center; padding: 32px 40px; border-top: 1px solid var(--color-border); font-size: 14px; color: var(--color-muted); font-style: italic; }
+    footer a { color: var(--color-muted); text-decoration: none; }
+    footer a:hover { color: var(--color-accent); }
+    @media (max-width: 720px) {
+      header { padding: 20px 24px; flex-direction: column; gap: 16px; text-align: center; }
+      .back-link { padding: 16px 24px; }
+      .book-hero { grid-template-columns: 1fr; gap: 28px; padding: 0 24px 48px; }
+      .hero-cover { position: static; max-width: 200px; }
+      .panel { padding: 40px 24px; }
+      .chars-grid { grid-template-columns: 1fr; }
+      .char-card { flex-direction: column; align-items: center; text-align: center; }
+      .char-card img { width: 80px; height: 105px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="site-title" href="index.html">Timeless Wisdom Books</a>
+  </header>
+
+  <a class="back-link" href="biblioteca-verne.html">Biblioteca de Julio Verne</a>
+
+  <div class="book-hero">
+    <div class="hero-cover">
+      <img src="traducciones/verne/24.jpg" alt="Portada de Keraban el Testarudo">
+    </div>
+    <div class="hero-meta">
+      <p class="series-tag">Viajes Extraordinarios · No. 24</p>
+      <h1 class="book-title">Keraban el Testarudo</h1>
+      <div class="presentation">
+        <p>Publicada en 1883, <em>Keraban el Testarudo</em> es una de las novelas más cómicas de Julio Verne. Verdadera farsa trepidante, es la historia de un hombre cuya legendaria obstinación lo lleva a realizar un periplo absurdo y magnífico.</p>
+        <p>Keraban, un rico comerciante de Constantinopla, recibe la visita de su amigo holandés Van Mitten. Mientras pasean por el Bósforo, la administración otomana anuncia un nuevo peaje en el puente. Keraban se indigna: «¡Nunca pagaré!» En lugar de cruzar el puente, decide rodear todo el mar Negro — un desvío de varios miles de kilómetros — para llegar a su villa situada al otro lado del estrecho.</p>
+        <p>Acompañado de su fiel sirviente Nizib y del desdichado Van Mitten, Keraban atraviesa Turquía, Bulgaria, Rumanía, Rusia y el Cáucaso a bordo de una tarantás traqueteante. Cada etapa es un nuevo pretexto para que Keraban demuestre que nunca cede, incluso cuando ceder sería más razonable.</p>
+        <p>Esta novela es una celebración de la obstinación y del carácter. Detrás de las risas, Verne retrata a un hombre cuya tenacidad fuerza la admiración. Keraban nos recuerda que la fidelidad a uno mismo, incluso llevada al extremo, puede transformar un simple capricho en una gran aventura.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- PRIMERAS PÁGINAS -->
+  <div class="panel" id="leer">
+    <p class="panel-title">Primeras Páginas</p>
+    <div class="placeholder-note">
+      <p>Las primeras páginas de esta edición estarán disponibles próximamente.</p>
+    </div>
+  </div>
+
+  <footer>
+    <a href="biblioteca-verne.html">← Biblioteca de Julio Verne</a>
+  </footer>
+
+</body>
+</html>
