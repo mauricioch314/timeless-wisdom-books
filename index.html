@@ -175,6 +175,7 @@
       align-items: baseline;
       gap: 0;
     }
+    .nav-row.is-hidden { display: none; }
 
     .nav-sep {
       font-family: var(--font-display);
@@ -267,14 +268,14 @@
 
   <!-- Navigation revealed after language selection -->
   <nav class="lang-nav" id="main-nav" aria-label="Site navigation" aria-hidden="true">
-    <div class="nav-row">
+    <div class="nav-row" id="nav-row-primary">
       <a href="/spirituality" id="nav-spirituality">Spirituality</a>
       <span class="nav-sep" aria-hidden="true">—</span>
       <a href="/newthought"   id="nav-newthought">New Thought</a>
       <span class="nav-sep" aria-hidden="true">—</span>
       <a href="/philosophy"   id="nav-philosophy">Philosophy</a>
     </div>
-    <div class="nav-row">
+    <div class="nav-row" id="nav-row-secondary">
       <a href="/novels"     id="nav-novels">Novels</a>
       <span class="nav-sep" aria-hidden="true">—</span>
       <a href="/psychology" id="nav-psychology">Psychology</a>
@@ -302,12 +303,13 @@
         tagline: 'Sagesse ancienne · Collection intemporelle',
       },
       es: {
-        spirituality: 'Espiritualidad', newthought: 'Nuevo Pensamiento', philosophy: 'Filosofía',
-        novels:       'Novelas',        psychology: 'Psicología',        economy:    'Economía',
-        spiritualityHref: '/espiritualidad', newthoughtHref: '/biblioteca-atkinson.html', philosophyHref: '/filosofia',
-        novelsHref:       '/biblioteca-verne.html', psychologyHref: '/psicologia', economyHref: '/economia',
+        spirituality: 'Biblioteca en español', newthought: 'W. W. Atkinson', philosophy: 'Julio Verne',
+        novels:       'Novelas',               psychology: 'Psicología',      economy:    'Economía',
+        spiritualityHref: '/biblioteca-es.html', newthoughtHref: '/biblioteca-atkinson.html', philosophyHref: '/biblioteca-verne.html',
+        novelsHref:       '/biblioteca-verne.html', psychologyHref: '/biblioteca-atkinson.html', economyHref: '/biblioteca-es.html',
         htmlLang: 'es',
         tagline: 'Sabiduría antigua · Colección intemporal',
+        compact: true,
       },
     };
 
@@ -319,6 +321,7 @@
     const navNovels       = document.getElementById('nav-novels');
     const navPsychology   = document.getElementById('nav-psychology');
     const navEconomy      = document.getElementById('nav-economy');
+    const navSecondary    = document.getElementById('nav-row-secondary');
     const flags           = document.querySelectorAll('.flag');
     const taglineEl       = document.getElementById('brand-tagline');
 
@@ -341,6 +344,7 @@
       navNovels.textContent       = c.novels;        navNovels.href       = c.novelsHref;
       navPsychology.textContent   = c.psychology;    navPsychology.href   = c.psychologyHref;
       navEconomy.textContent      = c.economy;       navEconomy.href      = c.economyHref;
+      navSecondary.classList.toggle('is-hidden', Boolean(c.compact));
       document.documentElement.lang = c.htmlLang;
 
       spiral.classList.add('hidden');
@@ -354,6 +358,7 @@
       flags.forEach(f => { f.classList.remove('active'); f.setAttribute('aria-pressed', 'false'); });
       spiral.classList.remove('hidden');
       nav.classList.remove('visible');
+      navSecondary.classList.remove('is-hidden');
       nav.setAttribute('aria-hidden', 'true');
     }
 
