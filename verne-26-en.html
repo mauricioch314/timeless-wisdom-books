@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Archipelago on Fire — The World of Jules Verne</title>
+  <meta name="description" content="The Archipelago on Fire, No. 26 of the Voyages Extraordinaires.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root { --color-bg: #ffffff; --color-text: #1a1a1a; --color-muted: #6b6b6b; --color-accent: #C9A84C; --color-border: #e8e4dc; --font: 'Cormorant Garamond', Georgia, serif; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--color-bg); color: var(--color-text); font-family: var(--font); line-height: 1.6; }
+    header { padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--color-border); }
+    .site-title { font-size: 18px; font-weight: 300; letter-spacing: 0.12em; text-decoration: none; color: var(--color-text); }
+    .site-title:hover { color: var(--color-accent); }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; padding: 20px 40px; font-size: 13px; letter-spacing: 0.08em; color: var(--color-muted); text-decoration: none; }
+    .back-link:hover { color: var(--color-accent); }
+    .back-link::before { content: '←'; }
+    .book-hero { display: grid; grid-template-columns: 260px 1fr; gap: 48px; max-width: 1000px; margin: 0 auto; padding: 0 40px 60px; }
+    .hero-cover { position: sticky; top: 32px; }
+    .hero-cover img { width: 100%; display: block; box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+    .hero-meta { padding-top: 8px; }
+    .series-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 10px; }
+    .book-title { font-size: clamp(32px, 4vw, 52px); font-weight: 300; letter-spacing: 0.08em; line-height: 1.1; margin-bottom: 20px; }
+    .presentation { font-size: clamp(16px, 1.8vw, 19px); font-weight: 300; line-height: 1.85; color: var(--color-text); max-width: 620px; }
+    .presentation p { margin-bottom: 1.2em; }
+    hr.divider { border: none; border-top: 1px solid var(--color-border); margin: 0; }
+    .panel { max-width: 1000px; margin: 0 auto; padding: 60px 40px; }
+    .panel + .panel { border-top: 1px solid var(--color-border); }
+    .panel-title { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 32px; }
+    .reader { max-width: 660px; }
+    .reader-chapter { font-size: 22px; font-weight: 300; letter-spacing: 0.1em; color: var(--color-text); margin-bottom: 24px; }
+    .reader p { font-size: clamp(16px, 1.7vw, 18px); font-weight: 300; line-height: 1.85; color: var(--color-text); margin-bottom: 1.1em; }
+    footer { text-align: center; padding: 32px 40px; border-top: 1px solid var(--color-border); font-size: 14px; color: var(--color-muted); font-style: italic; }
+    footer a { color: var(--color-muted); text-decoration: none; }
+    footer a:hover { color: var(--color-accent); }
+    /* Character Cards */
+    .chars-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      max-width: 1000px;
+    }
+    .char-card {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 20px;
+      border: 1px solid var(--color-border);
+      border-radius: 0;
+      background: var(--color-bg);
+    }
+    .char-card .char-placeholder {
+      width: 100px;
+      height: 130px;
+      flex-shrink: 0;
+      border: 1px dashed var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: var(--color-muted);
+      background: #fafaf8;
+    }
+    .char-card img {
+      width: 100px;
+      height: 130px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1px solid var(--color-border);
+    }
+    .char-info { flex: 1; min-width: 0; }
+    .char-name {
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+      color: var(--color-text);
+    }
+    .char-role {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 8px;
+    }
+    .char-desc {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--color-text);
+    }
+    @media (max-width: 720px) {
+      .chars-grid { grid-template-columns: 1fr; }
+      .char-card { flex-direction: column; align-items: center; text-align: center; }
+      .char-card img, .char-card .char-placeholder { width: 80px; height: 105px; }
+    }
+
+    @media (max-width: 720px) {
+      header { padding: 20px 24px; flex-direction: column; gap: 16px; text-align: center; }
+      .back-link { padding: 16px 24px; }
+      .book-hero { grid-template-columns: 1fr; gap: 28px; padding: 0 24px 48px; }
+      .hero-cover { position: static; max-width: 200px; }
+      .panel { padding: 40px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="site-title" href="index.html">Timeless Wisdom Books</a>
+  </header>
+
+  <a class="back-link" href="/biblioteca-verne-ingles">The World of Jules Verne</a>
+
+  <div class="book-hero">
+    <div class="hero-cover">
+      <img src="traducciones/verne/en/26.jpg" alt="Cover of The Archipelago on Fire">
+    </div>
+    <div class="hero-meta">
+      <p class="series-tag">Voyages Extraordinaires · No. 26</p>
+      <h1 class="book-title">The Archipelago on Fire</h1>
+      <div class="presentation">
+        <p>Published in 1884, <em>The Archipelago on Fire</em> plunges the reader into the turbulent waters of the Greek War of Independence. A tale of passion, betrayal, and redemption set among the islands of the Aegean, it is one of Verne's most atmospheric historical novels.</p>
+        <p>The story follows Henry d'Albaret, a young French officer traveling aboard the merchant ship <em>Sylphe</em> through the Greek archipelago. The year is 1827, and the Greek struggle for independence from Ottoman rule is reaching its climax. The ship's captain, Stradena, is a man haunted by his past, and his mysterious passenger, a woman known only as Hadjine, carries secrets that threaten to engulf everyone on board.</p>
+        <p>As the <em>Sylphe</em> navigates through waters patrolled by the Ottoman fleet and Greek privateers, the crew becomes entangled in a web of conspiracies, divided loyalties, and a love story marked by tragedy. The Greeks, led by patriots like Nicolas Skopas, fight desperately for their freedom, while the enigmatic Hadjine — a woman shaped by loss and vengeance — must decide whether her past will define her future.</p>
+        <p>Verne captures the fiery spirit of a people fighting for their homeland, painting the Aegean islands as both a paradise and a battlefield. Betrayals, naval encounters, and hidden identities drive the plot forward, while the burning ships on the horizon give the novel its haunting title. <em>The Archipelago on Fire</em> is a masterful blend of history and adventure, where the flames of war illuminate the human soul.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- CHARACTERS -->
+  <div class="panel" id="characters">
+    <p class="panel-title">Characters</p>
+    <div class="chars-grid">
+      <div class="char-card">
+        <div class="char-placeholder">?</div>
+        <div class="char-info">
+          <p class="char-name">Henry d'Albaret</p>
+          <p class="char-role">French Officer</p>
+          <p class="char-desc">A young French officer whose journey through the Aegean draws him into a world of war and mystery.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <div class="char-placeholder">?</div>
+        <div class="char-info">
+          <p class="char-name">Hadjine</p>
+          <p class="char-role">Mysterious Woman</p>
+          <p class="char-desc">A woman carrying a secret past, whose choices amid the war will determine her fate.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <div class="char-placeholder">?</div>
+        <div class="char-info">
+          <p class="char-name">Captain Stradena</p>
+          <p class="char-role">Ship's Commander</p>
+          <p class="char-desc">The haunted captain of the Sylphe, whose past binds him to the conflict around him.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <div class="char-placeholder">?</div>
+        <div class="char-info">
+          <p class="char-name">Nicolas Skopas</p>
+          <p class="char-role">Greek Patriot</p>
+          <p class="char-desc">A passionate fighter for Greek independence, willing to risk everything for his cause.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="panel" id="read">
+    <p class="panel-title">First Pages</p>
+    <div class="reader">
+      <h2 class="reader-chapter">CHAPTER I</h2>
+      <p>Coming soon — the first pages of the translation will be added shortly.</p>
+    </div>
+  </div>
+
+  <footer>
+    <a href="/biblioteca-verne-ingles">← The World of Jules Verne</a>
+  </footer>
+
+</body>
+</html>

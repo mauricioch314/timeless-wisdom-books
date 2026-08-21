@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Children of Captain Grant — The World of Jules Verne</title>
+  <meta name="description" content="The Children of Captain Grant, No. 5 of the Voyages Extraordinaires.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root { --color-bg: #ffffff; --color-text: #1a1a1a; --color-muted: #6b6b6b; --color-accent: #C9A84C; --color-border: #e8e4dc; --font: 'Cormorant Garamond', Georgia, serif; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--color-bg); color: var(--color-text); font-family: var(--font); line-height: 1.6; }
+    header { padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--color-border); }
+    .site-title { font-size: 18px; font-weight: 300; letter-spacing: 0.12em; text-decoration: none; color: var(--color-text); }
+    .site-title:hover { color: var(--color-accent); }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; padding: 20px 40px; font-size: 13px; letter-spacing: 0.08em; color: var(--color-muted); text-decoration: none; }
+    .back-link:hover { color: var(--color-accent); }
+    .back-link::before { content: '\2190'; }
+    .book-hero { display: grid; grid-template-columns: 260px 1fr; gap: 48px; max-width: 1000px; margin: 0 auto; padding: 0 40px 60px; }
+    .hero-cover { position: sticky; top: 32px; }
+    .hero-cover img { width: 100%; display: block; box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+    .hero-meta { padding-top: 8px; }
+    .series-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 10px; }
+    .book-title { font-size: clamp(32px, 4vw, 52px); font-weight: 300; letter-spacing: 0.08em; line-height: 1.1; margin-bottom: 20px; }
+    .presentation { font-size: clamp(16px, 1.8vw, 19px); font-weight: 300; line-height: 1.85; color: var(--color-text); max-width: 620px; }
+    .presentation p { margin-bottom: 1.2em; }
+    hr.divider { border: none; border-top: 1px solid var(--color-border); margin: 0; }
+    .panel { max-width: 1000px; margin: 0 auto; padding: 60px 40px; }
+    .panel + .panel { border-top: 1px solid var(--color-border); }
+    .panel-title { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 32px; }
+    .reader { max-width: 660px; }
+    .reader-chapter { font-size: 22px; font-weight: 300; letter-spacing: 0.1em; color: var(--color-text); margin-bottom: 24px; }
+    .reader p { font-size: clamp(16px, 1.7vw, 18px); font-weight: 300; line-height: 1.85; color: var(--color-text); margin-bottom: 1.1em; }
+    footer { text-align: center; padding: 32px 40px; border-top: 1px solid var(--color-border); font-size: 14px; color: var(--color-muted); font-style: italic; }
+    footer a { color: var(--color-muted); text-decoration: none; }
+    footer a:hover { color: var(--color-accent); }
+    .chars-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 1000px; }
+    .char-card { display: flex; gap: 20px; align-items: flex-start; padding: 20px; border: 1px solid var(--color-border); background: var(--color-bg); }
+    .char-card img { width: 100px; height: 130px; object-fit: cover; flex-shrink: 0; border: 1px solid var(--color-border); }
+    .char-info { flex: 1; min-width: 0; }
+    .char-name { font-size: 18px; font-weight: 500; letter-spacing: 0.04em; margin-bottom: 6px; color: var(--color-text); }
+    .char-role { font-size: 12px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 8px; }
+    .char-desc { font-size: 15px; font-weight: 300; line-height: 1.6; color: var(--color-text); }
+    @media (max-width: 720px) {
+      .chars-grid { grid-template-columns: 1fr; }
+      .char-card { flex-direction: column; align-items: center; text-align: center; }
+      .char-card img { width: 80px; height: 105px; }
+      header { padding: 20px 24px; flex-direction: column; gap: 16px; text-align: center; }
+      .back-link { padding: 16px 24px; }
+      .book-hero { grid-template-columns: 1fr; gap: 28px; padding: 0 24px 48px; }
+      .hero-cover { position: static; max-width: 200px; }
+      .panel { padding: 40px 24px; }
+    }
+  </style>
+  <link rel="stylesheet" href="verne-character-zoom.css">
+</head>
+<body>
+  <header>
+    <a class="site-title" href="index.html">Timeless Wisdom Books</a>
+  </header>
+  <a class="back-link" href="/biblioteca-verne-ingles">The World of Jules Verne</a>
+  <div class="book-hero">
+    <div class="hero-cover">
+      <img src="traducciones/verne/en/05.jpg" alt="Cover of The Children of Captain Grant">
+    </div>
+    <div class="hero-meta">
+      <p class="series-tag">Voyages Extraordinaires · No. 5</p>
+      <h1 class="book-title">The Children of Captain Grant</h1>
+      <div class="presentation">
+        <p>On a summer's day in 1864, the elegant yacht Duncan, belonging to the wealthy Scottish nobleman Lord Glenarvan, completes its sea trials in the Firth of Clyde. But what should have been a triumphant maiden voyage takes an unexpected turn when the crew captures a massive shark and discovers, inside its belly, a bottle containing a message—water-stained, partially obliterated, yet still legible in its desperate plea. It is a cry for help from the missing Captain Harry Grant, commander of the Britannia, who has been lost at sea for two years. The documents, written in three languages, indicate that Grant and two surviving crewmen have been shipwrecked on a distant shore, their exact location obscured by the ravages of salt water. Only one clue remains: a latitude, the thirty-seventh parallel south.</p>
+        <p>Lord Glenarvan, moved by compassion and a sense of duty, resolves to mount a rescue expedition. He is joined by two passengers whose presence transforms the voyage from a mere search into something far more personal: Mary Grant, the captain's sixteen-year-old daughter, whose quiet courage and devotion to her father move all who meet her, and her younger brother Robert, a boy of twelve whose heart burns with the desire to see his father again. Together, they set sail aboard the Duncan, carrying with them the fragile hope encoded in those half-erased lines. Their quest will lead them not to a single location but along an entire line of latitude—a ribbon drawn across the globe that passes through the southern reaches of South America, the vastness of the Pacific, the rugged coasts of New Zealand, and the uncharted islands of the ocean.</p>
+        <p>The expedition is joined, with characteristic serendipity, by Jacques Paganel, a French geographer of immense learning and comic absent-mindedness, who intended to travel to India but boarded the wrong ship. Paganel, however, proves to be no mere accident; his encyclopedic knowledge of geography, his boundless enthusiasm, and his gift for deciphering the riddles concealed in landscapes make him an indispensable member of the search party. As the Duncan and its crew traverse the Andes, cross the Argentine pampas, survive earthquakes and floods, and confront the hazards of uncharted territories, Paganel's expertise and his irrepressible good humour illuminate both the map and the spirit of the enterprise.</p>
+        <p>The Children of Captain Grant is Verne's most expansive and human-hearted novel, a journey across three continents that is as much an inner voyage as an outer one. It is a story about the bonds of family, the generosity of strangers, and the extraordinary lengths to which ordinary people will go when compassion demands action. Verne fills its pages with breathtaking landscapes and hair-raising adventures, but the emotional core remains constant: the image of two young people crossing the world in search of their father, and the growing conviction that no distance is too great, no obstacle too formidable, when love is the compass. In it, the thirty-seventh parallel becomes a thread stitching together cultures, climates, and destinies, proving that the world, for all its vastness, is small enough to be crossed by hope.</p>
+      </div>
+    </div>
+  </div>
+  <hr class="divider">
+
+  <div class="panel" id="characters">
+    <p class="panel-title">Characters</p>
+    <div class="chars-grid">
+      <div class="char-card">
+        <img src="personajes/verne/05/lord-edward-glenarvan.jpg" alt="Lord Edward Glenarvan">
+        <div class="char-info">
+          <p class="char-name">Lord Edward Glenarvan</p>
+          <p class="char-role">Scottish nobleman</p>
+          <p class="char-desc">Generous and determined, he funds and leads the search for Captain Grant across the world.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <img src="personajes/verne/05/jacques-paganel.jpg" alt="Jacques Paganel">
+        <div class="char-info">
+          <p class="char-name">Jacques Paganel</p>
+          <p class="char-role">Absent-minded geographer</p>
+          <p class="char-desc">An eccentric and endearing scholar, he brings humor, erudition, and memorable mistakes to the expedition.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <img src="personajes/verne/05/mary-y-robert-grant.jpg" alt="Mary and Robert Grant">
+        <div class="char-info">
+          <p class="char-name">Mary and Robert Grant</p>
+          <p class="char-role">Captain Grant&#x27;s children</p>
+          <p class="char-desc">Their stubborn hope of finding their father gives the voyage its emotional and moral force.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <div class="panel" id="read">
+    <p class="panel-title">First Pages</p>
+    <div class="reader">
+      <p style="font-style:italic;color:var(--color-muted)">Coming soon — the first pages of the translation will be added shortly.</p>
+    </div>
+  </div>
+  <footer>
+    <a href="/biblioteca-verne-ingles">← The World of Jules Verne</a>
+  </footer>
+  <script src="verne-character-zoom.js" defer></script>
+</body>
+</html>

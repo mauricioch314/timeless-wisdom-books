@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Around the World in Eighty Days — The World of Jules Verne</title>
+  <meta name="description" content="Around the World in Eighty Days, No. 11 of the Voyages Extraordinaires.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root { --color-bg: #ffffff; --color-text: #1a1a1a; --color-muted: #6b6b6b; --color-accent: #C9A84C; --color-border: #e8e4dc; --font: 'Cormorant Garamond', Georgia, serif; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--color-bg); color: var(--color-text); font-family: var(--font); line-height: 1.6; }
+    header { padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--color-border); }
+    .site-title { font-size: 18px; font-weight: 300; letter-spacing: 0.12em; text-decoration: none; color: var(--color-text); }
+    .site-title:hover { color: var(--color-accent); }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; padding: 20px 40px; font-size: 13px; letter-spacing: 0.08em; color: var(--color-muted); text-decoration: none; }
+    .back-link:hover { color: var(--color-accent); }
+    .back-link::before { content: '\2190'; }
+    .book-hero { display: grid; grid-template-columns: 260px 1fr; gap: 48px; max-width: 1000px; margin: 0 auto; padding: 0 40px 60px; }
+    .hero-cover { position: sticky; top: 32px; }
+    .hero-cover img { width: 100%; display: block; box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+    .hero-meta { padding-top: 8px; }
+    .series-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 10px; }
+    .book-title { font-size: clamp(32px, 4vw, 52px); font-weight: 300; letter-spacing: 0.08em; line-height: 1.1; margin-bottom: 20px; }
+    .presentation { font-size: clamp(16px, 1.8vw, 19px); font-weight: 300; line-height: 1.85; color: var(--color-text); max-width: 620px; }
+    .presentation p { margin-bottom: 1.2em; }
+    hr.divider { border: none; border-top: 1px solid var(--color-border); margin: 0; }
+    .panel { max-width: 1000px; margin: 0 auto; padding: 60px 40px; }
+    .panel + .panel { border-top: 1px solid var(--color-border); }
+    .panel-title { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 32px; }
+    .reader { max-width: 660px; }
+    .reader-chapter { font-size: 22px; font-weight: 300; letter-spacing: 0.1em; color: var(--color-text); margin-bottom: 24px; }
+    .reader p { font-size: clamp(16px, 1.7vw, 18px); font-weight: 300; line-height: 1.85; color: var(--color-text); margin-bottom: 1.1em; }
+    footer { text-align: center; padding: 32px 40px; border-top: 1px solid var(--color-border); font-size: 14px; color: var(--color-muted); font-style: italic; }
+    footer a { color: var(--color-muted); text-decoration: none; }
+    footer a:hover { color: var(--color-accent); }
+    .chars-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 1000px; }
+    .char-card { display: flex; gap: 20px; align-items: flex-start; padding: 20px; border: 1px solid var(--color-border); background: var(--color-bg); }
+    .char-card img { width: 100px; height: 130px; object-fit: cover; flex-shrink: 0; border: 1px solid var(--color-border); }
+    .char-info { flex: 1; min-width: 0; }
+    .char-name { font-size: 18px; font-weight: 500; letter-spacing: 0.04em; margin-bottom: 6px; color: var(--color-text); }
+    .char-role { font-size: 12px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 8px; }
+    .char-desc { font-size: 15px; font-weight: 300; line-height: 1.6; color: var(--color-text); }
+    @media (max-width: 720px) {
+      .chars-grid { grid-template-columns: 1fr; }
+      .char-card { flex-direction: column; align-items: center; text-align: center; }
+      .char-card img { width: 80px; height: 105px; }
+      header { padding: 20px 24px; flex-direction: column; gap: 16px; text-align: center; }
+      .back-link { padding: 16px 24px; }
+      .book-hero { grid-template-columns: 1fr; gap: 28px; padding: 0 24px 48px; }
+      .hero-cover { position: static; max-width: 200px; }
+      .panel { padding: 40px 24px; }
+    }
+  </style>
+  <link rel="stylesheet" href="verne-character-zoom.css">
+</head>
+<body>
+  <header>
+    <a class="site-title" href="index.html">Timeless Wisdom Books</a>
+  </header>
+  <a class="back-link" href="/biblioteca-verne-ingles">The World of Jules Verne</a>
+  <div class="book-hero">
+    <div class="hero-cover">
+      <img src="traducciones/verne/en/11.jpg" alt="Cover of Around the World in Eighty Days">
+    </div>
+    <div class="hero-meta">
+      <p class="series-tag">Voyages Extraordinaires · No. 11</p>
+      <h1 class="book-title">Around the World in Eighty Days</h1>
+      <div class="presentation">
+        <p>In the autumn of 1872, the members of the Reform Club in London are accustomed to the quiet, clockwork presence of one of their most peculiar members. Phileas Fogg is a gentleman of such precise habits, such unvarying routine, that his life might be mistaken for a chronometer's. He lives alone on Savile Row, employs a single servant, dines at the same club each day, and occupies himself with the patient study of whist. No one knows anything of his origins, his wealth, or his emotions—for if he possesses any, he never displays them. He is, in short, the most unlikely adventurer imaginable. And yet, on an ordinary October evening, a discussion with his fellow club members about a newspaper article on the opening of a new railway in India leads him to make a statement that will alter his life utterly: he declares that it is possible to travel around the world in eighty days, and he wagers half his fortune on it.</p>
+        <p>The bet accepted, Fogg does not pause for reflection. He collects his newly hired French valet, Jean Passepartout—a good-natured, resourceful man who had hoped for a quiet life of routine after a checkered career of wandering—and departs that very evening by train for Dover. Passepartout, who expected a placid existence of orderly meals and regular errands, finds himself instead on a mad dash across the continents, barely able to catch his breath as his master proceeds with the same imperturbable calm he would display at the card table. The route, meticulously planned, takes them through the Suez Canal, across the Indian subcontinent by rail and elephant, through the jungles of Singapore and the ports of China, across the Pacific to San Francisco, and then by train across the American West before the final Atlantic crossing to Liverpool and London. Every hour counts; every missed connection threatens the entire enterprise.</p>
+        <p>But Fogg does not reckon with Inspector Fix of Scotland Yard. A bank robbery of fifty-five thousand pounds has recently been committed in London, and the description of the suspect—a gentleman of refined habits travelling abroad—matches Fogg with suspicious precision. Fix becomes convinced that the globe-trotting bet is merely a cover for escape, and he pursues Fogg across the world with mounting frustration, obstructing his progress at every opportunity. The inspector's interference creates a parallel journey of intrigue and misdirection: while Fogg presses ever eastward, Fix lays traps, delays, and accusations that threaten to derail the schedule. Meanwhile, in the midst of the race, Fogg and Passepartout encounter a woman named Aouda, a young Parsee widow rescued from a forced sacrifice in the Indian countryside, whose grace and gratitude introduce an entirely unforeseen dimension into the life of a man who had seemed to need nothing and no one.</p>
+        <p>Around the World in Eighty Days is Verne's most beloved and enduring creation, a novel of pure momentum and joyful invention. Phileas Fogg, the most undemonstrative hero in adventure literature, becomes an icon of stoic determination, while Passepartout, with his warmth, his blunders, and his devotion, provides the human heartbeat of the journey. The novel is a celebration of the modern world—the steamships, railways, and telegraph lines that were shrinking the globe in the nineteenth century—but it is also a timeless story about the value of a wager, the meaning of honour, and the unexpected transformations that travel can work upon even the most settled soul. It races forward with the inevitability of a well-wound clock, and like all great journeys, it arrives at a destination far richer than the one its travellers intended: a home made new by the distance one has crossed to reach it.</p>
+      </div>
+    </div>
+  </div>
+  <hr class="divider">
+  <div class="panel" id="characters">
+    <p class="panel-title">Characters</p>
+    <div class="chars-grid">
+      <div class="char-card">
+        <img src="personajes/verne/11/phileas-fogg.png" alt="Phileas Fogg">
+        <div class="char-info">
+          <p class="char-name">Phileas Fogg</p>
+          <p class="char-role">Gentleman / Adventurer</p>
+          <p class="char-desc">A man of inscrutable composure and mathematical precision, Phileas Fogg lives his life by the clock. His wager to circle the globe in eighty days is an expression of pure faith in order and schedules. Beneath his impassive exterior lies a courage and honour that no obstacle can shake.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <img src="personajes/verne/11/passepartout.png" alt="Jean Passepartout">
+        <div class="char-info">
+          <p class="char-name">Jean Passepartout</p>
+          <p class="char-role">Valet</p>
+          <p class="char-desc">A Frenchman of cheerful disposition and resourceful cunning, Passepartout seeks a quiet life but finds himself swept into a whirlwind. His loyalty, his ingenuity in tight spots, and his irrepressible humanity make him the perfect companion for a journey that tests every virtue known to man.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <img src="personajes/verne/11/fix.png" alt="Inspector Fix">
+        <div class="char-info">
+          <p class="char-name">Inspector Fix</p>
+          <p class="char-role">Detective</p>
+          <p class="char-desc">A tenacious Scotland Yard detective convinced that Phileas Fogg is a bank robber fleeing justice, Fix pursues the travellers across the globe with single-minded determination. His mistaken obsession creates a series of obstacles that transform the journey into a race against more than just time.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <img src="personajes/verne/11/aouda.png" alt="Aouda">
+        <div class="char-info">
+          <p class="char-name">Aouda</p>
+          <p class="char-role">Young Woman</p>
+          <p class="char-desc">A young Parsee widow of extraordinary grace and dignity, Aouda is rescued by Fogg and Passepartout from a forced ritual sacrifice in India. Her gratitude, intelligence, and quiet strength gradually open a door in Fogg's guarded heart that no one had ever thought to find.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="divider">
+  <div class="panel" id="read">
+    <p class="panel-title">First Pages</p>
+    <div class="reader">
+      <p style="font-style:italic;color:var(--color-muted)">Coming soon — the first pages of the translation will be added shortly.</p>
+    </div>
+  </div>
+  <footer>
+    <a href="/biblioteca-verne-ingles">← The World of Jules Verne</a>
+  </footer>
+  <script src="verne-character-zoom.js" defer></script>
+</body>
+</html>

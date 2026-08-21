@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hector Servadac — The World of Jules Verne</title>
+  <meta name="description" content="Hector Servadac, No. 15 of the Voyages Extraordinaires.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root { --color-bg: #ffffff; --color-text: #1a1a1a; --color-muted: #6b6b6b; --color-accent: #C9A84C; --color-border: #e8e4dc; --font: 'Cormorant Garamond', Georgia, serif; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--color-bg); color: var(--color-text); font-family: var(--font); line-height: 1.6; }
+    header { padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--color-border); }
+    .site-title { font-size: 18px; font-weight: 300; letter-spacing: 0.12em; text-decoration: none; color: var(--color-text); }
+    .site-title:hover { color: var(--color-accent); }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; padding: 20px 40px; font-size: 13px; letter-spacing: 0.08em; color: var(--color-muted); text-decoration: none; }
+    .back-link:hover { color: var(--color-accent); }
+    .back-link::before { content: '←'; }
+    .book-hero { display: grid; grid-template-columns: 260px 1fr; gap: 48px; max-width: 1000px; margin: 0 auto; padding: 0 40px 60px; }
+    .hero-cover { position: sticky; top: 32px; }
+    .hero-cover img { width: 100%; display: block; box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+    .hero-meta { padding-top: 8px; }
+    .series-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 10px; }
+    .book-title { font-size: clamp(32px, 4vw, 52px); font-weight: 300; letter-spacing: 0.08em; line-height: 1.1; margin-bottom: 20px; }
+    .presentation { font-size: clamp(16px, 1.8vw, 19px); font-weight: 300; line-height: 1.85; color: var(--color-text); max-width: 620px; }
+    .presentation p { margin-bottom: 1.2em; }
+    hr.divider { border: none; border-top: 1px solid var(--color-border); margin: 0; }
+    .panel { max-width: 1000px; margin: 0 auto; padding: 60px 40px; }
+    .panel + .panel { border-top: 1px solid var(--color-border); }
+    .panel-title { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 32px; }
+    .reader { max-width: 660px; }
+    .reader-chapter { font-size: 22px; font-weight: 300; letter-spacing: 0.1em; color: var(--color-text); margin-bottom: 24px; }
+    .reader p { font-size: clamp(16px, 1.7vw, 18px); font-weight: 300; line-height: 1.85; color: var(--color-text); margin-bottom: 1.1em; }
+    footer { text-align: center; padding: 32px 40px; border-top: 1px solid var(--color-border); font-size: 14px; color: var(--color-muted); font-style: italic; }
+    footer a { color: var(--color-muted); text-decoration: none; }
+    footer a:hover { color: var(--color-accent); }
+    .chars-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      max-width: 1000px;
+    }
+    .char-card {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 20px;
+      border: 1px solid var(--color-border);
+      border-radius: 0;
+      background: var(--color-bg);
+    }
+    .char-card .char-placeholder {
+      width: 100px;
+      height: 130px;
+      flex-shrink: 0;
+      border: 1px dashed var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: var(--color-muted);
+      background: #fafaf8;
+    }
+    .char-card img {
+      width: 100px;
+      height: 130px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1px solid var(--color-border);
+    }
+    .char-info { flex: 1; min-width: 0; }
+    .char-name {
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+      color: var(--color-text);
+    }
+    .char-role {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 8px;
+    }
+    .char-desc {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--color-text);
+    }
+    @media (max-width: 720px) {
+      .chars-grid { grid-template-columns: 1fr; }
+      .char-card { flex-direction: column; align-items: center; text-align: center; }
+      .char-card img, .char-card .char-placeholder { width: 80px; height: 105px; }
+    }
+    @media (max-width: 720px) {
+      header { padding: 20px 24px; flex-direction: column; gap: 16px; text-align: center; }
+      .back-link { padding: 16px 24px; }
+      .book-hero { grid-template-columns: 1fr; gap: 28px; padding: 0 24px 48px; }
+      .hero-cover { position: static; max-width: 200px; }
+      .panel { padding: 40px 24px; }
+    }
+  </style>
+  <link rel="stylesheet" href="verne-character-zoom.css">
+</head>
+<body>
+
+  <header>
+    <a class="site-title" href="index.html">Timeless Wisdom Books</a>
+  </header>
+
+  <a class="back-link" href="/biblioteca-verne-ingles">The World of Jules Verne</a>
+
+  <div class="book-hero">
+    <div class="hero-cover">
+      <img src="traducciones/verne/en/15.jpg" alt="Cover of Hector Servadac">
+    </div>
+    <div class="hero-meta">
+      <p class="series-tag">Voyages Extraordinaires · No. 15</p>
+      <h1 class="book-title">Hector Servadac</h1>
+      <div class="presentation">
+        <p>Published in 1877, <em>Hector Servadac</em> is one of Jules Verne's most imaginative and playful novels. It combines astronomical speculation, adventure, and human comedy in a story that takes its characters — and its readers — far beyond the bounds of ordinary experience.</p>
+        <p>Captain Hector Servadac, a French officer stationed in Algeria, is a man of ambition and vanity, composing verses for a woman he hopes to marry. But his plans are disrupted when a cosmic catastrophe tears a fragment of the Earth — and several of its inhabitants — away from the planet. United in an extraordinary new world, Servadac finds himself alongside a Russian nobleman, his orderly, and a small group of survivors, all forced to navigate an unfamiliar reality.</p>
+        <p>The novel's charm lies in Verne's ability to merge scientific speculation with character comedy. The introduction of the eccentric astronomer Professor Palmyrin Rosette, who emerges as both a source of knowledge and conflict, adds a memorable dimension to the story. Together, the group must unravel the mystery of their situation and adapt to conditions that defy everything they once knew.</p>
+        <p><em>Hector Servadac</em> is a celebration of curiosity and resilience in the face of the unknown. While its premise is extraordinary, its heart is thoroughly human — full of humor, rivalry, and the quiet determination to make sense of a world turned upside down.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+    <div class="panel" id="characters">
+    <p class="panel-title">Characters</p>
+    <div class="chars-grid">
+      <div class="char-card">
+        <img src="personajes/verne/15/hector-servadac.jpg" alt="Captain Hector Servadac" loading="lazy">
+        <div class="char-info">
+          <p class="char-name">Captain Hector Servadac</p>
+          <p class="char-role">French officer</p>
+          <p class="char-desc">An officer stationed in Algeria who assumes leadership of the survivors after the cosmic catastrophe.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <img src="personajes/verne/15/ben-zouf.jpg" alt="Ben-Zouf" loading="lazy">
+        <div class="char-info">
+          <p class="char-name">Ben-Zouf</p>
+          <p class="char-role">Servadac’s orderly</p>
+          <p class="char-desc">Loyal, practical, and endlessly humorous. He remains beside Servadac even when their entire world is transformed.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <img src="personajes/verne/15/conde-timascheff.jpg" alt="Count Timascheff" loading="lazy">
+        <div class="char-info">
+          <p class="char-name">Count Timascheff</p>
+          <p class="char-role">Russian nobleman</p>
+          <p class="char-desc">Owner of the schooner Dobryna. Once Servadac’s rival, he becomes one of his most important allies.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <img src="personajes/verne/15/teniente-procope.jpg" alt="Lieutenant Procope" loading="lazy">
+        <div class="char-info">
+          <p class="char-name">Lieutenant Procope</p>
+          <p class="char-role">Sailor and navigator</p>
+          <p class="char-desc">Commander of the Dobryna and a gifted navigator whose knowledge helps the survivors explore and endure their new world.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <img src="personajes/verne/15/palmyrin-rosette.jpg" alt="Palmyrin Rosette" loading="lazy">
+        <div class="char-info">
+          <p class="char-name">Palmyrin Rosette</p>
+          <p class="char-role">Astronomer</p>
+          <p class="char-desc">Brilliant, irascible, and obsessed with his calculations. He discovers the true nature and trajectory of Gallia.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <img src="personajes/verne/15/isac-hakhabut.jpg" alt="Isac Hakhabut" loading="lazy">
+        <div class="char-info">
+          <p class="char-name">Isac Hakhabut</p>
+          <p class="char-role">Merchant</p>
+          <p class="char-desc">Owner of the tartan Hansa. Even far from Earth, he remains devoted to his goods, accounts, and business.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="panel" id="read">
+    <p class="panel-title">First Pages</p>
+    <div class="reader">
+      <h2 class="reader-chapter">CHAPTER I</h2>
+      <p>Coming soon — the first pages of the translation will be added shortly.</p>
+    </div>
+  </div>
+
+  <footer>
+    <a href="/biblioteca-verne-ingles">← The World of Jules Verne</a>
+  </footer>
+
+  <script src="verne-character-zoom.js" defer></script>
+</body>
+</html>

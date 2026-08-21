@@ -1,5 +1,6 @@
 .git/
 .gstack/
+.wrangler/
 .DS_Store
 tools/
 wrangler.jsonc

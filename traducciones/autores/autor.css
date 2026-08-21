@@ -1,0 +1,35 @@
+:root{--bg:#fff;--text:#1a1a1a;--muted:#6b6b6b;--gold:#c9a84c;--line:#e8e4dc;--font:'Cormorant Garamond',Georgia,serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh;padding:clamp(2rem,6vw,4rem) clamp(1rem,5vw,3rem)}
+.back{display:inline-block;color:var(--muted);font-size:13px;letter-spacing:.08em;text-decoration:none;margin-bottom:2rem}.back:hover{color:var(--text)}
+.hero{max-width:920px;margin:0 auto clamp(3rem,7vw,5rem);display:grid;grid-template-columns:clamp(130px,20vw,210px) 1fr;gap:clamp(2rem,6vw,5rem);align-items:center;padding-bottom:clamp(2.5rem,6vw,4rem);border-bottom:1px solid var(--line)}
+.portrait{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;filter:grayscale(15%);border:1px solid var(--line)}
+.eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem}
+h1{font-size:clamp(32px,5vw,58px);font-weight:300;line-height:1;letter-spacing:.05em;margin-bottom:1rem}
+.intro{font-size:clamp(17px,2vw,21px);line-height:1.65;color:var(--muted);font-style:italic;max-width:620px}
+.collection{max-width:920px;margin:0 auto clamp(3rem,7vw,4.5rem);padding-bottom:clamp(2.5rem,6vw,4rem);border-bottom:1px solid var(--line)}
+.section-title{text-align:center;font-size:clamp(22px,3vw,32px);font-weight:300;letter-spacing:.12em;margin-bottom:.5rem}.section-sub{text-align:center;color:var(--muted);font-size:15px;font-style:italic;margin-bottom:2rem}
+.collection-card{width:min(180px,60vw);margin:auto;text-align:center;text-decoration:none;color:var(--text);display:block;transition:transform .18s ease}.collection-card:hover{transform:translateY(-4px)}
+.collection-cover{width:100%;aspect-ratio:2/3;object-fit:cover;border:1px solid var(--line);box-shadow:0 12px 28px rgba(50,35,15,.09);margin-bottom:.8rem}.collection-name{font-size:17px;line-height:1.25}.collection-action{display:block;color:var(--gold);font-size:12px;letter-spacing:.08em;margin-top:.35rem}
+.books{max-width:920px;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,3vw,2rem)}
+body:has(.collection) .books::before{content:"También disponibles como libros individuales";grid-column:1/-1;text-align:center;font-size:clamp(21px,3vw,30px);font-weight:300;letter-spacing:.1em;margin-bottom:.5rem}
+.book{border:1px solid var(--line);padding:clamp(1.25rem,3vw,1.8rem);display:flex;flex-direction:column;min-height:210px}
+.book::before{width:100%;aspect-ratio:2/3;background-size:cover;background-position:center;display:block;margin-bottom:1.25rem;border:1px solid var(--line)}
+body:has(.portrait[src*="charles-haanel"]) .book:nth-child(1)::before{content:"";background-image:url(haanel-llave-maestra.png)}
+body:has(.portrait[src*="charles-haanel"]) .book:nth-child(2)::before{content:"";background-image:url(haanel-quimica-mental.png)}
+body:has(.portrait[src*="charles-haanel"]) .book:nth-child(3)::before{content:"";background-image:url(haanel-nueva-psicologia.png)}
+body:has(.portrait[src*="florence-scovel-shinn"]) .book:nth-child(1)::before{content:"";background-image:url(shinn-juego-vida.png)}
+body:has(.portrait[src*="florence-scovel-shinn"]) .book:nth-child(2)::before{content:"";background-image:url(shinn-varita-magica.png)}
+body:has(.portrait[src*="florence-scovel-shinn"]) .book:nth-child(3)::before{content:"";background-image:url(shinn-puerta-secreta.png)}
+body:has(.portrait[src*="james-allen"]) .book:nth-child(1)::before{content:"";background-image:url(allen-asi-como-piensas.png)}
+body:has(.portrait[src*="james-allen"]) .book:nth-child(2)::before{content:"";background-image:url(allen-vida-triunfo.png)}
+body:has(.portrait[src*="james-allen"]) .book:nth-child(3)::before{content:"";background-image:url(allen-ocho-pilares.png)}
+body:has(.portrait[src*="wallace-wattles"]) .book:nth-child(1)::before{content:"";background-image:url(wattles-ciencia-hacerse-rico.jpg)}
+body:has(.portrait[src*="wallace-wattles"]) .book:nth-child(2)::before{content:"";background-image:url(wattles-ciencia-ser-excelente.jpg)}
+body:has(.portrait[src*="wallace-wattles"]) .book:nth-child(3)::before{content:"";background-image:url(wattles-nuevo-cristo.jpg)}
+.book.cover-book{padding:0;overflow:hidden}.book-cover{width:100%;aspect-ratio:2/3;object-fit:cover}.book-info{padding:1.25rem;display:flex;flex-direction:column;flex:1}
+.number{font-size:11px;letter-spacing:.15em;color:var(--gold);margin-bottom:1rem}
+h2{font-size:clamp(20px,2.5vw,26px);font-weight:400;line-height:1.2;margin-bottom:.8rem}
+.book p{font-size:15px;line-height:1.55;color:var(--muted);flex:1}
+.buy{align-self:flex-start;margin-top:1.4rem;padding:7px 13px;background:var(--line);color:var(--muted);font-size:12px;letter-spacing:.05em;text-decoration:none}.buy:hover{color:var(--text);background:#d8d3c9}
+@media(max-width:680px){.hero{grid-template-columns:100px 1fr;gap:1.4rem}.books{grid-template-columns:1fr}.book{min-height:0}.book.cover-book{max-width:280px;margin:auto}}

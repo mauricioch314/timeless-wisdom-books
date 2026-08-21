@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Village in the Treetops — The World of Jules Verne</title>
+  <meta name="description" content="The Village in the Treetops, No. 48 of the Voyages Extraordinaires.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root { --color-bg: #ffffff; --color-text: #1a1a1a; --color-muted: #6b6b6b; --color-accent: #C9A84C; --color-border: #e8e4dc; --font: 'Cormorant Garamond', Georgia, serif; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--color-bg); color: var(--color-text); font-family: var(--font); line-height: 1.6; }
+    header { padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--color-border); }
+    .site-title { font-size: 18px; font-weight: 300; letter-spacing: 0.12em; text-decoration: none; color: var(--color-text); }
+    .site-title:hover { color: var(--color-accent); }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; padding: 20px 40px; font-size: 13px; letter-spacing: 0.08em; color: var(--color-muted); text-decoration: none; }
+    .back-link:hover { color: var(--color-accent); }
+    .back-link::before { content: '←'; }
+    .book-hero { display: grid; grid-template-columns: 260px 1fr; gap: 48px; max-width: 1000px; margin: 0 auto; padding: 0 40px 60px; }
+    .hero-cover { position: sticky; top: 32px; }
+    .hero-cover img { width: 100%; display: block; box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+    .hero-meta { padding-top: 8px; }
+    .series-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 10px; }
+    .book-title { font-size: clamp(32px, 4vw, 52px); font-weight: 300; letter-spacing: 0.08em; line-height: 1.1; margin-bottom: 20px; }
+    .presentation { font-size: clamp(16px, 1.8vw, 19px); font-weight: 300; line-height: 1.85; color: var(--color-text); max-width: 620px; }
+    .presentation p { margin-bottom: 1.2em; }
+    hr.divider { border: none; border-top: 1px solid var(--color-border); margin: 0; }
+    .panel { max-width: 1000px; margin: 0 auto; padding: 60px 40px; }
+    .panel + .panel { border-top: 1px solid var(--color-border); }
+    .panel-title { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 32px; }
+    .reader { max-width: 660px; }
+    .reader-chapter { font-size: 22px; font-weight: 300; letter-spacing: 0.1em; color: var(--color-text); margin-bottom: 24px; }
+    .reader p { font-size: clamp(16px, 1.7vw, 18px); font-weight: 300; line-height: 1.85; color: var(--color-text); margin-bottom: 1.1em; }
+    footer { text-align: center; padding: 32px 40px; border-top: 1px solid var(--color-border); font-size: 14px; color: var(--color-muted); font-style: italic; }
+    footer a { color: var(--color-muted); text-decoration: none; }
+    footer a:hover { color: var(--color-accent); }
+    .chars-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 1000px; }
+    .char-card { display: flex; gap: 20px; align-items: flex-start; padding: 20px; border: 1px solid var(--color-border); border-radius: 0; background: var(--color-bg); }
+    .char-card .char-placeholder { width: 100px; height: 130px; flex-shrink: 0; border: 1px dashed var(--color-border); display: flex; align-items: center; justify-content: center; font-size: 28px; color: var(--color-muted); background: #fafaf8; }
+    .char-card img { width: 100px; height: 130px; object-fit: cover; flex-shrink: 0; border: 1px solid var(--color-border); }
+    .char-info { flex: 1; min-width: 0; }
+    .char-name { font-size: 18px; font-weight: 500; letter-spacing: 0.04em; margin-bottom: 6px; color: var(--color-text); }
+    .char-role { font-size: 12px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 8px; }
+    .char-desc { font-size: 15px; font-weight: 300; line-height: 1.6; color: var(--color-text); }
+    @media (max-width: 720px) {
+      .chars-grid { grid-template-columns: 1fr; }
+      .char-card { flex-direction: column; align-items: center; text-align: center; }
+      .char-card img, .char-card .char-placeholder { width: 80px; height: 105px; }
+      header { padding: 20px 24px; flex-direction: column; gap: 16px; text-align: center; }
+      .back-link { padding: 16px 24px; }
+      .book-hero { grid-template-columns: 1fr; gap: 28px; padding: 0 24px 48px; }
+      .hero-cover { position: static; max-width: 200px; }
+      .panel { padding: 40px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="site-title" href="index.html">Timeless Wisdom Books</a>
+  </header>
+  <a class="back-link" href="/biblioteca-verne-ingles">The World of Jules Verne</a>
+  <div class="book-hero">
+    <div class="hero-cover">
+      <img src="traducciones/verne/en/48.jpg" alt="Cover of The Village in the Treetops">
+    </div>
+    <div class="hero-meta">
+      <p class="series-tag">Voyages Extraordinaires · No. 48</p>
+      <h1 class="book-title">The Village in the Treetops</h1>
+      <div class="presentation">
+        <p>Published in 1901, <em>The Village in the Treetops</em> (original French: <em>Le Village aérien</em>) takes Jules Verne's readers deep into the African jungle, where the boundary between the known and the unknown gives way to one of his most peculiar and thought-provoking creations. John Cort, a pragmatic engineer, and Max Huber, a boisterous hunter, venture into the heart of the continent on an expedition that quickly escapes the boundaries of conventional exploration.</p>
+        <p>Guided by Khamis, an experienced and observant local guide, the two Europeans push deeper into territory where the forest canopy thickens and the ground below grows dim. It is there, among the towering trees, that they make a discovery that defies everything they thought they knew about human civilization: a community living entirely in the treetops, suspended between earth and sky on platforms of woven vines and timber. The aerial village is a world unto itself, with its own customs, its own hierarchies, and its own enigmatic guardians.</p>
+        <p>At the heart of this community stands Li-Mai, the village priestess, whose authority and knowledge of the forest's secrets hold the key to understanding the treetop society. Are these people refugees who fled some catastrophe below, prisoners of a culture that forbids them to descend, or guardians of something the outside world cannot comprehend? Cort and Huber must navigate not only the physical dangers of the jungle — wild animals, treacherous paths, and the constant threat of disease — but also the ethical complexities of encountering a civilization that has chosen to exist apart.</p>
+        <p>Verne uses the aerial village as a lens through which to examine questions of freedom, isolation, and the meaning of progress. The novel is by turns an adventure story, an ethnographic puzzle, and a meditation on the ways that environment shapes society. In the treetops, Verne finds a metaphor for the precariousness of all civilization — built above the abyss, connected by fragile bridges, and sustained by the will to remain aloft.</p>
+      </div>
+    </div>
+  </div>
+  <hr class="divider">
+  <div class="panel" id="characters">
+    <p class="panel-title">Characters</p>
+    <div class="chars-grid">
+      <div class="char-card">
+        <div class="char-placeholder">👤</div>
+        <div class="char-info">
+          <p class="char-name">John Cort</p>
+          <p class="char-role">Engineer</p>
+          <p class="char-desc">A pragmatic and observant engineer whose analytical mind and steady temperament are put to the test when he discovers a civilization living entirely in the treetops of the African jungle.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <div class="char-placeholder">👤</div>
+        <div class="char-info">
+          <p class="char-name">Max Huber</p>
+          <p class="char-role">Hunter</p>
+          <p class="char-desc">A boisterous and daring hunter whose skills in the wilderness and bold temperament complement Cort's caution, making him an invaluable companion in the encounter with the aerial village.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <div class="char-placeholder">👤</div>
+        <div class="char-info">
+          <p class="char-name">Khamis</p>
+          <p class="char-role">Guide</p>
+          <p class="char-desc">An experienced and perceptive local guide whose deep knowledge of the jungle and its secrets proves essential in navigating both the physical terrain and the cultural mysteries of the treetop community.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <div class="char-placeholder">👤</div>
+        <div class="char-info">
+          <p class="char-name">Li-Mai</p>
+          <p class="char-role">Village Priestess</p>
+          <p class="char-desc">The enigmatic priestess of the treetop village, whose authority, wisdom, and connection to the forest's hidden powers hold the key to understanding the aerial civilization's origins and purpose.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="divider">
+  <div class="panel" id="read">
+    <p class="panel-title">First Pages</p>
+    <div class="reader">
+      <h2 class="reader-chapter">CHAPTER I</h2>
+      <p>Coming soon — the first pages of the translation will be added shortly.</p>
+    </div>
+  </div>
+  <footer>
+    <a href="/biblioteca-verne-ingles">← The World of Jules Verne</a>
+  </footer>
+</body>
+</html>

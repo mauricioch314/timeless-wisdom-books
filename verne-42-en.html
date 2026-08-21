@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facing the Flag — The World of Jules Verne</title>
+  <meta name="description" content="Facing the Flag, No. 42 of the Voyages Extraordinaires.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root { --color-bg: #ffffff; --color-text: #1a1a1a; --color-muted: #6b6b6b; --color-accent: #C9A84C; --color-border: #e8e4dc; --font: 'Cormorant Garamond', Georgia, serif; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--color-bg); color: var(--color-text); font-family: var(--font); line-height: 1.6; }
+    header { padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--color-border); }
+    .site-title { font-size: 18px; font-weight: 300; letter-spacing: 0.12em; text-decoration: none; color: var(--color-text); }
+    .site-title:hover { color: var(--color-accent); }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; padding: 20px 40px; font-size: 13px; letter-spacing: 0.08em; color: var(--color-muted); text-decoration: none; }
+    .back-link:hover { color: var(--color-accent); }
+    .back-link::before { content: '←'; }
+    .book-hero { display: grid; grid-template-columns: 260px 1fr; gap: 48px; max-width: 1000px; margin: 0 auto; padding: 0 40px 60px; }
+    .hero-cover { position: sticky; top: 32px; }
+    .hero-cover img { width: 100%; display: block; box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+    .hero-meta { padding-top: 8px; }
+    .series-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 10px; }
+    .book-title { font-size: clamp(32px, 4vw, 52px); font-weight: 300; letter-spacing: 0.08em; line-height: 1.1; margin-bottom: 20px; }
+    .presentation { font-size: clamp(16px, 1.8vw, 19px); font-weight: 300; line-height: 1.85; color: var(--color-text); max-width: 620px; }
+    .presentation p { margin-bottom: 1.2em; }
+    hr.divider { border: none; border-top: 1px solid var(--color-border); margin: 0; }
+    .panel { max-width: 1000px; margin: 0 auto; padding: 60px 40px; }
+    .panel + .panel { border-top: 1px solid var(--color-border); }
+    .panel-title { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 32px; }
+    .reader { max-width: 660px; }
+    .reader-chapter { font-size: 22px; font-weight: 300; letter-spacing: 0.1em; color: var(--color-text); margin-bottom: 24px; }
+    .reader p { font-size: clamp(16px, 1.7vw, 18px); font-weight: 300; line-height: 1.85; color: var(--color-text); margin-bottom: 1.1em; }
+    footer { text-align: center; padding: 32px 40px; border-top: 1px solid var(--color-border); font-size: 14px; color: var(--color-muted); font-style: italic; }
+    footer a { color: var(--color-muted); text-decoration: none; }
+    footer a:hover { color: var(--color-accent); }
+    /* Character Cards */
+    .chars-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      max-width: 1000px;
+    }
+    .char-card {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 20px;
+      border: 1px solid var(--color-border);
+      border-radius: 0;
+      background: var(--color-bg);
+    }
+    .char-card .char-placeholder {
+      width: 100px;
+      height: 130px;
+      flex-shrink: 0;
+      border: 1px dashed var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: var(--color-muted);
+      background: #fafaf8;
+    }
+    .char-card img {
+      width: 100px;
+      height: 130px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1px solid var(--color-border);
+    }
+    .char-info { flex: 1; min-width: 0; }
+    .char-name {
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+      color: var(--color-text);
+    }
+    .char-role {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 8px;
+    }
+    .char-desc {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--color-text);
+    }
+    @media (max-width: 720px) {
+      .chars-grid { grid-template-columns: 1fr; }
+      .char-card { flex-direction: column; align-items: center; text-align: center; }
+      .char-card img, .char-card .char-placeholder { width: 80px; height: 105px; }
+    }
+
+    @media (max-width: 720px) {
+      header { padding: 20px 24px; flex-direction: column; gap: 16px; text-align: center; }
+      .back-link { padding: 16px 24px; }
+      .book-hero { grid-template-columns: 1fr; gap: 28px; padding: 0 24px 48px; }
+      .hero-cover { position: static; max-width: 200px; }
+      .panel { padding: 40px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="site-title" href="index.html">Timeless Wisdom Books</a>
+  </header>
+
+  <a class="back-link" href="/biblioteca-verne-ingles">The World of Jules Verne</a>
+
+  <div class="book-hero">
+    <div class="hero-cover">
+      <img src="traducciones/verne/en/42.jpg" alt="Cover of Facing the Flag">
+    </div>
+    <div class="hero-meta">
+      <p class="series-tag">Voyages Extraordinaires · No. 42</p>
+      <h1 class="book-title">Facing the Flag</h1>
+      <div class="presentation">
+        <p>Published in 1896, <em>Facing the Flag</em> (original French: <em>Face au drapeau</em>) is Jules Verne's gripping thriller of scientific terror and international conspiracy. At its center is Thomas Roch, a brilliant but unstable French inventor who has created an explosive compound of unprecedented destructive power — the Fulgurator — capable of annihilating entire fleets and fortifications from miles away.</p>
+        <p>Roch's mental state deteriorates as the world's powers vie for control of his weapon. When he is committed to a sanatorium on an isolated island, the stage is set for a deadly game of deception. Count d'Artigas, a mysterious and wealthy figure, orchestrates a daring abduction, transporting Roch to a hidden fortress where a conspiracy to weaponize his invention takes shape. Simon Hart, an engineer held captive alongside Roch, becomes the only hope of preventing catastrophe.</p>
+        <p>The novel unfolds in the claustrophobic confines of the pirate fortress — a cavernous hideout carved into a volcanic island. Verne builds tension masterfully, juxtaposing Hart's desperate ingenuity against d'Artigas's cold ambition and Roch's unpredictable genius. The question is not merely whether the weapon will be used, but whether the man who created it can be reached before his mind slips beyond recovery.</p>
+        <p><em>Facing the Flag</em> anticipates the anxieties of the twentieth century with eerie precision. In its portrait of a weapon too terrible to control, of inventors caught between patriotism and madness, and of powers willing to destroy the world to own it, Verne wrote one of the first true techno-thrillers — as urgent today as when it was written.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- CHARACTERS -->
+  <div class="panel" id="characters">
+    <p class="panel-title">Characters</p>
+    <div class="chars-grid">
+      <div class="char-card">
+        <div class="char-placeholder">👤</div>
+        <div class="char-info">
+          <p class="char-name">Thomas Roch</p>
+          <p class="char-role">French Inventor</p>
+          <p class="char-desc">A brilliant but mentally fragile inventor whose devastating explosive — the Fulgurator — becomes the most dangerous weapon ever created, and the most coveted.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <div class="char-placeholder">👤</div>
+        <div class="char-info">
+          <p class="char-name">Simon Hart</p>
+          <p class="char-role">Engineer</p>
+          <p class="char-desc">A resourceful engineer held captive alongside Roch, whose courage and ingenuity become the last line of defense against a global catastrophe.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <div class="char-placeholder">👤</div>
+        <div class="char-info">
+          <p class="char-name">Count d'Artigas</p>
+          <p class="char-role">Pirate / Conspirator</p>
+          <p class="char-desc">A mysterious and ruthless figure who orchestrates the abduction of Thomas Roch, intending to use his apocalyptic invention for his own dark purposes.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <div class="char-placeholder">👤</div>
+        <div class="char-info">
+          <p class="char-name">Captain Spade</p>
+          <p class="char-role">Pirate Lieutenant</p>
+          <p class="char-desc">The brutal and loyal lieutenant of Count d'Artigas, whose ruthless efficiency makes him a formidable enforcer of the pirate conspiracy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="panel" id="read">
+    <p class="panel-title">First Pages</p>
+    <div class="reader">
+      <h2 class="reader-chapter">CHAPTER I</h2>
+      <p>Coming soon — the first pages of the translation will be added shortly.</p>
+    </div>
+  </div>
+
+  <footer>
+    <a href="/biblioteca-verne-ingles">← The World of Jules Verne</a>
+  </footer>
+
+</body>
+</html>

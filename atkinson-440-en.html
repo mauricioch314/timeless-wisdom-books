@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Mastery of Being - William Walker Atkinson</title>
+  <meta name="description" content="A philosophical inquiry into reality, being, and the deeper consciousness behind ordinary experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#fbfaf7;--paper:#fffdfa;--ink:#1e1c18;--muted:#70685d;--line:#e4d8c5;--gold:#b78b2f;--gold-soft:#f4ead7;--font:'Cormorant Garamond',Georgia,serif}
+    *,*::before,*::after{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.55}
+    a{color:inherit}header{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 42px;border-bottom:1px solid var(--line);background:rgba(255,253,250,.88);position:sticky;top:0;z-index:5;backdrop-filter:blur(8px)}
+    .brand{text-decoration:none;font-size:18px;letter-spacing:.13em;text-transform:uppercase}.nav{display:flex;gap:22px;flex-wrap:wrap}.nav a{text-decoration:none;color:var(--muted);font-size:15px;letter-spacing:.08em}.nav a.active,.nav a:hover{color:var(--gold)}
+    .hero{text-align:center;padding:58px 28px 36px;border-bottom:1px solid var(--line)}.kicker{color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-size:14px;margin:0 0 10px}.hero h1{font-size:clamp(38px,6vw,72px);font-weight:300;letter-spacing:.08em;line-height:1;margin:0 0 18px}.hero p{max-width:850px;margin:0 auto;color:var(--muted);font-size:20px;font-style:italic}
+    .tools{max-width:1180px;margin:0 auto;padding:24px 28px 0;display:grid;grid-template-columns:minmax(300px,380px) 1fr;gap:16px;align-items:center}.search{width:100%;border:1px solid var(--line);background:var(--paper);padding:12px 14px;font:18px var(--font);color:var(--ink)}.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.chips a{text-decoration:none;border:1px solid var(--line);padding:8px 12px;font-size:13px;letter-spacing:.08em;color:var(--muted);background:var(--paper)}.chips a:hover{border-color:var(--gold);color:var(--ink)}
+    main{max-width:1180px;margin:0 auto;padding:18px 28px 74px}.section{padding-top:34px}.section h2{font-size:clamp(24px,3vw,38px);font-weight:300;letter-spacing:.1em;text-align:center;margin:0 0 6px}.section-desc{max-width:760px;margin:0 auto 24px;text-align:center;color:var(--muted);font-size:17px;font-style:italic}
+    .volume-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:22px 0 32px}.volume-card{text-decoration:none;border:1px solid var(--line);background:var(--paper);padding:14px;min-height:112px;display:flex;flex-direction:column;justify-content:space-between}.volume-card:hover{border-color:var(--gold);box-shadow:0 10px 24px rgba(90,62,20,.08)}.volume-card b{color:var(--gold);letter-spacing:.14em;text-transform:uppercase;font-size:12px}.volume-card span{font-size:17px;line-height:1.2}.volume-card small{color:var(--muted);font-size:13px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:30px 22px}.book-card{display:flex;flex-direction:column;min-width:0}.cover-link{display:block;text-decoration:none}.cover{aspect-ratio:2/3;background:#eee4d5;border:1px solid var(--line);overflow:hidden;box-shadow:0 12px 30px rgba(32,22,10,.09);transition:transform .18s ease,box-shadow .18s ease}.cover img{width:100%;height:100%;object-fit:cover;display:block}.cover-link:hover .cover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(32,22,10,.14)}
+    .book-meta{color:var(--gold);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-top:13px}.book-card h3{font-size:20px;line-height:1.18;font-weight:500;margin:4px 0 8px}.book-card p{font-size:15px;color:var(--muted);margin:0 0 12px}.actions{display:flex;flex-direction:column;gap:8px;margin-top:auto}.btn{display:inline-flex;justify-content:center;align-items:center;text-decoration:none;border:1px solid var(--line);background:var(--paper);padding:8px 10px;font-size:14px;letter-spacing:.05em}.btn.primary{border-color:var(--gold);background:var(--gold-soft)}.btn:hover{border-color:var(--gold)}
+    .detail{display:grid;grid-template-columns:minmax(220px,340px) minmax(0,1fr);gap:42px;align-items:start;max-width:1060px;margin:0 auto;padding-top:48px}.detail-cover img{width:100%;height:auto;border:1px solid var(--line);box-shadow:0 18px 40px rgba(32,22,10,.14)}.detail h1{font-size:clamp(34px,5vw,62px);font-weight:300;line-height:1.02;letter-spacing:.04em;margin:0 0 12px}.detail .meta{color:var(--gold);letter-spacing:.13em;text-transform:uppercase;font-size:13px;margin-bottom:20px}.synopsis p{font-size:20px;color:var(--muted);margin:0 0 16px}.detail-actions{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}.panel{border-top:1px solid var(--line);padding-top:22px;margin-top:24px}.panel h2{font-size:26px;font-weight:400;letter-spacing:.08em;margin:0 0 12px}.panel p{font-size:18px;color:var(--muted)}.embedded-preview{max-height:760px;overflow:auto;border:1px solid var(--line);background:var(--paper);padding:24px 26px;box-shadow:inset 0 0 0 1px rgba(183,139,47,.08)}.embedded-preview h2{font-size:21px;font-style:italic;color:var(--gold);letter-spacing:.04em;margin:28px 0 12px}.embedded-preview p{font-size:18px;color:var(--ink);text-align:justify;margin:0 0 13px}.guide-preview{width:100%;min-height:620px;border:1px solid var(--line);background:var(--paper);box-shadow:0 14px 32px rgba(32,22,10,.08)}
+    footer{text-align:center;border-top:1px solid var(--line);padding:30px;color:var(--muted);font-size:15px}
+    @media(max-width:760px){header{position:static;padding:20px 22px;flex-direction:column}.tools{grid-template-columns:1fr}.chips{justify-content:center}.detail{grid-template-columns:1fr;padding-top:30px}.detail-cover{max-width:280px;margin:0 auto}.hero{padding-top:42px}.grid{grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:24px 14px}.book-card h3{font-size:17px}.book-card p{font-size:14px}}
+</style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">Timeless Wisdom Books</a>
+    <nav class="nav">
+      <a class="active" href="biblioteca-atkinson-en.html">W.W. Atkinson</a>
+      <a href="library-en.html">Translations</a>
+    </nav>
+  </header>
+
+  <main class="detail">
+    <aside class="detail-cover"><img src="traducciones/atkinson/books/en/440.jpg" alt="The Mastery of Being"></aside>
+    <article>
+      <div class="meta">440 · Vol. 4 · William Walker Atkinson</div>
+      <h1>The Mastery of Being</h1>
+      <div class="detail-actions"><a class="btn primary free-ebook" href="https://mauriciochavesmesen.com/traducciones/atkinson/ebooks/en/The-Mastery-of-Being.pdf" download>Free Book PDF Download</a><a class="btn" href="#primeras">Read First Pages</a><a class="btn" href="#guia">Study Guide</a></div><p class="library-return" style="margin:10px 0 24px"><a href="biblioteca-atkinson-en.html" style="color:var(--muted);text-decoration:none;letter-spacing:.05em">← Back to Library</a></p>
+      <section class="synopsis">
+        <p>A philosophical inquiry into reality, being, and the deeper consciousness behind ordinary experience.</p>
+      </section>
+
+      <section class="panel" id="primeras">
+        <h2>First pages</h2>
+        <div class="embedded-preview"><h2>I. THE QUEST FOR TRUTH.</h2>
+    <p>There is an ancient Oriental fable which runs as follows:</p>
+    <p>There was once a fabulously rich potentate, who died bequeathing all his property to Yusef, his favorite slave, with the one reservation that each of his sons was to be allowed to select some one thing of value, which should be set aside from the residue of the estate for the son to have and to hold forever, with all appertaining thereto. The sons each selected someone valuable piece of property. The eldest selected the royal palace; the second, the famed hanging gardens; the third, the jeweled peacock throne bestudded with precious stones of great value, and so on. Each son made his choice, and yet each bewailed the fact that the great bulk of the potentate’s possessions must pass into the hands of Yusef the slave.</p>
+    <p>Awaiting his turn sat the youngest son, a mere stripling. When his elder brothers had each made his choice, and the time of the youngest had come, he turned to the executors, saying: “I choose Yusef the slave!” A cry of wonder and admiration went up from the assembled judges, courtiers, and soldiery, for the stripling youth had displayed the greatest mental keenness and cunning. He had chosen as his one piece of property the favorite slave to whom the potentate had bequeathed the bulk of his estate. As the will provided that with each piece of property chosen by the sons should also go “all appertaining thereto,” the owner of the slave thus became owner of the enormous possessions forming the residuary bulk of the estate. Under the law the slave’s possessions became the property of the owner of the slave. By owning the slave the lad became the owner of all except the comparatively trifling things that the brothers had chosen. He had chosen the only possible thing which, when owned, made him the owner of all the rest of real and permanent value.</p>
+    <p>And so, in the spirit of the allegory, the attainment of the knowledge of Reality causes one to become the attainer of All Truth, for All Truth is included in the content thereof. Reality is the “one thing which, when known, all is known.” It is the primal and elemental Truth-of-All-Truth.</p>
+    <p>The Path of Attainment.</p>
+    <p>Truth is discovered only by those who have the courage, faith, and persistency to climb the steep Path of Attainment; by those who brave the rocky, narrow footpath; by those who are appalled not when they gaze down upon the canyons far beneath them, seeing the multitude of crawling, creeping things that look like tiny ants—the world of men living on the lower planes of thought. A clear head, steady nerves, sound lungs, strong muscles, and sure feet are needed by him who would attain the heights. Do you possess these?</p>
+    <p>Have you the courage to leave behind you all preconceived notions, superstitions, and prejudices of finite life? Have you the intellectual daring which alone will enable you to make foot places along the jagged cliffs in which your feet must be placed one after the other as you mount higher and higher? Have you the persistency which will cause you to proceed thus, step by step, mounting higher and higher toward Truth without becoming dizzy when you chance to look downward over the immense distances which you have traversed? Have you the constancy which will enable you to look upward and not downward, forward and not backward, on the Path, caring for naught except to reach the summit of the highest peak of the mountain of Truth?</p>
+    <p>If you have these, O Seeker! then are you invited to participate in the Quest for Truth, in the Inquiry for Ultimate Reality, which is Spirit. You are invited to pursue the quest for this underlying, fundamental, actual, enduring, absolute Truth, this Ultimate Verity—Reality. The journey is long, arduous, and tedious. Its path is strewn with jagged rocks, which torment and bruise the feet of the intellect. Its grade is steep, and the traveler ofttimes loses his breath and feels insecure of his footing. His head swims and becomes dizzy. The spiritual air is very rare, and the unaccustomed lungs of thought pant with the unusual exertion. For remember, the Path of Knowledge leading to the recognition and realization of Reality winds around the sides of the steepest and highest mountain of human mentation. He who reaches its summit—he who gains its highest peak—has found “that which, when known, all things are known.”</p></div>
+      </section>
+      <section class="panel" id="guia">
+        <h2>Study Guide</h2>
+        <p>Preview the study guide below, or download the PDF for offline reading.</p><iframe class="guide-preview" src="https://mauriciochavesmesen.com/traducciones/atkinson/guides/440-study-guide.pdf" title="Study guide preview"></iframe><p><a class="btn primary" href="https://mauriciochavesmesen.com/traducciones/atkinson/guides/440-study-guide.pdf" download>Free Study Guide Download</a></p>
+      </section>
+    </article>
+  </main>
+  <footer>© Timeless Wisdom Books · <a href="library-en.html">Translations</a></footer>
+</body>
+</html>

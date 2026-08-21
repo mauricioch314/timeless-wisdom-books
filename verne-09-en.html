@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Englishmen and Three Russians in South Africa — The World of Jules Verne</title>
+  <meta name="description" content="Three Englishmen and Three Russians in South Africa, No. 9 of the Voyages Extraordinaires.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root { --color-bg: #ffffff; --color-text: #1a1a1a; --color-muted: #6b6b6b; --color-accent: #C9A84C; --color-border: #e8e4dc; --font: 'Cormorant Garamond', Georgia, serif; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--color-bg); color: var(--color-text); font-family: var(--font); line-height: 1.6; }
+    header { padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--color-border); }
+    .site-title { font-size: 18px; font-weight: 300; letter-spacing: 0.12em; text-decoration: none; color: var(--color-text); }
+    .site-title:hover { color: var(--color-accent); }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; padding: 20px 40px; font-size: 13px; letter-spacing: 0.08em; color: var(--color-muted); text-decoration: none; }
+    .back-link:hover { color: var(--color-accent); }
+    .back-link::before { content: '\2190'; }
+    .book-hero { display: grid; grid-template-columns: 260px 1fr; gap: 48px; max-width: 1000px; margin: 0 auto; padding: 0 40px 60px; }
+    .hero-cover { position: sticky; top: 32px; }
+    .hero-cover img { width: 100%; display: block; box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+    .hero-meta { padding-top: 8px; }
+    .series-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 10px; }
+    .book-title { font-size: clamp(32px, 4vw, 52px); font-weight: 300; letter-spacing: 0.08em; line-height: 1.1; margin-bottom: 20px; }
+    .presentation { font-size: clamp(16px, 1.8vw, 19px); font-weight: 300; line-height: 1.85; color: var(--color-text); max-width: 620px; }
+    .presentation p { margin-bottom: 1.2em; }
+    hr.divider { border: none; border-top: 1px solid var(--color-border); margin: 0; }
+    .panel { max-width: 1000px; margin: 0 auto; padding: 60px 40px; }
+    .panel + .panel { border-top: 1px solid var(--color-border); }
+    .panel-title { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 32px; }
+    .reader { max-width: 660px; }
+    .reader-chapter { font-size: 22px; font-weight: 300; letter-spacing: 0.1em; color: var(--color-text); margin-bottom: 24px; }
+    .reader p { font-size: clamp(16px, 1.7vw, 18px); font-weight: 300; line-height: 1.85; color: var(--color-text); margin-bottom: 1.1em; }
+    footer { text-align: center; padding: 32px 40px; border-top: 1px solid var(--color-border); font-size: 14px; color: var(--color-muted); font-style: italic; }
+    footer a { color: var(--color-muted); text-decoration: none; }
+    footer a:hover { color: var(--color-accent); }
+    .chars-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 1000px; }
+    .char-card { display: flex; gap: 20px; align-items: flex-start; padding: 20px; border: 1px solid var(--color-border); background: var(--color-bg); }
+    .char-card img { width: 100px; height: 130px; object-fit: cover; flex-shrink: 0; border: 1px solid var(--color-border); }
+    .char-card .char-placeholder { width: 100px; height: 130px; flex-shrink: 0; border: 1px dashed var(--color-border); display: flex; align-items: center; justify-content: center; font-size: 28px; color: var(--color-muted); background: #fafaf8; }
+    .char-info { flex: 1; min-width: 0; }
+    .char-name { font-size: 18px; font-weight: 500; letter-spacing: 0.04em; margin-bottom: 6px; color: var(--color-text); }
+    .char-role { font-size: 12px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 8px; }
+    .char-desc { font-size: 15px; font-weight: 300; line-height: 1.6; color: var(--color-text); }
+    @media (max-width: 720px) {
+      .chars-grid { grid-template-columns: 1fr; }
+      .char-card { flex-direction: column; align-items: center; text-align: center; }
+      .char-card img, .char-card .char-placeholder { width: 80px; height: 105px; }
+      header { padding: 20px 24px; flex-direction: column; gap: 16px; text-align: center; }
+      .back-link { padding: 16px 24px; }
+      .book-hero { grid-template-columns: 1fr; gap: 28px; padding: 0 24px 48px; }
+      .hero-cover { position: static; max-width: 200px; }
+      .panel { padding: 40px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="site-title" href="index.html">Timeless Wisdom Books</a>
+  </header>
+  <a class="back-link" href="/biblioteca-verne-ingles">The World of Jules Verne</a>
+  <div class="book-hero">
+    <div class="hero-cover">
+      <img src="traducciones/verne/en/09.jpg" alt="Cover of Three Englishmen and Three Russians in South Africa">
+    </div>
+    <div class="hero-meta">
+      <p class="series-tag">Voyages Extraordinaires · No. 9</p>
+      <h1 class="book-title">Three Englishmen and Three Russians in South Africa</h1>
+      <div class="presentation">
+        <p>In the vast, sun-scorched plains of southern Africa, a convergence of scientific ambition and international rivalry is about to unfold. A joint Anglo-Russian astronomical commission has been dispatched to measure an arc of the meridian—a precise geodetic operation that will help determine the true shape of the Earth. The stakes are high, for the accuracy of navigation charts, the mapping of distant colonies, and the prestige of two great empires all depend on the successful completion of this delicate survey. The two teams, each led by a commander of formidable reputation, arrive at the Cape of Good Hope prepared for months of gruelling fieldwork across some of the most challenging terrain on the planet.</p>
+        <p>Colonel Everest, the English leader, is a man of rigid discipline and imperial confidence. He carries himself with the authority of a military commander accustomed to being obeyed, and his methods are precise, his expectations absolute. His Russian counterpart, Matthew Strux, is no less commanding—a scientist of formidable intellect and stubborn pride, equally unwilling to yield an inch in matters of protocol or procedure. Between these two men, the spirit of collaboration that launched the expedition quickly gives way to a simmering competition. Each measurement, each triangulation, each calculation becomes a point of contention, and the grand scientific enterprise risks being undermined by the very human weakness it was meant to transcend.</p>
+        <p>Yet the natural world pays no heed to the quarrels of nations. The survey takes the commissioners across a landscape of extraordinary beauty and danger: from the semi-desert of the Great Karoo to the rugged escarpments of the Drakensberg, through territories inhabited by wildlife that regards the trespass of human beings with indifference or hostility. Lions, elephants, rhinoceroses, and buffalo cross their path; rivers must be forded, mountains scaled, instruments protected from the elements. The local populations, from Boer farmers to African tribes, regard the expedition with a mixture of curiosity and suspicion. And through it all, the astronomers must maintain the precision of their measurements, knowing that a single error could invalidate months of labour and exacerbate the tensions already simmering between the two camps.</p>
+        <p>Three Englishmen and Three Russians in South Africa is a novel that explores the strange intersection of science and nationalism, cooperation and rivalry. Verne populates the story with characters who embody both the nobility and the frailty of the scientific spirit: William Emery and Nicolas Palander, the young astronomers on each side, whose genuine love of knowledge transcends national boundaries and offers a quiet hope for reconciliation. The novel moves between moments of high tension—the near-collapse of the mission over a point of pride—and passages of pure wonder at the African landscape. It is a meditation on how the pursuit of truth can be both exalted and compromised by the human beings who pursue it, and a reminder that even the most exact science unfolds within the messy, unpredictable world of human relationships.</p>
+      </div>
+    </div>
+  </div>
+  <hr class="divider">
+  <div class="panel" id="characters">
+    <p class="panel-title">Characters</p>
+    <div class="chars-grid">
+      <div class="char-card">
+        <div class="char-placeholder" role="img" aria-label="Portrait not yet available">?</div>
+        <div class="char-info">
+          <p class="char-name">Colonel Everest</p>
+          <p class="char-role">English Leader</p>
+          <p class="char-desc">A military man of formidable rigour and imperial bearing, Colonel Everest commands the English team with unquestioned authority. His commitment to precision is absolute, but his pride and stubbornness threaten to derail the very mission he has been sent to lead.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <div class="char-placeholder" role="img" aria-label="Portrait not yet available">?</div>
+        <div class="char-info">
+          <p class="char-name">Matthew Strux</p>
+          <p class="char-role">Russian Leader</p>
+          <p class="char-desc">Proud, brilliant, and unyielding, Matthew Strux commands the Russian contingent with an intensity that matches his English counterpart. His scientific credentials are impeccable, but his refusal to compromise on matters of national honour creates a dangerous friction at the heart of the expedition.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <div class="char-placeholder" role="img" aria-label="Portrait not yet available">?</div>
+        <div class="char-info">
+          <p class="char-name">William Emery</p>
+          <p class="char-role">Astronomer</p>
+          <p class="char-desc">A young English astronomer of genuine passion and integrity, William Emery represents the ideal of science as a universal endeavour. His dedication to the measurement transcends national pride, and his quiet competence makes him a bridge between the divided camps.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <div class="char-placeholder" role="img" aria-label="Portrait not yet available">?</div>
+        <div class="char-info">
+          <p class="char-name">Nicolas Palander</p>
+          <p class="char-role">Astronomer</p>
+          <p class="char-desc">A gifted Russian astronomer whose love for the stars knows no borders, Palander shares with William Emery a mutual respect that defies the tension between their leaders. His patient observations and steady temperament provide a calming influence during the expedition's most trying moments.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="divider">
+  <div class="panel" id="read">
+    <p class="panel-title">First Pages</p>
+    <div class="reader">
+      <p style="font-style:italic;color:var(--color-muted)">Coming soon — the first pages of the translation will be added shortly.</p>
+    </div>
+  </div>
+  <footer>
+    <a href="/biblioteca-verne-ingles">← The World of Jules Verne</a>
+  </footer>
+</body>
+</html>

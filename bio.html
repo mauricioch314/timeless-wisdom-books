@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio — Timeless Wisdom Books</title>
+  <meta name="description" content="Escritor, director de cine, viajero y conferencista. Conoce a Mauricio Chaves-Mesén.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-bg:     #ffffff;
+      --color-text:   #1a1a1a;
+      --color-muted:  #6b6b6b;
+      --color-accent: #C9A84C;
+      --color-border: #e8e4dc;
+      --font: 'Cormorant Garamond', Georgia, serif;
+      --max-w: 820px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font);
+      min-height: 100vh;
+    }
+
+    /* ── Back link ───────────────────────────────────────────────── */
+    .back-link {
+      display: inline-block;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      color: var(--color-muted);
+      text-decoration: none;
+      padding: clamp(1.25rem, 4vw, 2rem) clamp(1.25rem, 5vw, 3rem);
+    }
+    .back-link:hover { color: var(--color-text); }
+
+    /* ── Opening quote ───────────────────────────────────────────── */
+    .opening {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: clamp(2rem, 6vw, 4rem) clamp(1.25rem, 5vw, 3rem) clamp(3rem, 8vw, 6rem);
+      text-align: center;
+    }
+
+    .opening blockquote {
+      font-size: clamp(18px, 3vw, 26px);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.7;
+      color: var(--color-text);
+      border: none;
+      padding: 0;
+    }
+
+    .opening blockquote p + p {
+      margin-top: 1.2em;
+    }
+
+    .opening cite {
+      display: block;
+      margin-top: 2rem;
+      font-size: 13px;
+      font-style: normal;
+      letter-spacing: 0.12em;
+      color: var(--color-muted);
+    }
+
+    /* ── Section divider ─────────────────────────────────────────── */
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--color-border);
+      margin: 0 auto;
+    }
+
+    /* ── Bio section ─────────────────────────────────────────────── */
+    .bio-section {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: clamp(3rem, 8vw, 5rem) clamp(1.25rem, 5vw, 3rem);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .bio-section:first-of-type {
+      border-top: none;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .section-body {
+      display: grid;
+      gap: clamp(1.5rem, 4vw, 3rem);
+    }
+
+    /* Layout: text + photos side by side */
+    .section-body.has-photos {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
+
+    @media (max-width: 600px) {
+      .section-body.has-photos {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .section-text {
+      font-size: clamp(16px, 2vw, 19px);
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--color-text);
+    }
+
+    .section-text p + p {
+      margin-top: 1em;
+    }
+
+    .section-text blockquote {
+      font-style: italic;
+      padding-left: 1.25rem;
+      border-left: 2px solid var(--color-border);
+      color: var(--color-muted);
+      font-size: clamp(15px, 1.8vw, 18px);
+      line-height: 1.75;
+    }
+
+    /* Photos */
+    .section-photos {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .section-photos.two-up {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    @media (max-width: 600px) {
+      .section-photos.two-up {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .section-photos img {
+      width: 100%;
+      height: 240px;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* Keep single stacked photos taller */
+    .section-photos:not(.two-up) img {
+      height: auto;
+      max-height: 420px;
+    }
+
+    /* Single large photo spans full width in text column */
+    .section-body.photo-left {
+      grid-template-columns: 1fr 1.4fr;
+    }
+
+    .section-body.photo-right {
+      grid-template-columns: 1.4fr 1fr;
+    }
+
+    @media (max-width: 600px) {
+      .section-body.photo-left,
+      .section-body.photo-right {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Full-width photo (conferencista) */
+    .photo-full {
+      width: 100%;
+      max-height: 520px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+    }
+
+    /* ── Social links ────────────────────────────────────────────── */
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    .social-links a {
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      color: var(--color-muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 2px;
+      transition: color 180ms ease, border-color 180ms ease;
+    }
+
+    .social-links a:hover {
+      color: var(--color-text);
+      border-color: var(--color-accent);
+    }
+
+    /* ── Cortometraje ────────────────────────────────────────────── */
+    .corto-card {
+      margin-top: clamp(1.5rem, 4vw, 2.5rem);
+      border: 1px solid var(--color-border);
+      display: flex;
+      align-items: stretch;
+      overflow: hidden;
+    }
+    .corto-card img {
+      width: 70%;
+      height: 280px;
+      object-fit: cover;
+      object-position: center center;
+      flex-shrink: 0;
+      display: block;
+    }
+    .corto-info {
+      width: 30%;
+      padding: clamp(1rem, 2vw, 1.5rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 0.6rem;
+    }
+    .corto-label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+    }
+    .corto-title {
+      font-size: clamp(16px, 1.8vw, 22px);
+      font-weight: 300;
+      letter-spacing: 0.08em;
+    }
+    .corto-desc {
+      font-size: 12px;
+      color: var(--color-muted);
+      line-height: 1.8;
+    }
+    .corto-desc .nowrap { white-space: nowrap; }
+    .corto-link {
+      display: inline-block;
+      font-family: var(--font);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      color: var(--color-muted);
+      background: var(--color-border);
+      padding: 6px 16px;
+      text-decoration: none;
+      transition: background 150ms ease, color 150ms ease;
+    }
+    .corto-link:hover { background: #d8d3c9; color: var(--color-text); }
+    @media (max-width: 520px) {
+      .corto-card { flex-direction: column; }
+      .corto-card img { width: 100%; height: 220px; }
+      .corto-info { width: 100%; }
+    }
+
+    /* ── Entrevistas ────────────────────────────────────────────── */
+    .interview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 0;
+    }
+    @media (max-width: 520px) {
+      .interview-grid { grid-template-columns: 1fr; }
+    }
+    .interview-card {
+      display: block;
+      text-decoration: none;
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+      transition: border-color 200ms ease;
+    }
+    .interview-card:hover { border-color: var(--color-accent); }
+    .interview-thumb {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      background: #f0ede8;
+    }
+    .interview-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 300ms ease;
+    }
+    .interview-card:hover .interview-thumb img { transform: scale(1.03); }
+    .interview-play {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.18);
+      transition: background 200ms ease;
+    }
+    .interview-card:hover .interview-play { background: rgba(0,0,0,0.28); }
+    .interview-play svg {
+      width: 48px;
+      height: 48px;
+      opacity: 0.9;
+    }
+    .interview-info {
+      padding: 0.9rem 1rem;
+    }
+    .interview-label {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 4px;
+    }
+    .interview-title {
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: var(--color-text);
+      line-height: 1.4;
+    }
+
+    /* ── Footer ──────────────────────────────────────────────────── */
+    .page-footer {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: clamp(2rem, 5vw, 3rem) clamp(1.25rem, 5vw, 3rem) clamp(3rem, 8vw, 5rem);
+      border-top: 1px solid var(--color-border);
+      text-align: center;
+    }
+
+    .page-footer p {
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      color: var(--color-muted);
+    }
+  /* Generic section */
+    .site-section {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: clamp(2.5rem, 7vw, 4.5rem) clamp(1.25rem, 5vw, 3rem);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .section-heading {
+      font-size: clamp(20px, 3.5vw, 30px);
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      color: var(--color-text);
+      margin-bottom: 0.6rem;
+    }
+
+    .section-intro {
+      font-size: clamp(13px, 1.6vw, 15px);
+      color: var(--color-muted);
+      line-height: 1.65;
+      margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
+    }
+
+    /* ── Blog ──────────────────────────────────────────────────────── */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: clamp(1.25rem, 3vw, 2rem);
+    }
+
+    .blog-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      border: 1px solid var(--color-border);
+      padding: clamp(1.25rem, 3vw, 1.75rem);
+    }
+
+    .blog-category {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+    }
+
+    .blog-title {
+      font-size: clamp(17px, 2.2vw, 21px);
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      line-height: 1.35;
+      color: var(--color-text);
+    }
+
+    .blog-excerpt {
+      font-size: clamp(13px, 1.5vw, 15px);
+      color: var(--color-muted);
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    .blog-link {
+      display: inline-block;
+      font-family: var(--font);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      color: var(--color-muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 2px;
+      align-self: flex-start;
+      margin-top: 0.25rem;
+      transition: color 150ms ease, border-color 150ms ease;
+    }
+    .blog-link:hover { color: var(--color-text); border-color: var(--color-accent); }
+
+    /* ── Testimonials ──────────────────────────────────────────────── */
+    .rating-display {
+      text-align: center;
+      margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
+    }
+
+    .rating-stars {
+      font-size: clamp(22px, 4vw, 34px);
+      color: var(--color-accent);
+      letter-spacing: 0.1em;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    .rating-score {
+      font-size: clamp(22px, 3.5vw, 30px);
+      font-weight: 300;
+      color: var(--color-text);
+    }
+
+    .rating-count {
+      display: block;
+      font-size: 13px;
+      color: var(--color-muted);
+      letter-spacing: 0.08em;
+      margin-top: 0.2rem;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(0.75rem, 2vw, 1.25rem);
+    }
+
+    .testimonial-card {
+      border: 1px solid var(--color-border);
+      padding: clamp(1.1rem, 2.5vw, 1.4rem);
+      text-align: center;
+    }
+
+    .testimonial-mark {
+      font-size: clamp(13px, 1.7vw, 17px);
+      color: var(--color-accent);
+      display: block;
+      margin-bottom: 0.65rem;
+      letter-spacing: 0.08em;
+    }
+
+    .testimonial-label {
+      font-size: clamp(14px, 1.8vw, 17px);
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--color-text);
+      font-style: italic;
+      line-height: 1.35;
+    }
+
+    @media (max-width: 620px) {
+      .testimonial-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── YouTube ───────────────────────────────────────────────────── */
+    .youtube-card {
+      border: 1px solid var(--color-border);
+      padding: clamp(1.5rem, 4vw, 2.25rem);
+      display: flex;
+      gap: clamp(1.5rem, 4vw, 2.5rem);
+      align-items: center;
+    }
+
+    @media (max-width: 540px) {
+      .youtube-card { flex-direction: column; align-items: flex-start; }
+    }
+
+    .youtube-icon {
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      background: #ff0000;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .youtube-icon svg {
+      width: 26px;
+      height: 26px;
+      fill: #fff;
+    }
+
+    .youtube-channel {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .youtube-title {
+      font-size: clamp(18px, 2.5vw, 24px);
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--color-text);
+      margin-bottom: 0.4rem;
+    }
+
+    .youtube-desc {
+      font-size: clamp(13px, 1.5vw, 15px);
+      color: var(--color-muted);
+      line-height: 1.65;
+    }
+
+    .cta-link {
+      display: inline-block;
+      font-family: var(--font);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      color: var(--color-muted);
+      background: var(--color-border);
+      padding: 6px 16px;
+      text-decoration: none;
+      margin-top: 0.9rem;
+      transition: background 150ms ease, color 150ms ease;
+    }
+    .cta-link:hover { background: #d8d3c9; color: var(--color-text); }
+
+    /* ── Newsletter ───────────────────────────────────────────── */
+    .newsletter-banner {
+      border: 1px solid var(--color-border);
+      padding: clamp(1.75rem, 5vw, 3rem);
+      text-align: center;
+    }
+
+    .newsletter-label {
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .newsletter-heading {
+      font-size: clamp(20px, 3.5vw, 30px);
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      color: var(--color-text);
+      margin-bottom: 0.75rem;
+    }
+
+    .newsletter-text {
+      font-size: clamp(14px, 1.8vw, 17px);
+      color: var(--color-muted);
+      line-height: 1.65;
+      margin-bottom: clamp(1.25rem, 3vw, 2rem);
+    }
+
+    /* ── Recursos ──────────────────────────────────────────────────── */
+    .recursos-card {
+      border: 1px solid var(--color-border);
+      padding: clamp(1.25rem, 3vw, 1.75rem);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+      .recursos-card { flex-direction: column; align-items: flex-start; }
+    }
+
+    .recursos-card h3 {
+      font-size: clamp(16px, 2vw, 20px);
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: var(--color-text);
+      margin-bottom: 0.35rem;
+    }
+
+    .recursos-card p {
+      font-size: clamp(12px, 1.5vw, 14px);
+      color: var(--color-muted);
+      line-height: 1.6;
+    }
+
+    /* ── Contact ───────────────────────────────────────────────────── */
+    .contact-note {
+      font-size: clamp(17px, 2.5vw, 23px);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.7;
+      color: var(--color-text);
+      max-width: 600px;
+      margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .contact-link {
+      font-size: 13px;
+      letter-spacing: 0.09em;
+      color: var(--color-muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 2px;
+      transition: color 180ms ease, border-color 180ms ease;
+    }
+    .contact-link:hover { color: var(--color-text); border-color: var(--color-accent); }
+
+    
+
+    </style>
+  <link rel="stylesheet" href="bio-editorial.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://mauriciochavesmesen.com/bio#profile",
+  "url": "https://mauriciochavesmesen.com/bio",
+  "name": "Biografía de Mauricio Chaves-Mesén",
+  "inLanguage": "es",
+  "isPartOf": {
+    "@id": "https://mauriciochavesmesen.com/#website"
+  },
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://mauriciochavesmesen.com/#mauricio-chaves-mesen",
+    "name": "Mauricio Chaves-Mesén",
+    "url": "https://mauriciochavesmesen.com",
+    "image": "https://mauriciochavesmesen.com/mauricio-2.jpg",
+    "jobTitle": [
+      "Writer",
+      "Filmmaker",
+      "Editor",
+      "Translator"
+    ],
+    "knowsLanguage": [
+      "Spanish",
+      "English",
+      "French"
+    ],
+    "sameAs": [
+      "https://www.instagram.com/mauriciochavesmesen",
+      "https://www.facebook.com/mauriciochavesmesen",
+      "https://www.linkedin.com/in/mauricio-chaves-mes%C3%A9n-47b33675/",
+      "https://x.com/mauriciochavesm",
+      "https://www.youtube.com/@MauricioChavesMesen"
+    ]
+  }
+}
+  </script>
+</head>
+<body>
+  <h1 class="seo-page-title">Biografía de Mauricio Chaves-Mesén</h1>
+
+  <a class="back-link" href="index.html">← Inicio</a>
+
+  <!-- Opening personal quote -->
+  <section class="opening" id="declaracion">
+    <blockquote>
+      <p>En el pasado fui abogado y fui empresario y fui esto y fui lo otro,<br>pero ya no soy nada de eso, ni lo he sido por mucho tiempo.</p>
+      <p>Ahora soy escritor, y escribo novelas de misterio.</p>
+      <p>Todavía me suena divertido, quizá tengo síndrome de impostor,<br>
+      pero escribir es lo que hago cuando me levanto, es lo que hago al mediodía,<br>
+      y es lo que hago cuando en las noches trato de dormir y las musas no me dejan<br>
+      hasta que termino una novela, y después otra, y después otra…</p>
+      <p>No me estoy quejando, por el contrario, estoy muy agradecido.<br>
+      Mis otros yo, los de antes, no eran felices ni disfrutaban lo que hacían.<br>
+      El yo de ahora sí.</p>
+    </blockquote>
+    <cite>— Mauricio Chaves-Mesén</cite>
+  </section>
+
+  <!-- ESCRITOR -->
+  <section class="bio-section" id="escritor">
+    <p class="section-label">Escritor</p>
+    <div class="section-body has-photos photo-right">
+
+      <div class="section-text">
+        <p>Abogado, MBA y empresario, Mauricio Chaves-Mesén se dedica hoy por completo a la escritura. Ha publicado doce novelas de misterio y tres libros de negocios, motivación y biografía, que han impactado a más de medio millón de personas.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/mauriciochavesmesen" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/mauriciochavesmesen" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.linkedin.com/in/mauricio-chaves-mesén-47b33675/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://x.com/mauriciochavesm" target="_blank" rel="noopener">X</a>
+        </div>
+      </div>
+
+      <div class="section-photos">
+        <img src="mauricio-2.jpg" alt="Mauricio Chaves-Mesén con sus libros" style="max-height: none; object-position: center top">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DIRECTOR DE CINE -->
+  <section class="bio-section" id="director">
+    <p class="section-label">Director de Cine</p>
+    <div class="section-body has-photos photo-left">
+
+      <div class="section-photos">
+        <img src="bio/cine-1.png" alt="Diploma de dirección de cine">
+      </div>
+
+      <div class="section-text">
+        <p>Con un Master en Cine de la Escuela de Cine de Málaga, prepara su primera película — una historia relacionada con sus novelas que se filmará en locaciones en España e Italia.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/mauriciochavesmesen" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/mauriciochavesmesen" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.linkedin.com/in/mauricio-chaves-mesén-47b33675/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://x.com/mauriciochavesm" target="_blank" rel="noopener">X</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="section-photos two-up" style="margin-top: clamp(1.5rem, 4vw, 2.5rem)">
+      <img src="bio/cine-2.jpg" alt="Festival de Cine de Málaga 2025" style="object-position: center 25%">
+      <img src="bio/cine-3.jpg" alt="Festival de Cine de Málaga 2024" style="object-position: center 25%">
+    </div>
+    <div class="corto-card">
+      <img loading="lazy" src="bio/corto-1.jpg" alt="Escena del cortometraje Las Bragas">
+      <div class="corto-info">
+        <p class="corto-label">Cortometraje</p>
+        <h3 class="corto-title">Las Bragas</h3>
+        <p class="corto-desc">Cortometraje de ficción<br><span class="nowrap">dirigido por Mauricio Chaves-Mesén.</span><br>Producción Escuela de Cine de Málaga.</p>
+        <a class="corto-link" href="https://play.escueladecinedemalaga.com/videos/cortometraje-las-bragas-mauricio-chaves" target="_blank" rel="noopener">Ver cortometraje →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDITOR Y TRADUCTOR -->
+  <section class="bio-section" id="editor-traductor">
+    <p class="section-label">Editor y Traductor</p>
+    <div class="editorial-showcase">
+      <div class="section-text">
+        <p>Durante muchos años, Mauricio Chaves-Mesén ha trabajado de forma obsesiva en la edición de cientos de libros clásicos en inglés, la sistematización de las novelas de Julio Verne en varios idiomas y la traducción de más de cien libros al español. Entre ellos se encuentran obras fundamentales del Nuevo Pensamiento y el esoterismo, así como novelas de importancia histórica como <em>1984</em>, <em>El Principito</em> y <em>La raza que vendrá</em>, además de la serie de Arsène Lupin para Editorial Planeta.</p>
+      </div>
+      <div class="editorial-covers" aria-label="Selección de libros editados y traducidos por Mauricio Chaves-Mesén">
+        <img loading="lazy" src="traducciones/atkinson/05-kybalion.jpg" alt="El Kybalion">
+        <img loading="lazy" src="traducciones/verne/02.jpg" alt="Las aventuras del capitán Hatteras">
+        <img loading="lazy" src="traducciones/clasica/02-1984.jpg" alt="1984">
+        <img loading="lazy" src="traducciones/esoterica/02-atlantida.png" alt="Atlántida: el mundo antediluviano">
+        <img loading="lazy" src="traducciones/verne/05.jpg" alt="Los hijos del capitán Grant">
+        <img loading="lazy" src="traducciones/atkinson/04-doctrina-secreta.jpg" alt="La doctrina secreta de los rosacruces">
+      </div>
+    </div>
+  </section>
+
+  <!-- VIAJERO INCANSABLE -->
+  <section class="bio-section" id="viajero">
+    <p class="section-label">Viajero Incansable</p>
+    <div class="section-body has-photos photo-right">
+
+      <div class="section-text">
+        <blockquote>
+          "He recorrido el mundo varias veces, visitando los sitios sagrados de Cuzco a Stonehenge, de Egipto a Gobekli Tepe, de las esferas de piedra de Costa Rica a las líneas de Nazca, de las pirámides de México a los templos de Bolivia, de la muralla China a Angkor Wat… Lo he visto casi todo, he caminado los lugares que inspiran mis novelas, he sentido lo que debieron sentir mis personajes. Un secreto: muchas de esas historias que en mis libros parecen fantasía, son parte de una oculta realidad."
+        </blockquote>
+        <div class="social-links">
+          <a href="https://www.instagram.com/mauriciochavesmesen" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/mauriciochavesmesen" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.linkedin.com/in/mauricio-chaves-mesén-47b33675/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://x.com/mauriciochavesm" target="_blank" rel="noopener">X</a>
+        </div>
+      </div>
+
+      <div class="section-photos two-up">
+        <img src="bio/viajero-1.png" alt="Mauricio en las pirámides de Egipto">
+        <img src="bio/viajero-2.png" alt="Mauricio en vuelo">
+        <img src="bio/viajero-3.jpg" alt="Petra, Jordania">
+        <img src="bio/viajero-4.jpg" alt="Atardecer en Boracay, Filipinas">
+        <img src="bio/viajero-5.jpg" alt="Torres Petronas, Kuala Lumpur">
+        <img src="bio/viajero-6.jpg" alt="Puerta del Sol, Tiwanaku, Bolivia">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BUSCADOR DE SENTIDO -->
+  <section class="bio-section" id="buscador">
+    <p class="section-label">Buscador de Sentido</p>
+    <div class="section-body has-photos photo-right">
+      <div class="section-text">
+        <blockquote>
+          "Desde ceremonias del cacao en el Sahara y ayahuasca en los Andes, a meditaciones en la Gran Pirámide, en medio de las Esferas sagradas de Costa Rica, o al atardecer en algún Paraíso… soy un buscador de las verdades profundas con curiosidad insaciable y mente sincrética."
+        </blockquote>
+        <div class="social-links">
+          <a href="https://www.instagram.com/mauriciochavesmesen" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/mauriciochavesmesen" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.linkedin.com/in/mauricio-chaves-mesén-47b33675/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://x.com/mauriciochavesm" target="_blank" rel="noopener">X</a>
+        </div>
+      </div>
+      <div class="section-photos two-up">
+        <img src="bio/buscador-1.jpg" alt="Meditación en la playa">
+        <img src="bio/buscador-2.jpg" alt="Contemplando el océano" style="object-position: 58% top">
+      </div>
+    </div>
+    <div class="section-photos two-up" style="margin-top: clamp(1.5rem, 4vw, 2.5rem)">
+      <img src="bio/buscador-3.jpg" alt="Meditación en la Cámara del Rey, Gran Pirámide de Giza">
+      <img src="bio/buscador-5.jpg" alt="Meditando entre las Esferas sagradas de Costa Rica">
+    </div>
+  </section>
+
+  <!-- CONFERENCISTA -->
+  <section class="bio-section" id="conferencista">
+    <p class="section-label">Conferencista</p>
+    <div class="section-text" style="margin-bottom: clamp(1.5rem, 4vw, 2.5rem)">
+      <p>Orador en múltiples conferencias, ha presentado sus libros en ferias internacionales del libro y compartido con lectores los misterios, viajes e investigaciones que inspiran sus novelas.</p>
+    </div>
+    <div class="section-photos two-up">
+      <img src="bio/conferencista-1.jpg" alt="Mauricio Chaves-Mesén en la Feria del Libro de Málaga">
+      <img src="bio/conferencista-2.jpg" alt="Presentando libros con lectores">
+      <img src="bio/conferencista-3.jpg" alt="Festival de Cine de Málaga 2024">
+      <img src="bio/conferencista-4.jpg" alt="Presentación en stand con libros">
+    </div>
+  </section>
+
+  <!-- ENTREVISTAS -->
+  <section class="bio-section" id="entrevistas">
+    <p class="section-label">Entrevistas</p>
+    <div class="interview-grid">
+
+      <a class="interview-card" href="https://www.youtube.com/watch?v=5pOWFVdboQs" target="_blank" rel="noopener">
+        <div class="interview-thumb">
+          <img src="https://img.youtube.com/vi/5pOWFVdboQs/maxresdefault.jpg" alt="Entrevista A hombros de gigantes" loading="lazy">
+          <div class="interview-play">
+            <svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg">
+              <path d="M66.5 7.7C65.8 5.3 63.9 3.4 61.5 2.7 56.1 1 34 1 34 1S11.9 1 6.5 2.7C4.1 3.4 2.2 5.3 1.5 7.7 0 13.1 0 24 0 24s0 10.9 1.5 16.3c.7 2.4 2.6 4.3 5 5C11.9 47 34 47 34 47s22.1 0 27.5-1.7c2.4-.7 4.3-2.6 5-5C68 34.9 68 24 68 24s0-10.9-1.5-16.3z" fill="#ff0000"/>
+              <path d="M45 24 27 14v20" fill="#fff"/>
+            </svg>
+          </div>
+        </div>
+        <div class="interview-info">
+          <p class="interview-label">YouTube · A hombros de gigantes</p>
+          <p class="interview-title">Entrevista Mauricio Chaves-Mesén</p>
+        </div>
+      </a>
+
+      <a class="interview-card" href="https://www.7tvandalucia.es/video/magazine/260224-siete-malaga-b2-mp4/20260224171739009224.html" target="_blank" rel="noopener">
+        <div class="interview-thumb">
+          <img src="bio/entrevista-7tv.jpg" alt="Entrevista Las Siete Málaga" loading="lazy">
+          <div class="interview-play">
+            <svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg">
+              <path d="M66.5 7.7C65.8 5.3 63.9 3.4 61.5 2.7 56.1 1 34 1 34 1S11.9 1 6.5 2.7C4.1 3.4 2.2 5.3 1.5 7.7 0 13.1 0 24 0 24s0 10.9 1.5 16.3c.7 2.4 2.6 4.3 5 5C11.9 47 34 47 34 47s22.1 0 27.5-1.7c2.4-.7 4.3-2.6 5-5C68 34.9 68 24 68 24s0-10.9-1.5-16.3z" fill="#c8102e"/>
+              <path d="M45 24 27 14v20" fill="#fff"/>
+            </svg>
+          </div>
+        </div>
+        <div class="interview-info">
+          <p class="interview-label">7TV Andalucía · Las Siete Málaga</p>
+          <p class="interview-title">Entrevista Mauricio Chaves-Mesén</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+<section class="site-section" id="reflexiones">
+    <p class="section-label">Del blog</p>
+    <h2 class="section-heading">Reflexiones del autor</h2>
+    <p class="section-intro">Notas sobre escritura, viajes y los misterios que inspiran las novelas.</p>
+
+    <div class="blog-grid">
+
+      <div class="blog-card">
+        <span class="blog-category">Autobiografía</span>
+        <h3 class="blog-title">Hoy cumple 30 años mi primera novela</h3>
+        <p class="blog-excerpt">Tres décadas después, sigo viendo aquel cuarto en Roma donde nació Círculo de Poder. Lo escribí casi de un tirón, entre Italia y Costa Rica, convencido de que nadie lo leería. Me equivoqué, y estoy agradecido.</p>
+        <a class="blog-link" href="/blog">Leer en el blog →</a>
+      </div>
+
+      <div class="blog-card">
+        <span class="blog-category">Reflexión</span>
+        <h3 class="blog-title">Carta a mis lectores (¿o a mis personajes?)</h3>
+        <p class="blog-excerpt">A veces me pregunto quién escribe a quién. Mis personajes tienen opiniones propias, aparecen cuando no los invito, desaparecen justo cuando los necesito. Esta es mi carta a todos ellos — y a ustedes.</p>
+        <a class="blog-link" href="/blog">Leer en el blog →</a>
+      </div>
+
+      <div class="blog-card">
+        <span class="blog-category">Proceso creativo</span>
+        <h3 class="blog-title">Una reunión con las musas</h3>
+        <p class="blog-excerpt">Las musas llegaron sin anunciarse, como siempre. Se sentaron frente a mí y me preguntaron por qué había tardado tanto. Así nació la novela número doce, y así seguirán llegando las demás.</p>
+        <a class="blog-link" href="/blog">Leer en el blog →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="site-section" id="lectores">
+    <p class="section-label">Lectores</p>
+    <h2 class="section-heading">Lo que dicen los lectores</h2>
+
+    <div class="rating-display">
+      <span class="rating-stars">★★★★★</span>
+      <span class="rating-score">4.6 / 5</span>
+      <span class="rating-count">Reacciones reales seleccionadas entre cientos de reseñas en español</span>
+    </div>
+
+    <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <span class="testimonial-mark">★★★★★</span>
+          <p class="testimonial-label">Entretenida y con gran imaginación</p>
+        </div>
+        <div class="testimonial-card">
+          <span class="testimonial-mark">★★★★★</span>
+          <p class="testimonial-label">Súper genial</p>
+        </div>
+        <div class="testimonial-card">
+          <span class="testimonial-mark">★★★★★</span>
+          <p class="testimonial-label">Capta desde el principio</p>
+        </div>
+        <div class="testimonial-card">
+          <span class="testimonial-mark">★★★★★</span>
+          <p class="testimonial-label">Fenomenal</p>
+        </div>
+        <div class="testimonial-card">
+          <span class="testimonial-mark">★★★★★</span>
+          <p class="testimonial-label">Muy, muy interesante</p>
+        </div>
+        <div class="testimonial-card">
+          <span class="testimonial-mark">★★★★★</span>
+          <p class="testimonial-label">Me tiene impactada</p>
+        </div>
+        <div class="testimonial-card">
+          <span class="testimonial-mark">★★★★★</span>
+          <p class="testimonial-label">Fascinante</p>
+        </div>
+        <div class="testimonial-card">
+          <span class="testimonial-mark">★★★★★</span>
+          <p class="testimonial-label">Impresionante de principio a fin</p>
+        </div>
+        <div class="testimonial-card">
+          <span class="testimonial-mark">★★★★★</span>
+          <p class="testimonial-label">Excelente como toda la saga</p>
+        </div>
+    </div>
+  </section>
+
+  <!-- YouTube -->
+  <section class="site-section" id="youtube-futuro" hidden>
+    <p class="section-label">Canal de YouTube</p>
+    <h2 class="section-heading">Grandes misterios del mundo</h2>
+    <p class="section-intro">Conferencias sobre los lugares, culturas y enigmas que inspiran las novelas.</p>
+
+    <div class="youtube-card">
+      <div class="youtube-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+      </div>
+      <div>
+        <p class="youtube-channel">@MauricioChavesMesen</p>
+        <h3 class="youtube-title">Mauricio Chaves-Mesén</h3>
+        <p class="youtube-desc">Misterios, lugares sagrados y las historias detrás de las novelas. Una ventana al mundo que inspira cada página.</p>
+        <a class="cta-link" href="https://www.youtube.com/@MauricioChavesMesen" target="_blank" rel="noopener">Ver el canal →</a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Contacto -->
+  <section class="site-section" id="contacto">
+    <p class="section-label">Contacto</p>
+    <h2 class="section-heading">Escríbeme</h2>
+
+    <p class="contact-note">No tengo formularios ni asistentes. Si tienes algo que decirme, escríbeme directamente — respondo en persona.</p>
+
+    <div class="contact-links">
+      <a class="contact-link" href="mailto:contacto@mauriciochavesmesen.com">contacto@mauriciochavesmesen.com</a>
+      <a class="contact-link" href="https://www.instagram.com/mauriciochavesmesen" target="_blank" rel="noopener">Instagram</a>
+      <a class="contact-link" href="https://www.facebook.com/mauriciochavesmesen" target="_blank" rel="noopener">Facebook</a>
+      <a class="contact-link" href="https://www.linkedin.com/in/mauricio-chaves-mes%C3%A9n-47b33675/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="contact-link" href="https://x.com/mauriciochavesm" target="_blank" rel="noopener">X</a>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="site-section" id="newsletter-futuro" hidden>
+    <div class="newsletter-banner">
+      <p class="newsletter-label">Próximamente</p>
+      <h2 class="newsletter-heading">Novedades desde el escritorio</h2>
+      <p class="newsletter-text">Una carta periódica con avances de nuevas novelas, novedades editoriales y reflexiones sobre los grandes misterios del mundo. En preparación.</p>
+      <a class="cta-link" href="mailto:contacto@mauriciochavesmesen.com?subject=Novedades%20newsletter&body=Hola%20Mauricio%2C%20me%20gustar%C3%ADa%20recibir%20tus%20novedades%20cuando%20est%C3%A9n%20disponibles.">Avisarme cuando esté lista →</a>
+    </div>
+  </section>
+
+  <footer class="page-footer">
+    <p>Mauricio Chaves-Mesén &nbsp;·&nbsp; Escritor</p>
+  </footer>
+
+  <script>
+    const bioOrder=[
+      'escritor','director','editor-traductor','viajero','buscador','conferencista','lectores',
+      'entrevistas','declaracion','reflexiones','contacto'
+    ];
+    const finalFooter=document.querySelector('footer.page-footer:last-of-type');
+    bioOrder.forEach(id=>{
+      const section=document.getElementById(id);
+      if(section) document.body.insertBefore(section,finalFooter);
+    });
+  </script>
+
+
+  <script src="/interview-start.js"></script>
+</body>
+</html>

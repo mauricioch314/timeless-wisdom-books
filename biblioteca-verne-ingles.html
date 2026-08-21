@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The World of Jules Verne — Timeless Wisdom Books</title>
+  <meta name="description" content="The Voyages Extraordinaires by Jules Verne in English. The 54 novels with presentations, characters and first pages.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg:      #ffffff;
+      --color-text:    #1a1a1a;
+      --color-muted:   #6b6b6b;
+      --color-accent:  #C9A84C;
+      --color-border:  #e8e4dc;
+      --font:          'Cormorant Garamond', Georgia, serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--color-bg); color: var(--color-text); font-family: var(--font); line-height: 1.6; }
+
+    header { padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--color-border); }
+    .site-title { font-size: 18px; font-weight: 300; letter-spacing: 0.12em; text-decoration: none; color: var(--color-text); }
+    .site-title:hover { color: var(--color-accent); }
+    nav { display: flex; gap: 28px; }
+    nav a { font-family: var(--font); font-size: 16px; font-weight: 400; letter-spacing: 0.06em; color: var(--color-muted); text-decoration: none; border-bottom: 1px solid transparent; transition: color 200ms ease, border-color 200ms ease; }
+    nav a:hover, nav a.active { color: var(--color-text); border-bottom-color: var(--color-accent); }
+
+    .page-hero { text-align: center; padding: 64px 40px 48px; border-bottom: 1px solid var(--color-border); }
+    .page-hero h1 { font-size: clamp(36px, 5vw, 56px); font-weight: 300; letter-spacing: 0.12em; line-height: 1.1; margin-bottom: 12px; }
+    .page-hero p { font-size: 18px; font-style: italic; color: var(--color-muted); font-weight: 300; max-width: 720px; margin: 0 auto; line-height: 1.65; }
+
+    main { max-width: 1200px; margin: 0 auto; padding: 0 40px 80px; }
+
+    .series { padding-top: 64px; }
+    .series + .series { border-top: 1px solid var(--color-border); margin-top: 64px; }
+    .series-label { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 8px; }
+    .series-title { font-size: clamp(28px, 3.5vw, 42px); font-weight: 300; letter-spacing: 0.1em; text-align: center; }
+    .series-desc { font-size: 17px; font-style: italic; color: var(--color-muted); font-weight: 300; margin-top: 12px; max-width: 720px; line-height: 1.7; }
+
+    .book-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 36px 28px; margin-top: 40px; }
+    .book-card { display: flex; flex-direction: column; }
+    .book-cover-link { text-decoration: none; }
+
+    .book-cover {
+      width: 100%; aspect-ratio: 2/3;
+      background: #f0ede8; border: 1px solid var(--color-border);
+      margin-bottom: 14px; overflow: hidden; position: relative;
+      transition: box-shadow 280ms ease, border-color 280ms ease;
+    }
+    .book-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .book-cover-link:hover .book-cover {
+      border-color: rgba(201, 168, 76, 0.70);
+      box-shadow: 0 0 0 1px rgba(201, 168, 76, 0.40), 0 10px 28px rgba(201, 168, 76, 0.18);
+    }
+    .book-cover::after {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(201, 168, 76, 0.20); opacity: 0;
+      transition: opacity 280ms ease; pointer-events: none;
+    }
+    .book-cover-link:hover .book-cover::after { opacity: 1; }
+
+    .book-number { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 4px; }
+    .book-title { font-size: 17px; font-weight: 400; letter-spacing: 0.03em; line-height: 1.3; margin-bottom: 6px; }
+    .book-desc-short { font-size: 13px; color: var(--color-muted); line-height: 1.55; margin-bottom: 10px; }
+
+    .book-actions { display: flex; flex-direction: column; gap: 6px; margin-top: auto; }
+    .btn-action {
+      font-family: var(--font); font-size: 13px; letter-spacing: 0.06em;
+      color: var(--color-text); text-decoration: none;
+      border: 1px solid var(--color-border); padding: 7px 14px;
+      text-align: center; transition: border-color 180ms ease, background 180ms ease;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+    }
+    .btn-action:hover { border-color: var(--color-accent); background: #fdfbf7; }
+    .btn-action svg { width: 16px; height: 16px; stroke: var(--color-accent); fill: none; flex-shrink: 0; }
+    .btn-action.primary { border-color: var(--color-accent); background: #fdfbf7; }
+    .btn-action.primary:hover { background: var(--color-accent); color: #fff; }
+    .btn-action.primary:hover svg { stroke: #fff; }
+
+
+    .verne-search {
+      max-width: 680px; margin: 34px auto 0;
+      display: grid; gap: 9px;
+    }
+    .verne-search input {
+      width: 100%; border: 1px solid var(--color-border); background: #fff;
+      color: var(--color-text); font-family: var(--font);
+      font-size: 18px; letter-spacing: 0.03em;
+      padding: 13px 16px; outline: none;
+      transition: border-color 180ms ease, box-shadow 180ms ease;
+    }
+    .verne-search input:focus {
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 1px rgba(201, 168, 76, 0.28);
+    }
+    .verne-search-meta {
+      font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--color-muted);
+    }
+    .verne-empty {
+      display: none; margin-top: 34px; text-align: center;
+      color: var(--color-muted); font-style: italic; font-size: 18px;
+    }
+    body.verne-filter-empty .verne-empty { display: block; }
+
+    footer { text-align: center; padding: 32px 40px; border-top: 1px solid var(--color-border); font-size: 14px; color: var(--color-muted); font-style: italic; }
+    footer a { color: var(--color-muted); text-decoration: none; }
+    footer a:hover { color: var(--color-accent); }
+
+    @media (max-width: 640px) {
+      header { padding: 20px 24px; flex-direction: column; gap: 16px; text-align: center; }
+      .page-hero { padding: 40px 24px 32px; }
+      main { padding: 0 24px 60px; }
+      .book-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 28px 20px; }
+      .series { padding-top: 48px; }
+      .series + .series { margin-top: 48px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="site-title" href="index.html">Timeless Wisdom Books</a>
+    <nav>
+      <a href="/biblioteca-verne-ingles.html" class="active">The World of Verne</a>
+      <a href="library-en.html">English Library</a>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <h1>The World of Jules Verne</h1>
+    <p>The 54 novels of the Voyages Extraordinaires — presentations, characters and first pages presented in the original order of publication. Since 2012, Mauricio Chaves-Mesén has translated or supervised annotated editions of the entire series in six languages. Hard copies of the edition will be available soon on Amazon.</p>
+  </div>
+
+    <div class="verne-search">
+      <input id="verne-search" type="search" autocomplete="off" placeholder="Search by title, character, or number...">
+      <div class="verne-search-meta"><span id="verne-search-count">0</span> visible titles</div>
+    </div>
+
+  <main>
+    <section class="series">
+      <h2 class="series-title">The Voyages Extraordinaires</h2>
+      <p class="verne-empty">No books match that search.</p>
+      <div class="book-grid">
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-01-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/01.jpg" alt="Five Weeks in a Balloon"></div></a>
+          <div class="book-number">No. 1</div>
+          <h3 class="book-title">Five Weeks in a Balloon</h3>
+          <p class="book-desc-short">Dr. Samuel Fergusson, his friend Dick Kennedy, and faithful Joe embark on an aerial journey across Africa. Aboard the balloon Victoria, they face unknown territories, natural dangers, and unexpected encounters as they advance westward.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-01-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-01-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-02-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/02.jpg" alt="The Adventures of Captain Hatteras"></div></a>
+          <div class="book-number">No. 2</div>
+          <h3 class="book-title">The Adventures of Captain Hatteras</h3>
+          <p class="book-desc-short">Captain Hatteras leads a British expedition toward the North Pole, driven by an unwavering will. Amidst ice, isolation, and growing tensions, his men must endure the dangers of a still-unknown region.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-02-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-02-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-03-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/03.jpg" alt="Journey to the Center of the Earth"></div></a>
+          <div class="book-number">No. 3</div>
+          <h3 class="book-title">Journey to the Center of the Earth</h3>
+          <p class="book-desc-short">Professor Lidenbrock deciphers a manuscript revealing a route to the planet's interior. Together with Axel and guide Hans, he descends through an Icelandic volcano into a world where every discovery defies reason.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-03-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-03-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-04-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/04.jpg" alt="From the Earth to the Moon"></div></a>
+          <div class="book-number">No. 4</div>
+          <h3 class="book-title">From the Earth to the Moon</h3>
+          <p class="book-desc-short">The Gun Club of Baltimore conceives a cannon capable of sending a projectile to the Moon. Barbicane, Nicholl, and the daring Michel Ardan turn the scientific challenge into an endeavor that captivates the entire world.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-04-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-04-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-05-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/05.jpg" alt="The Children of Captain Grant"></div></a>
+          <div class="book-number">No. 5</div>
+          <h3 class="book-title">The Children of Captain Grant</h3>
+          <p class="book-desc-short">A message found inside a bottle drives Lord Glenarvan and Captain Grant's children to travel along the 37th parallel. Their search crosses continents, oceans, and cultures following incomplete clues.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-05-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-05-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-06-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/06.jpg" alt="Twenty Thousand Leagues Under the Seas"></div></a>
+          <div class="book-number">No. 6</div>
+          <h3 class="book-title">Twenty Thousand Leagues Under the Seas</h3>
+          <p class="book-desc-short">Professor Aronnax, Conseil, and Ned Land are welcomed aboard the Nautilus, an extraordinary submarine commanded by Captain Nemo. Beneath the oceans they discover natural wonders and the secrets of a man withdrawn from the world.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-06-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-06-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-07-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/07.jpg" alt="Around the Moon"></div></a>
+          <div class="book-number">No. 7</div>
+          <h3 class="book-title">Around the Moon</h3>
+          <p class="book-desc-short">Barbicane, Nicholl, and Michel Ardan travel inside the projectile launched from Florida. As they approach the Moon, every calculation, observation, and mishap tests their mission, turning their journey into a cosmic adventure.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-07-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-07-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-08-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/08.jpg" alt="A Floating City"></div></a>
+          <div class="book-number">No. 8</div>
+          <h3 class="book-title">A Floating City</h3>
+          <p class="book-desc-short">The gigantic Great Eastern crosses the Atlantic as a true floating city. Amid the ship's daily life, storms, and personal rivalries, the narrator accompanies travelers marked by a shared past.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-08-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-08-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-09-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/09.jpg" alt="Three Englishmen and Three Russians in South Africa"></div></a>
+          <div class="book-number">No. 9</div>
+          <h3 class="book-title">Three Englishmen and Three Russians in South Africa</h3>
+          <p class="book-desc-short">Six scientists travel to southern Africa to precisely measure an arc of the meridian. The expedition must reconcile national rivalries, technical difficulties, dangerous wildlife, and vast unexplored regions while pursuing its ambitious goal.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-09-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-09-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-10-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/10.jpg" alt="The Fur Country"></div></a>
+          <div class="book-number">No. 10</div>
+          <h3 class="book-title">The Fur Country</h3>
+          <p class="book-desc-short">Lieutenant Jasper Hobson leads a Hudson's Bay Company expedition to the far north of Canada. There they establish a remote fort, surrounded by an Arctic landscape as fascinating as it is unpredictable.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-10-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-10-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-11-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/11.jpg" alt="Around the World in Eighty Days"></div></a>
+          <div class="book-number">No. 11</div>
+          <h3 class="book-title">Around the World in Eighty Days</h3>
+          <p class="book-desc-short">Phileas Fogg bets his fortune that he can circumnavigate the globe in eighty days. Accompanied by Passepartout and followed by Inspector Fix, he embarks on a race where every connection, delay, and encounter proves decisive.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-11-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-11-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-12-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/12.jpg" alt="The Mysterious Island"></div></a>
+          <div class="book-number">No. 12</div>
+          <h3 class="book-title">The Mysterious Island</h3>
+          <p class="book-desc-short">Five fugitives escape in a balloon and land on an unknown Pacific island. With ingenuity, science, and collective labor they build a new life, while inexplicable events suggest they may not be entirely alone.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-12-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-12-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-13-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/13.jpg" alt="The Survivors of the Chancellor"></div></a>
+          <div class="book-number">No. 13</div>
+          <h3 class="book-title">The Survivors of the Chancellor</h3>
+          <p class="book-desc-short">The Chancellor sets sail from Charleston to Liverpool with passengers, crew, and a troubling cargo. Told as a ship's diary, the voyage confronts everyone with escalating dangers and decisions that test their humanity.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-13-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-13-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-14-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/14.jpg" alt="Michael Strogoff"></div></a>
+          <div class="book-number">No. 14</div>
+          <h3 class="book-title">Michael Strogoff</h3>
+          <p class="book-desc-short">The czar's courier receives an urgent mission: cross Siberia and deliver a vital message to Irkutsk. Under a secret identity, Michael Strogoff must traverse turbulent territories while protecting his duty and those he meets.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-14-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-14-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-15-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/15.jpg" alt="Hector Servadac"></div></a>
+          <div class="book-number">No. 15</div>
+          <h3 class="book-title">Hector Servadac</h3>
+          <p class="book-desc-short">An astronomical phenomenon sweeps Captain Hector Servadac and a diverse group of survivors far from Earth. United in an altered world, they must understand their new situation and adapt to extraordinary conditions.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-15-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-15-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-16-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/16.jpg" alt="The Black Indies"></div></a>
+          <div class="book-number">No. 16</div>
+          <h3 class="book-title">The Black Indies</h3>
+          <p class="book-desc-short">Engineer James Starr returns to the abandoned Aberfoyle mines after receiving a mysterious letter. Underground he discovers a community determined to be reborn, but also troubling signs that threaten their plans.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-16-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-16-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-17-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/17.jpg" alt="Dick Sand, a Captain at Fifteen"></div></a>
+          <div class="book-number">No. 17</div>
+          <h3 class="book-title">Dick Sand, a Captain at Fifteen</h3>
+          <p class="book-desc-short">When a tragedy leaves the Pilgrim without command, young Dick Sand takes on unexpected responsibilities. His courage and knowledge are tested during an uncertain voyage, surrounded by vulnerable passengers and hidden dangers.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-17-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-17-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-18-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/18.jpg" alt="The Begum's Millions"></div></a>
+          <div class="book-number">No. 18</div>
+          <h3 class="book-title">The Begum's Millions</h3>
+          <p class="book-desc-short">Two heirs receive immense fortunes and build cities inspired by opposing ideals. While one seeks well-being and knowledge, the other concentrates power and technology, turning their rivalry into a growing threat.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-18-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-18-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-19-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/19.jpg" alt="Tribulations of a Chinaman in China"></div></a>
+          <div class="book-number">No. 19</div>
+          <h3 class="book-title">Tribulations of a Chinaman in China</h3>
+          <p class="book-desc-short">Kin-Fo, a young millionaire unable to enjoy his fortune, makes an extreme decision he soon wishes to undo. Together with his servant and a peculiar philosopher, he travels across China in a whirlwind and humorous adventure.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-19-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-19-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-20-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/20.jpg" alt="The Steam House"></div></a>
+          <div class="book-number">No. 20</div>
+          <h3 class="book-title">The Steam House</h3>
+          <p class="book-desc-short">A group of travelers crosses India in an extraordinary steam-powered house on wheels guided by a mechanical elephant. The journey combines landscapes, history, and threats linked to an ancient rivalry.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-20-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-20-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-21-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/21.jpg" alt="The Giant Raft"></div></a>
+          <div class="book-number">No. 21</div>
+          <h3 class="book-title">The Giant Raft</h3>
+          <p class="book-desc-short">The Garral family descends the Amazon on an immense raft bound for Belém. The journey reveals the richness of the great river, while an accusation from the past threatens the family's peace and honor.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-21-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-21-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-22-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/22.jpg" alt="Godfrey Morgan"></div></a>
+          <div class="book-number">No. 22</div>
+          <h3 class="book-title">Godfrey Morgan</h3>
+          <p class="book-desc-short">Godfrey Morgan longs for adventure before marrying, and his tutor sends him on a voyage that ends in shipwreck. On a deserted island he must apply everything he learned from books while nature and instinct teach him unexpected lessons.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-22-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-22-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-23-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/23.jpg" alt="The Green Ray"></div></a>
+          <div class="book-number">No. 23</div>
+          <h3 class="book-title">The Green Ray</h3>
+          <p class="book-desc-short">Miss Campbell hopes to witness the last green ray of the setting sun, a phenomenon that according to legend reveals true love. Between Scotland and the Hebrides, her companions conspire so that the optical wonder reaches her in the most unexpected way.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-23-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-23-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-24-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/24.jpg" alt="Kéraban the Inflexible"></div></a>
+          <div class="book-number">No. 24</div>
+          <h3 class="book-title">Kéraban the Inflexible</h3>
+          <p class="book-desc-short">The stubborn merchant Keraban refuses to pay a new tax and decides to circumnavigate the Black Sea instead of crossing it. His obstinate journey takes him through landscapes, cultures, and dangers that will put his stubbornness to the test.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-24-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-24-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-25-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/25.jpg" alt="The Southern Star"></div></a>
+          <div class="book-number">No. 25</div>
+          <h3 class="book-title">The Southern Star</h3>
+          <p class="book-desc-short">Engineer Cyprien Méré discovers a fabulous diamond in the South African mines, but the stone disappears. The search for the thief among settlers, natives, and prospectors reveals hidden tensions in a land where wealth transforms everything.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-25-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-25-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-26-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/26.jpg" alt="The Archipelago on Fire"></div></a>
+          <div class="book-number">No. 26</div>
+          <h3 class="book-title">The Archipelago on Fire</h3>
+          <p class="book-desc-short">In the Aegean Sea during the Greek War of Independence, the crew of a merchant ship becomes entangled in a web of betrayals and passions. Among islands lit by conflict, a woman marked by the past decides her own destiny.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-26-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-26-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-27-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/27.jpg" alt="Mathias Sandorf"></div></a>
+          <div class="book-number">No. 27</div>
+          <h3 class="book-title">Mathias Sandorf</h3>
+          <p class="book-desc-short">A political plot separates Mathias Sandorf from his family and sends him to prison. After escaping, he adopts multiple identities to execute a plan of vengeance across the Mediterranean, inspired by the Count of Monte Cristo.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-27-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-27-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-28-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/28.jpg" alt="The Lottery Ticket"></div></a>
+          <div class="book-number">No. 28</div>
+          <h3 class="book-title">The Lottery Ticket</h3>
+          <p class="book-desc-short">A lost lottery ticket sets off a story of waiting and hope in a Norwegian fjord. While a young woman awaits news of her fiancé lost at sea, the annual drawing decides the fate of several intertwined lives.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-28-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-28-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-29-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/29.jpg" alt="Robur the Conqueror"></div></a>
+          <div class="book-number">No. 29</div>
+          <h3 class="book-title">Robur the Conqueror</h3>
+          <p class="book-desc-short">The enigmatic Robur bursts into the Aerial Navigation Club to demonstrate the superiority of his formidable flying machine, the Albatross. Unexpected guests accompany him on an astonishing journey around the world through the skies.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-29-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-29-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-30-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/30.jpg" alt="North Against South"></div></a>
+          <div class="book-number">No. 30</div>
+          <h3 class="book-title">North Against South</h3>
+          <p class="book-desc-short">In Florida during the Civil War, farmer James Burbank, a Unionist on Confederate soil, faces hostility from his neighbors. When his daughter is kidnapped, a conflict erupts where political loyalties mix with personal grudges.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-30-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-30-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-31-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/31.jpg" alt="The Flight to France"></div></a>
+          <div class="book-number">No. 31</div>
+          <h3 class="book-title">The Flight to France</h3>
+          <p class="book-desc-short">A French soldier captured in Prussia manages to escape and cross enemy territory to reunite with his beloved. His clandestine journey through forests, hostile villages, and a country at war is also a voyage toward his own convictions.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-31-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-31-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-32-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/32.jpg" alt="Two Years' Vacation"></div></a>
+          <div class="book-number">No. 32</div>
+          <h3 class="book-title">Two Years' Vacation</h3>
+          <p class="book-desc-short">A group of schoolboys is set adrift in the Pacific and stranded on a deserted island. Without adults to guide them, they must organize themselves, overcome differences, and face whatever the sea brings their way.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-32-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-32-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-33-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/33.jpg" alt="Family Without a Name"></div></a>
+          <div class="book-number">No. 33</div>
+          <h3 class="book-title">Family Without a Name</h3>
+          <p class="book-desc-short">During the Patriot rebellion in French Canada, a family hides its true surname to fight for independence. Amid persecutions, divided loyalties, and a father whose identity is a secret, the children must choose their side.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-33-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-33-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-34-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/34.jpg" alt="The Purchase of the North Pole"></div></a>
+          <div class="book-number">No. 34</div>
+          <h3 class="book-title">The Purchase of the North Pole</h3>
+          <p class="book-desc-short">President Barbicane announces the purchase of the North Pole. Soon a purpose capable of provoking worldwide panic is revealed, as governments and scientists try to understand the consequences of another monumental Gun Club project.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-34-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-34-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-35-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/35.jpg" alt="César Cascabel"></div></a>
+          <div class="book-number">No. 35</div>
+          <h3 class="book-title">César Cascabel</h3>
+          <p class="book-desc-short">The Cascabel family, French traveling performers, decide to return to Europe from California across Alaska and Siberia. Their circus caravan traverses extreme landscapes while their skills as clowns and acrobats help them overcome every obstacle.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-35-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-35-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-36-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/36.jpg" alt="Mistress Branican"></div></a>
+          <div class="book-number">No. 36</div>
+          <h3 class="book-title">Mistress Branican</h3>
+          <p class="book-desc-short">After her husband's disappearance at sea, Mistress Branican herself leads search expeditions across the oceans. Her determination leads her to discover not only her husband's fate, but also her own strength.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-36-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-36-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-37-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/37.jpg" alt="The Carpathian Castle"></div></a>
+          <div class="book-number">No. 37</div>
+          <h3 class="book-title">The Carpathian Castle</h3>
+          <p class="book-desc-short">Strange phenomena surround an abandoned castle in Transylvania. When Count Franz de Télek arrives in the region, memories of a lost singer and the wonders of science turn the fortress into an enigma.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-37-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-37-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-38-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/38.jpg" alt="Claudius Bombarnac"></div></a>
+          <div class="book-number">No. 38</div>
+          <h3 class="book-title">Claudius Bombarnac</h3>
+          <p class="book-desc-short">A French reporter travels on the Great Transasiatic train from the Caspian Sea to Peking. His chronicle records eccentric passengers, fascinating landscapes, and unforeseen events that turn his report into an unparalleled railway adventure.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-38-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-38-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-39-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/39.jpg" alt="Foundling Mick"></div></a>
+          <div class="book-number">No. 39</div>
+          <h3 class="book-title">Foundling Mick</h3>
+          <p class="book-desc-short">Young orphan Mick survives the streets of Dublin through his ingenuity and unwavering will. From the depths of misery, his social ascent is a moving portrait of abandoned childhood and the power to reinvent oneself.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-39-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-39-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-40-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/40.jpg" alt="The Wonderful Adventures of Captain Antifer"></div></a>
+          <div class="book-number">No. 40</div>
+          <h3 class="book-title">The Wonderful Adventures of Captain Antifer</h3>
+          <p class="book-desc-short">Captain Antifer inherits a geographical enigma that guides him toward a hidden treasure across different points of the planet. His obsession takes him from island to island, accompanied by a skeptical notary, on a quest that crosses three continents.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-40-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-40-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-41-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/41.jpg" alt="Propeller Island"></div></a>
+          <div class="book-number">No. 41</div>
+          <h3 class="book-title">Propeller Island</h3>
+          <p class="book-desc-short">An artificial island powered by engines cruises the Pacific, home to the most eccentric millionaires. When a group of French musicians lands on it, they discover a mechanical paradise that hides tensions beneath its floating luxury.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-41-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-41-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-42-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/42.jpg" alt="Facing the Flag"></div></a>
+          <div class="book-number">No. 42</div>
+          <h3 class="book-title">Facing the Flag</h3>
+          <p class="book-desc-short">Inventor Thomas Roch creates an explosive of devastating power, but when it falls into the wrong hands, his secret threatens global security. On a fortress island where a conspiracy is brewing, an engineer must prevent the catastrophe.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-42-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-42-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-43-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/43.jpg" alt="Clovis Dardentor"></div></a>
+          <div class="book-number">No. 43</div>
+          <h3 class="book-title">Clovis Dardentor</h3>
+          <p class="book-desc-short">An eccentric philanthropist offers to fund two young men's journey in exchange for being called uncle. The Mediterranean voyage unfolds encounters, misunderstandings, and adventures where generosity and self-interest mix unpredictably.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-43-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-43-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-44-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/44.jpg" alt="The Sphinx of the Ice Fields"></div></a>
+          <div class="book-number">No. 44</div>
+          <h3 class="book-title">The Sphinx of the Ice Fields</h3>
+          <p class="book-desc-short">American Jeorling joins a whaling expedition seeking answers about a disappearance years earlier. In the Antarctic, the ice holds a secret linking his journey to the legend of Captain Arthur Gordon Pym.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-44-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-44-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-45-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/45.jpg" alt="The Mighty Orinoco"></div></a>
+          <div class="book-number">No. 45</div>
+          <h3 class="book-title">The Mighty Orinoco</h3>
+          <p class="book-desc-short">Sergeant Martial and his nephew navigate up the Orinoco River on a scientific expedition that soon reveals a hidden purpose. Along the banks of the great South American river, false identities and jungle landscapes conceal a family revelation.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-45-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-45-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-46-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/46.jpg" alt="The Will of an Eccentric"></div></a>
+          <div class="book-number">No. 46</div>
+          <h3 class="book-title">The Will of an Eccentric</h3>
+          <p class="book-desc-short">An eccentric millionaire bequeaths his fortune to whoever completes a journey across the United States following a living game board. The participants cross the entire country in a competition where chance, strategy, and character define the winner.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-46-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-46-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-47-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/47.jpg" alt="Second Fatherland"></div></a>
+          <div class="book-number">No. 47</div>
+          <h3 class="book-title">Second Fatherland</h3>
+          <p class="book-desc-short">After years of abandonment, the Zermatt family returns to the island where they were shipwrecked and which they made their home. Nostalgia leads them back to their lost paradise, but new threats will test their bond with that land.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-47-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-47-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-48-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/48.jpg" alt="The Village in the Treetops"></div></a>
+          <div class="book-number">No. 48</div>
+          <h3 class="book-title">The Village in the Treetops</h3>
+          <p class="book-desc-short">An engineer and a hunter venture into the African jungle and discover a community living in the treetops. Among vines, heights, and unknown customs, they must decipher whether this aerial village is a refuge or a prison.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-48-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-48-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-49-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/49.jpg" alt="The Sea Serpent"></div></a>
+          <div class="book-number">No. 49</div>
+          <h3 class="book-title">The Sea Serpent</h3>
+          <p class="book-desc-short">Boatswain Cabidoulin entertains the whaling crew with stories of sea monsters, but his obsession with a giant serpent proves prophetic. On the high seas, legend and reality meet when the dreaded encounter becomes inevitable.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-49-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-49-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-50-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/50.jpg" alt="The Kip Brothers"></div></a>
+          <div class="book-number">No. 50</div>
+          <h3 class="book-title">The Kip Brothers</h3>
+          <p class="book-desc-short">Two sailor brothers are wrongly accused of murdering their captain in the Pacific islands. While serving their sentence, the proof of their innocence travels slowly across the ocean, in a story of fraternal loyalty and patience in adversity.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-50-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-50-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-51-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/51.jpg" alt="Travel Scholarships"></div></a>
+          <div class="book-number">No. 51</div>
+          <h3 class="book-title">Travel Scholarships</h3>
+          <p class="book-desc-short">A group of students from a West Indies school wins an educational trip through the Caribbean islands. What promises to be a journey of learning turns into a nightmare when the ship falls into the hands of former pirates.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-51-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-51-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-52-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/52.jpg" alt="A Drama in Livonia"></div></a>
+          <div class="book-number">No. 52</div>
+          <h3 class="book-title">A Drama in Livonia</h3>
+          <p class="book-desc-short">In the Baltic region of Livonia, a banker is murdered and suspicion falls on an innocent man. The lawyer handling the case must unravel a tangle of jealousy, interests, and ethnic tensions before justice condemns the wrong man.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-52-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-52-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-53-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/53.jpg" alt="Master of the World"></div></a>
+          <div class="book-number">No. 53</div>
+          <h3 class="book-title">Master of the World</h3>
+          <p class="book-desc-short">A vehicle capable of traveling by land, sea, and air at prodigious speeds baffles the authorities. While the inventor of the Terror keeps the United States on edge, Inspector Strock follows its trail across mountains, lakes, and skies.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-53-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-53-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+        <div class="book-card">
+          <a class="book-cover-link" href="/verne-54-en.html"><div class="book-cover"><img loading="lazy" src="traducciones/verne/en/54.jpg" alt="Invasion of the Sea"></div></a>
+          <div class="book-number">No. 54</div>
+          <h3 class="book-title">Invasion of the Sea</h3>
+          <p class="book-desc-short">An engineering project aims to flood the depressions of the Algerian Sahara to create an inland sea. Engineers, soldiers, and Tuareg communities clash around a monumental work also subject to the forces of nature.</p>
+          <div class="book-actions">
+            <a class="btn-action" href="/verne-54-en.html#read"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Read first pages</a>
+            <a class="btn-action primary" href="/verne-54-en.html"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>Presentation, characters & more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Mauricio Chaves-Mesén · <a href="library-en.html">English Library</a></p>
+  </footer>
+
+  <script>
+    (function () {
+      const input = document.getElementById('verne-search');
+      const count = document.getElementById('verne-search-count');
+      const cards = Array.from(document.querySelectorAll('.book-card'));
+      if (!input || !count || !cards.length) return;
+
+      const normalize = (value) =>
+        (value || '')
+          .toLocaleLowerCase()
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '');
+
+      const haystacks = cards.map((card) => normalize(card.textContent));
+      const update = () => {
+        const query = normalize(input.value.trim());
+        let visible = 0;
+        cards.forEach((card, index) => {
+          const show = !query || haystacks[index].includes(query);
+          card.style.display = show ? '' : 'none';
+          if (show) visible += 1;
+        });
+        count.textContent = String(visible);
+        document.body.classList.toggle('verne-filter-empty', visible === 0);
+      };
+
+      input.addEventListener('input', update);
+      update();
+    })();
+  </script>
+
+</body>
+</html>

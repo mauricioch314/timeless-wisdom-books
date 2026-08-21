@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twenty Thousand Leagues Under the Seas — The World of Jules Verne</title>
+  <meta name="description" content="Twenty Thousand Leagues Under the Seas, No. 6 of the Voyages Extraordinaires.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root { --color-bg: #ffffff; --color-text: #1a1a1a; --color-muted: #6b6b6b; --color-accent: #C9A84C; --color-border: #e8e4dc; --font: 'Cormorant Garamond', Georgia, serif; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--color-bg); color: var(--color-text); font-family: var(--font); line-height: 1.6; }
+    header { padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--color-border); }
+    .site-title { font-size: 18px; font-weight: 300; letter-spacing: 0.12em; text-decoration: none; color: var(--color-text); }
+    .site-title:hover { color: var(--color-accent); }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; padding: 20px 40px; font-size: 13px; letter-spacing: 0.08em; color: var(--color-muted); text-decoration: none; }
+    .back-link:hover { color: var(--color-accent); }
+    .back-link::before { content: '\2190'; }
+    .book-hero { display: grid; grid-template-columns: 260px 1fr; gap: 48px; max-width: 1000px; margin: 0 auto; padding: 0 40px 60px; }
+    .hero-cover { position: sticky; top: 32px; }
+    .hero-cover img { width: 100%; display: block; box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+    .hero-meta { padding-top: 8px; }
+    .series-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 10px; }
+    .book-title { font-size: clamp(32px, 4vw, 52px); font-weight: 300; letter-spacing: 0.08em; line-height: 1.1; margin-bottom: 20px; }
+    .presentation { font-size: clamp(16px, 1.8vw, 19px); font-weight: 300; line-height: 1.85; color: var(--color-text); max-width: 620px; }
+    .presentation p { margin-bottom: 1.2em; }
+    hr.divider { border: none; border-top: 1px solid var(--color-border); margin: 0; }
+    .panel { max-width: 1000px; margin: 0 auto; padding: 60px 40px; }
+    .panel + .panel { border-top: 1px solid var(--color-border); }
+    .panel-title { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 32px; }
+    .reader { max-width: 660px; }
+    .reader-chapter { font-size: 22px; font-weight: 300; letter-spacing: 0.1em; color: var(--color-text); margin-bottom: 24px; }
+    .reader p { font-size: clamp(16px, 1.7vw, 18px); font-weight: 300; line-height: 1.85; color: var(--color-text); margin-bottom: 1.1em; }
+    footer { text-align: center; padding: 32px 40px; border-top: 1px solid var(--color-border); font-size: 14px; color: var(--color-muted); font-style: italic; }
+    footer a { color: var(--color-muted); text-decoration: none; }
+    footer a:hover { color: var(--color-accent); }
+    .chars-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 1000px; }
+    .char-card { display: flex; gap: 20px; align-items: flex-start; padding: 20px; border: 1px solid var(--color-border); background: var(--color-bg); }
+    .char-card img { width: 100px; height: 130px; object-fit: cover; flex-shrink: 0; border: 1px solid var(--color-border); }
+    .char-info { flex: 1; min-width: 0; }
+    .char-name { font-size: 18px; font-weight: 500; letter-spacing: 0.04em; margin-bottom: 6px; color: var(--color-text); }
+    .char-role { font-size: 12px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 8px; }
+    .char-desc { font-size: 15px; font-weight: 300; line-height: 1.6; color: var(--color-text); }
+    @media (max-width: 720px) {
+      .chars-grid { grid-template-columns: 1fr; }
+      .char-card { flex-direction: column; align-items: center; text-align: center; }
+      .char-card img { width: 80px; height: 105px; }
+      header { padding: 20px 24px; flex-direction: column; gap: 16px; text-align: center; }
+      .back-link { padding: 16px 24px; }
+      .book-hero { grid-template-columns: 1fr; gap: 28px; padding: 0 24px 48px; }
+      .hero-cover { position: static; max-width: 200px; }
+      .panel { padding: 40px 24px; }
+    }
+  </style>
+  <link rel="stylesheet" href="verne-character-zoom.css">
+</head>
+<body>
+  <header>
+    <a class="site-title" href="index.html">Timeless Wisdom Books</a>
+  </header>
+  <a class="back-link" href="/biblioteca-verne-ingles">The World of Jules Verne</a>
+  <div class="book-hero">
+    <div class="hero-cover">
+      <img src="traducciones/verne/en/06.jpg" alt="Cover of Twenty Thousand Leagues Under the Seas">
+    </div>
+    <div class="hero-meta">
+      <p class="series-tag">Voyages Extraordinaires · No. 6</p>
+      <h1 class="book-title">Twenty Thousand Leagues Under the Seas</h1>
+      <div class="presentation">
+        <p>The year is 1866, and the shipping lanes of the world are in uproar. From the Pacific to the Atlantic, vessels report sightings of an enormous, luminous object in the waters—something far larger than a whale, faster than any known creature, and possessed of a strange, deliberate intelligence. Speculation runs wild: is it a gigantic narwhal, a living remnant of a prehistoric age, or something altogether more sinister? The maritime powers dispatch an expedition aboard the frigate Abraham Lincoln to hunt the beast down and, if necessary, destroy it. Among those aboard is Professor Pierre Aronnax, a distinguished marine biologist from the Museum of Natural History in Paris, whose expertise in the creatures of the deep makes him the natural choice to identify the mysterious leviathan.</p>
+        <p>Accompanied by his devoted and phlegmatic servant Conseil—a man who classifies everything he encounters with serene precision—and the Canadian harpooner Ned Land, a man of prodigious strength and fiery temper, Aronnax embarks on what he expects to be a straightforward scientific mission. The hunt, however, proves far more dangerous than anticipated. When the Abraham Lincoln finally confronts its quarry, the encounter ends in disaster: the three men are thrown overboard and, clinging to wreckage in the darkness, discover that the monster is no animal at all. It is a vessel, a submarine of such advanced design that it seems to belong to a future age. Its commander, a man who calls himself Captain Nemo, takes them aboard and offers them a choice that is no choice at all: they will remain prisoners of the Nautilus for as long as he sees fit, guests of a world they cannot leave.</p>
+        <p>Thus begins an underwater journey unlike any in literature. The Nautilus, powered by electricity drawn from the sea itself, glides through oceans of breathtaking splendour and terror. Aronnax, despite his captivity, cannot suppress the wonder of a naturalist granted access to the hidden half of the planet. He and Conseil catalogue species unknown to science, walk among coral forests on the ocean floor, witness the sunken ruins of Atlantis, and navigate through the perilous ice corridors of the Antarctic. Ned Land, meanwhile, chafes against the bars of his golden cage, forever planning escape, forever denied by the implacable will of their captor. Between these poles—the scientist's awe and the harpooner's rebellion—the soul of the Nautilus is suspended.</p>
+        <p>Twenty Thousand Leagues Under the Seas is one of the most enduringly powerful novels ever written, and much of its power resides in Captain Nemo himself. He is a figure of immense intellect and fathomless grief, a man who has rejected the surface world and its injustices, who commands a kingdom of silence and darkness beneath the waves. Verne never fully reveals Nemo's secrets—the nature of his exile, the source of his rage, the tragedy that has turned him into a living ghost—and this restraint is the novel's genius. The ocean, in these pages, becomes a realm of both liberation and imprisonment, beauty and solitude, endless discovery and eternal distance from the human world. It is a masterpiece of wonder, melancholy, and the unquenchable human desire to explore what lies beyond the horizon, beneath the surface, within the abyss.</p>
+      </div>
+    </div>
+  </div>
+  <hr class="divider">
+
+  <div class="panel" id="characters">
+    <p class="panel-title">Characters</p>
+    <div class="chars-grid">
+      <div class="char-card">
+        <img src="personajes/verne/06/profesor-aronnax.jpg" alt="Professor Aronnax">
+        <div class="char-info">
+          <p class="char-name">Professor Aronnax</p>
+          <p class="char-role">Naturalist</p>
+          <p class="char-desc">A curious scholar and narrator of the voyage, he discovers the wonders and ambiguities of Nemo&#x27;s world.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <img src="personajes/verne/06/capitan-nemo.jpg" alt="Captain Nemo">
+        <div class="char-info">
+          <p class="char-name">Captain Nemo</p>
+          <p class="char-role">Commander of the Nautilus</p>
+          <p class="char-desc">A mysterious and wounded genius, he rules beneath the seas between absolute freedom, science, and secret vengeance.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <img src="personajes/verne/06/conseil.jpg" alt="Conseil">
+        <div class="char-info">
+          <p class="char-name">Conseil</p>
+          <p class="char-role">Faithful assistant</p>
+          <p class="char-desc">Aronnax&#x27;s devoted servant, calm and methodical, he classifies the world with almost comic patience.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <img src="personajes/verne/06/ned-land.jpg" alt="Ned Land">
+        <div class="char-info">
+          <p class="char-name">Ned Land</p>
+          <p class="char-role">Canadian harpooner</p>
+          <p class="char-desc">Energetic, blunt, and freedom-loving, he refuses to accept captivity aboard the Nautilus.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <div class="panel" id="read">
+    <p class="panel-title">First Pages</p>
+    <div class="reader">
+      <p style="font-style:italic;color:var(--color-muted)">Coming soon — the first pages of the translation will be added shortly.</p>
+    </div>
+  </div>
+  <footer>
+    <a href="/biblioteca-verne-ingles">← The World of Jules Verne</a>
+  </footer>
+  <script src="verne-character-zoom.js" defer></script>
+</body>
+</html>

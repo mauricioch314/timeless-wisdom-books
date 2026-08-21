@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Around the Moon — The World of Jules Verne</title>
+  <meta name="description" content="Around the Moon, No. 7 of the Voyages Extraordinaires.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root { --color-bg: #ffffff; --color-text: #1a1a1a; --color-muted: #6b6b6b; --color-accent: #C9A84C; --color-border: #e8e4dc; --font: 'Cormorant Garamond', Georgia, serif; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--color-bg); color: var(--color-text); font-family: var(--font); line-height: 1.6; }
+    header { padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--color-border); }
+    .site-title { font-size: 18px; font-weight: 300; letter-spacing: 0.12em; text-decoration: none; color: var(--color-text); }
+    .site-title:hover { color: var(--color-accent); }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; padding: 20px 40px; font-size: 13px; letter-spacing: 0.08em; color: var(--color-muted); text-decoration: none; }
+    .back-link:hover { color: var(--color-accent); }
+    .back-link::before { content: '\2190'; }
+    .book-hero { display: grid; grid-template-columns: 260px 1fr; gap: 48px; max-width: 1000px; margin: 0 auto; padding: 0 40px 60px; }
+    .hero-cover { position: sticky; top: 32px; }
+    .hero-cover img { width: 100%; display: block; box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+    .hero-meta { padding-top: 8px; }
+    .series-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 10px; }
+    .book-title { font-size: clamp(32px, 4vw, 52px); font-weight: 300; letter-spacing: 0.08em; line-height: 1.1; margin-bottom: 20px; }
+    .presentation { font-size: clamp(16px, 1.8vw, 19px); font-weight: 300; line-height: 1.85; color: var(--color-text); max-width: 620px; }
+    .presentation p { margin-bottom: 1.2em; }
+    hr.divider { border: none; border-top: 1px solid var(--color-border); margin: 0; }
+    .panel { max-width: 1000px; margin: 0 auto; padding: 60px 40px; }
+    .panel + .panel { border-top: 1px solid var(--color-border); }
+    .panel-title { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 32px; }
+    .reader { max-width: 660px; }
+    .reader-chapter { font-size: 22px; font-weight: 300; letter-spacing: 0.1em; color: var(--color-text); margin-bottom: 24px; }
+    .reader p { font-size: clamp(16px, 1.7vw, 18px); font-weight: 300; line-height: 1.85; color: var(--color-text); margin-bottom: 1.1em; }
+    footer { text-align: center; padding: 32px 40px; border-top: 1px solid var(--color-border); font-size: 14px; color: var(--color-muted); font-style: italic; }
+    footer a { color: var(--color-muted); text-decoration: none; }
+    footer a:hover { color: var(--color-accent); }
+    .chars-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 1000px; }
+    .char-card { display: flex; gap: 20px; align-items: flex-start; padding: 20px; border: 1px solid var(--color-border); background: var(--color-bg); }
+    .char-card img { width: 100px; height: 130px; object-fit: cover; flex-shrink: 0; border: 1px solid var(--color-border); }
+    .char-info { flex: 1; min-width: 0; }
+    .char-name { font-size: 18px; font-weight: 500; letter-spacing: 0.04em; margin-bottom: 6px; color: var(--color-text); }
+    .char-role { font-size: 12px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 8px; }
+    .char-desc { font-size: 15px; font-weight: 300; line-height: 1.6; color: var(--color-text); }
+    @media (max-width: 720px) {
+      .chars-grid { grid-template-columns: 1fr; }
+      .char-card { flex-direction: column; align-items: center; text-align: center; }
+      .char-card img { width: 80px; height: 105px; }
+      header { padding: 20px 24px; flex-direction: column; gap: 16px; text-align: center; }
+      .back-link { padding: 16px 24px; }
+      .book-hero { grid-template-columns: 1fr; gap: 28px; padding: 0 24px 48px; }
+      .hero-cover { position: static; max-width: 200px; }
+      .panel { padding: 40px 24px; }
+    }
+  </style>
+  <link rel="stylesheet" href="verne-character-zoom.css">
+</head>
+<body>
+  <header>
+    <a class="site-title" href="index.html">Timeless Wisdom Books</a>
+  </header>
+  <a class="back-link" href="/biblioteca-verne-ingles">The World of Jules Verne</a>
+  <div class="book-hero">
+    <div class="hero-cover">
+      <img src="traducciones/verne/en/07.jpg" alt="Cover of Around the Moon">
+    </div>
+    <div class="hero-meta">
+      <p class="series-tag">Voyages Extraordinaires · No. 7</p>
+      <h1 class="book-title">Around the Moon</h1>
+      <div class="presentation">
+        <p>The great Columbiad has fired. On a December evening in Florida, the colossal cannon embedded in the limestone of the peninsula roared, and a projectile carrying three men was hurled into the heavens at a velocity that defied every precedent. From the Earth to the Moon ended with that thunderous moment of departure; Around the Moon begins in the silence that follows—the silence of space, of weightlessness, of a world left behind. Impey Barbicane, Captain Nicholl, and Michel Ardan, having survived the unimaginable acceleration of their launch, now find themselves encased in an aluminium projectile hurtling through the void, their destination—the Moon—approaching with the inexorable certainty of celestial mechanics.</p>
+        <p>The journey itself becomes the drama. Inside their metal bubble, the three travellers confront the practical realities of space travel with all the ingenuity and humour that Verne could imagine. They calculate their trajectory, measure the diminishing pull of Earth's gravity, and contend with the peculiar behaviour of objects in free fall. Michel Ardan, ever the enthusiast, turns their confinement into a lively philosophical salon, debating the nature of the universe and the habits of lunar inhabitants with irrepressible good cheer. Barbicane, the disciplined mathematician, records every observation with scrupulous precision. Nicholl, the engineer, monitors the integrity of their vessel. But no calculation can prepare them for the discovery that begins to dawn as they approach their goal: their trajectory has been subtly altered, and instead of landing on the Moon, they will merely circle it, drifting past its surface at a distance that permits observation but forbids descent.</p>
+        <p>The view from their projectile window is among the most breathtaking passages in all of Verne's work. As they swing around the far side of the Moon—the hemisphere that no human eye has ever seen—they observe its craters, its mountains, its vast frozen plains with a wonder that transcends scientific detachment. Is there an atmosphere? Could life once have existed there? Are those shadows cast by ruined cities, or only the familiar formations of a dead world? The travellers debate, speculate, and yearn, suspended in an orbit that offers the closest possible intimacy with their goal while denying them the final step. The Moon, in Verne's rendering, becomes the ultimate object of desire: visible, knowable in part, yet unreachable, a mirror in which humanity sees both its ambition and its limits.</p>
+        <p>Around the Moon is the direct sequel to From the Earth to the Moon and completes what is arguably literature's first two-part space epic. Written with the same blend of meticulous science, buoyant characterisation, and narrative verve that distinguishes its predecessor, it follows the three companions through a crisis that tests their courage, their friendship, and their resourcefulness to the utmost. Verne's grasp of orbital mechanics was remarkably prescient for its time, but the novel's real achievement is its atmosphere—the strange, contemplative stillness of space travel, the intimacy of three men sharing a fate beyond the reach of all human help, and the ache of a goal so close and yet so far. It is a novel about the romance of the unreachable, the poetry of the journey itself, and the quiet heroism of those who venture not to conquer, but to see.</p>
+      </div>
+    </div>
+  </div>
+  <hr class="divider">
+
+  <div class="panel" id="characters">
+    <p class="panel-title">Characters</p>
+    <div class="chars-grid">
+      <div class="char-card">
+        <img src="personajes/verne/07/impey-barbicane.jpg" alt="Impey Barbicane">
+        <div class="char-info">
+          <p class="char-name">Impey Barbicane</p>
+          <p class="char-role">President of the Gun Club</p>
+          <p class="char-desc">A methodical and visionary mind, he turns the idea of firing toward the Moon into a global scientific project.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <img src="personajes/verne/07/capitan-nicholl.jpg" alt="Captain Nicholl">
+        <div class="char-info">
+          <p class="char-name">Captain Nicholl</p>
+          <p class="char-role">Rival engineer</p>
+          <p class="char-desc">An armor engineer and Barbicane&#x27;s technical rival, he brings the discipline of doubt to the project.</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <img src="personajes/verne/07/michel-ardan.jpg" alt="Michel Ardan">
+        <div class="char-info">
+          <p class="char-name">Michel Ardan</p>
+          <p class="char-role">French adventurer</p>
+          <p class="char-desc">A bold and eloquent dreamer, he proposes to travel inside the projectile and gives the experiment a human soul.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <div class="panel" id="read">
+    <p class="panel-title">First Pages</p>
+    <div class="reader">
+      <p style="font-style:italic;color:var(--color-muted)">Coming soon — the first pages of the translation will be added shortly.</p>
+    </div>
+  </div>
+  <footer>
+    <a href="/biblioteca-verne-ingles">← The World of Jules Verne</a>
+  </footer>
+  <script src="verne-character-zoom.js" defer></script>
+</body>
+</html>

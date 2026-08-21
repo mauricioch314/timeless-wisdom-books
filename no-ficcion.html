@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Ficción — Timeless Wisdom Books</title>
+  <meta name="description" content="Libros de no ficción de Mauricio Chaves-Mesén sobre negocios, motivación y biografía, disponibles actualmente en español.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg:     #ffffff;
+      --color-text:   #1a1a1a;
+      --color-muted:  #6b6b6b;
+      --color-accent: #C9A84C;
+      --color-border: #e8e4dc;
+      --font: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font);
+      min-height: 100vh;
+      padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 5vw, 3rem);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
+    }
+
+    .back-link {
+      display: inline-block;
+      font-family: var(--font);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      color: var(--color-muted);
+      text-decoration: none;
+      margin-bottom: 1.75rem;
+    }
+    .back-link:hover { color: var(--color-text); }
+
+    h1 {
+      font-size: clamp(22px, 4vw, 36px);
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      color: var(--color-text);
+      margin-bottom: 0.4rem;
+    }
+
+    .subtitle {
+      font-size: clamp(13px, 1.8vw, 16px);
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: var(--color-muted);
+      margin-bottom: 0;
+    }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 3vw, 2rem);
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .book-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .book-cover {
+      width: 100%;
+      aspect-ratio: 2/3;
+      background: var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .book-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .book-cover-placeholder {
+      width: 100%;
+      aspect-ratio: 2/3;
+      background: #f3f1ec;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #c8c0b4;
+      font-size: 2rem;
+      letter-spacing: 0.05em;
+    }
+
+    .book-badge {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+    }
+
+    h3.book-title {
+      font-size: clamp(15px, 2vw, 18px);
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--color-text);
+      line-height: 1.35;
+    }
+    h3.book-title a { color: inherit; text-decoration: none; }
+
+    .book-desc {
+      font-size: clamp(12px, 1.4vw, 14px);
+      color: var(--color-muted);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .buy-group {
+      display: flex;
+      gap: 6px;
+      flex-wrap: nowrap;
+      margin-top: 0.25rem;
+    }
+
+    .book-buy {
+      display: inline-block;
+      font-family: var(--font);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--color-muted);
+      background: var(--color-border);
+      padding: 5px 10px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 150ms ease, color 150ms ease;
+    }
+
+    .book-buy:hover { background: #d8d3c9; color: var(--color-text); }
+    .book-detail { display:block; margin-top:.35rem; padding:7px 12px; border:1px solid var(--color-accent); color:var(--color-text); text-align:center; text-decoration:none; font-size:13px; letter-spacing:.06em; transition:background 150ms ease,color 150ms ease; }
+    .book-detail:hover { background:var(--color-accent); color:#fff; }
+
+    .book-buy.unavailable {
+      background: #f3f1ec;
+      color: #c0b9ae;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .coming-soon .book-cover-placeholder {
+      border: 1px dashed #d4cfc7;
+    }
+
+    .coming-soon .book-title {
+      color: var(--color-muted);
+    }
+
+    .soon-label {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: #c0b9ae;
+      text-transform: uppercase;
+    }
+
+    /* ── Traducciones section ─────────────────────────────────────── */
+    .translations-section {
+      max-width: 960px;
+      margin: clamp(3rem, 8vw, 5rem) auto 0;
+      padding-top: clamp(2.5rem, 6vw, 4rem);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .translations-header {
+      text-align: center;
+      margin-bottom: clamp(2rem, 5vw, 3rem);
+    }
+
+    .translations-header h2 {
+      font-size: clamp(20px, 3.5vw, 30px);
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      color: var(--color-text);
+      margin-bottom: 0.6rem;
+    }
+
+    .translations-header p {
+      font-size: clamp(13px, 1.6vw, 15px);
+      color: var(--color-muted);
+      letter-spacing: 0.05em;
+      line-height: 1.6;
+    }
+
+    .collection-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: clamp(1rem, 3vw, 1.5rem);
+    }
+
+    .collection-card {
+      border: 1px solid var(--color-border);
+      padding: clamp(1.25rem, 3vw, 1.75rem);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .collection-card h3 {
+      font-size: clamp(15px, 1.8vw, 18px);
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--color-text);
+      line-height: 1.3;
+    }
+
+    .collection-card p {
+      font-size: clamp(12px, 1.4vw, 14px);
+      color: var(--color-muted);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .collection-authors {
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: #b0a898;
+      line-height: 1.7;
+    }
+
+    .collection-link {
+      display: inline-block;
+      font-family: var(--font);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: var(--color-muted);
+      background: var(--color-border);
+      padding: 6px 14px;
+      text-decoration: none;
+      margin-top: 0.25rem;
+      transition: background 150ms ease, color 150ms ease;
+      align-self: flex-start;
+    }
+
+    .collection-link:hover {
+      background: #d8d3c9;
+      color: var(--color-text);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="back-link" href="index.html">← Inicio</a>
+    <h1>No Ficción</h1>
+    <p class="subtitle">Negocios · Motivación · Emprendimiento</p>
+  </header>
+
+  <main class="book-grid">
+
+    <div class="book-card">
+      <a class="book-cover" href="/no-ficcion-12-leyes"><img loading="lazy" src="assets/nonfiction/12-leyes/covers/es.jpg" alt="12 Leyes de los Grandes Empresarios"></a>
+      <div class="book-badge">Edición 15.º Aniversario</div>
+      <h3 class="book-title"><a href="/no-ficcion-12-leyes">12 Leyes de los Grandes Empresarios</a></h3>
+      <p class="book-desc">Un clásico contemporáneo sobre emprendimiento. Doce principios esenciales que no se enseñan en las escuelas de negocios — escritos desde la experiencia real.</p>
+      <div class="buy-group">
+        <a class="book-buy" href="https://www.amazon.com/dp/B0GJT2WJVX" target="_blank" rel="noopener">amazon.com</a>
+        <a class="book-buy" href="https://www.amazon.es/dp/B0GJT2WJVX" target="_blank" rel="noopener">amazon.es</a>
+      </div>
+      <a class="book-detail" href="/no-ficcion-12-leyes">Descripción, guía y más</a>
+    </div>
+
+    <div class="book-card">
+      <a class="book-cover" href="/no-ficcion-piensa-exito"><img loading="lazy" src="covers/nonfiction/02.jpg" alt="Piensa Éxito"></a>
+      <div class="book-badge">Edición 15.º Aniversario</div>
+      <h3 class="book-title"><a href="/no-ficcion-piensa-exito">Piensa Éxito</a></h3>
+      <p class="book-desc">Una guía práctica sobre cómo la forma de pensar, creer y actuar determina el rumbo de la vida. Un llamado claro a asumir responsabilidad y encender el potencial interior.</p>
+      <div class="buy-group">
+        <a class="book-buy" href="https://www.amazon.com/dp/B0GJD48WB2" target="_blank" rel="noopener">amazon.com</a>
+        <a class="book-buy" href="https://www.amazon.es/dp/B0GJD48WB2" target="_blank" rel="noopener">amazon.es</a>
+      </div>
+      <a class="book-detail" href="/no-ficcion-piensa-exito">Descripción, guía y más</a>
+    </div>
+
+    <div class="book-card">
+      <a class="book-cover" href="/no-ficcion-a-triunfar"><img loading="lazy" src="covers/nonfiction/03.jpg" alt="¡Ahora Sí, A Triunfar!"></a>
+      <h3 class="book-title"><a href="/no-ficcion-a-triunfar">¡Ahora Sí, A Triunfar!</a></h3>
+      <p class="book-desc">Eres el creador de tu realidad. Un libro sobre la capacidad innata del ser humano de transformar su vida cuando decide actuar con propósito y convicción.</p>
+      <p class="soon-label">Próximamente</p>
+      <a class="book-detail" href="/no-ficcion-a-triunfar">Descripción, guía y más</a>
+    </div>
+
+    <div class="book-card">
+      <a class="book-cover" href="/no-ficcion-geometria-alma"><img loading="lazy" src="covers/nonfiction/04.jpg" alt="Geometría del Alma"></a>
+      <div class="book-badge">Biblioteca de Biografías Notables</div>
+      <h3 class="book-title"><a href="/no-ficcion-geometria-alma">Geometría del Alma</a></h3>
+      <p class="book-desc">La vida de Ibo Bonilla narrada con el ritmo de una novela. De niño campesino a diseñador de la escultura más alta de Costa Rica, la Flor de la Vida más grande del mundo, y una arquitectura donde PI, FI y Euler se vuelven frecuencias vivas.</p>
+      <div class="buy-group">
+        <a class="book-buy" href="https://www.amazon.com/dp/B0GDG3RW7W" target="_blank" rel="noopener">amazon.com</a>
+        <a class="book-buy" href="https://www.amazon.es/dp/B0GDG3RW7W" target="_blank" rel="noopener">amazon.es</a>
+      </div>
+      <a class="book-detail" href="/no-ficcion-geometria-alma">Descripción, guía y más</a>
+    </div>
+
+</main>
+
+
+</body>
+</html>

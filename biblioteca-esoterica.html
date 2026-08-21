@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Esotérica — Timeless Wisdom Books</title>
+  <meta name="description" content="Clásicos del hermetismo, el ocultismo y la filosofía esotérica traducidos y editados por Mauricio Chaves-Mesén.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg:     #ffffff;
+      --color-text:   #1a1a1a;
+      --color-muted:  #6b6b6b;
+      --color-accent: #C9A84C;
+      --color-border: #e8e4dc;
+      --font: 'Cormorant Garamond', Georgia, serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font);
+      min-height: 100vh;
+      padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 5vw, 3rem);
+    }
+    header { text-align: center; margin-bottom: clamp(2.5rem, 6vw, 4rem); }
+    .back-link {
+      display: inline-block; font-size: 13px; letter-spacing: 0.08em;
+      color: var(--color-muted); text-decoration: none; margin-bottom: 1.75rem;
+    }
+    .back-link:hover { color: var(--color-text); }
+    h1 {
+      font-size: clamp(22px, 4vw, 34px); font-weight: 300;
+      letter-spacing: 0.18em; margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      font-size: clamp(13px, 1.8vw, 15px); letter-spacing: 0.08em;
+      color: var(--color-muted); line-height: 1.6;
+    }
+    /* Book grid */
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 3vw, 1.75rem);
+      max-width: 1020px; margin: 0 auto;
+    }
+    .book-card { display: flex; flex-direction: column; gap: 0.55rem; }
+    .book-cover {
+      width: 100%; aspect-ratio: 2/3; background: var(--color-border);
+      overflow: hidden;
+    }
+    .book-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .book-cover-placeholder {
+      width: 100%; aspect-ratio: 2/3; background: #f3f1ec;
+      display: flex; align-items: center; justify-content: center;
+      color: #c8c0b4; font-size: 1.5rem;
+    }
+    .book-num {
+      font-size: 11px; letter-spacing: 0.14em; color: var(--color-accent);
+    }
+    h3.book-title {
+      font-size: clamp(14px, 1.7vw, 16px); font-weight: 400;
+      letter-spacing: 0.03em; line-height: 1.35; color: var(--color-text);
+    }
+    .book-author {
+      font-size: 12px; letter-spacing: 0.05em;
+      color: var(--color-muted); font-style: italic;
+    }
+    .book-desc {
+      font-size: clamp(11px, 1.3vw, 13px); color: var(--color-muted);
+      line-height: 1.6; flex: 1;
+    }
+    .buy-group { display: flex; gap: 5px; flex-wrap: nowrap; margin-top: 0.2rem; }
+    .book-buy {
+      display: inline-block; font-family: var(--font); font-size: 11px;
+      letter-spacing: 0.04em; color: var(--color-muted);
+      background: var(--color-border); padding: 4px 9px; text-decoration: none;
+      white-space: nowrap; transition: background 150ms ease, color 150ms ease;
+    }
+    .book-buy:hover { background: #d8d3c9; color: var(--color-text); }
+    .book-buy.unavailable {
+      background: #f3f1ec; color: #c0b9ae; cursor: default; pointer-events: none;
+    }
+    .vol-label {
+      font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--color-muted); margin-top: 0.5rem;
+    }
+    /* Volume section (for Éxito) */
+    .vol-section {
+      max-width: 1020px; margin: 0 auto clamp(2.5rem, 5vw, 3.5rem);
+    }
+    .vol-header {
+      display: flex; align-items: baseline; gap: 1rem;
+      border-bottom: 1px solid var(--color-border);
+      margin-bottom: 1.25rem; padding-bottom: 0.6rem;
+    }
+    .vol-num { font-size: 11px; letter-spacing: 0.14em; color: var(--color-accent); }
+    .vol-title { font-size: clamp(15px, 2vw, 18px); font-weight: 400; letter-spacing: 0.05em; }
+    .vol-buy {
+      display: inline-block; font-family: var(--font); font-size: 11px;
+      letter-spacing: 0.05em; color: var(--color-muted);
+      background: var(--color-border); padding: 3px 9px; text-decoration: none;
+      white-space: nowrap; margin-left: auto;
+      transition: background 150ms ease, color 150ms ease;
+    }
+    .vol-buy:hover { background: #d8d3c9; color: var(--color-text); }
+    .vol-body {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.25rem 2rem; align-items: start;
+    }
+    .vol-cover { width: 130px; }
+    .vol-cover img { width: 100%; display: block; }
+    .vol-cover-placeholder {
+      width: 130px; aspect-ratio: 2/3; background: #f3f1ec;
+      display: flex; align-items: center; justify-content: center; color: #c8c0b4;
+    }
+    .vol-books { }
+    .vol-book-list {
+      list-style: none; display: flex; flex-direction: column; gap: 0.5rem;
+    }
+    .vol-book-list li {
+      font-size: clamp(13px, 1.6vw, 15px); display: flex;
+      align-items: baseline; gap: 0.75rem; flex-wrap: wrap;
+    }
+    .vol-book-list li .title { color: var(--color-text); letter-spacing: 0.02em; }
+    .vol-book-list li .bk-buy {
+      font-size: 11px; letter-spacing: 0.04em; color: var(--color-muted);
+      background: var(--color-border); padding: 2px 7px; text-decoration: none;
+      white-space: nowrap; transition: background 150ms ease;
+    }
+    .vol-book-list li .bk-buy:hover { background: #d8d3c9; color: var(--color-text); }
+    @media (max-width: 540px) {
+      .vol-body { grid-template-columns: 1fr; }
+      .vol-cover { width: 100px; }
+    }
+    /* Intro text */
+    .intro {
+      max-width: 680px; margin: 0 auto clamp(2rem, 5vw, 3rem);
+      font-size: clamp(14px, 1.8vw, 16px); color: var(--color-muted);
+      line-height: 1.75; text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <a class="back-link" href="/traducciones">← Traducciones</a>
+    <h1>Biblioteca Esotérica</h1>
+    <p class="subtitle">Grandes textos del conocimiento oculto y los misterios del mundo antiguo</p>
+  </header>
+  <main class="book-grid">
+
+    <div class="book-card">
+      <div class="book-cover"><img loading="lazy" src="traducciones/esoterica/01-enoc.png" alt="El Libro de Enoc"></div>
+      <div class="book-num">No. 1</div>
+      <h3 class="book-title">El Libro de Enoc</h3>
+      <p class="book-desc">Texto sagrado del siglo III a.C. atribuido al bisabuelo de Noé. Narra la caída de los Vigilantes —ángeles que tomaron mujeres humanas y transmitieron conocimientos prohibidos—, el nacimiento de los Nefilim, y las visiones apocalípticas de Enoc. Fundamento de la angelología occidental y fuente oculta de los tres grandes monoteísmos.</p>
+      <div class="buy-group">
+        <a class="book-buy" href="https://www.amazon.com/dp/1695462459" target="_blank" rel="noopener">amazon.com</a>
+        <a class="book-buy" href="https://www.amazon.es/dp/1695462459" target="_blank" rel="noopener">amazon.es</a>
+      </div>
+      <p class="book-author" style="margin-top:0.6rem; font-style:normal; letter-spacing:0.04em;">The Book of Enoch <span style="font-style:italic">(English edition)</span></p>
+      <div class="buy-group">
+        <a class="book-buy" href="https://www.amazon.com/dp/1696002788" target="_blank" rel="noopener">amazon.com</a>
+        <a class="book-buy" href="https://www.amazon.es/dp/1696002788" target="_blank" rel="noopener">amazon.es</a>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <div class="book-cover"><img loading="lazy" src="traducciones/esoterica/02-atlantida.png" alt="Atlántida: El Mundo Antediluviano"></div>
+      <div class="book-num">No. 2</div>
+      <h3 class="book-title">Atlántida: El Mundo Antediluviano</h3>
+      <p class="book-author">Ignatius Donnelly</p>
+      <p class="book-desc">El libro que resucitó el mito de la Atlántida en el siglo XIX. Donnelly demuestra con evidencia geológica, mitológica y lingüística que la Atlántida fue una civilización real que dio origen a todas las grandes culturas antiguas. Una obra que cambió para siempre el debate sobre los orígenes de la humanidad.</p>
+      <div class="vol-label">Vol. 1</div>
+      <div class="buy-group">
+        <a class="book-buy" href="https://www.amazon.com/dp/B08413HV3M" target="_blank" rel="noopener">amazon.com</a>
+        <a class="book-buy" href="https://www.amazon.es/dp/B08413HV3M" target="_blank" rel="noopener">amazon.es</a>
+      </div>
+      <div class="vol-label">Vol. 2</div>
+      <div class="buy-group">
+        <a class="book-buy" href="https://www.amazon.com/dp/B0H44D8V1B" target="_blank" rel="noopener">amazon.com</a>
+        <a class="book-buy" href="https://www.amazon.es/dp/B0H44D8V1B" target="_blank" rel="noopener">amazon.es</a>
+      </div>
+      <p class="book-author" style="margin-top:0.6rem; font-style:normal; letter-spacing:0.04em;">Atlantis: The Antediluvian World <span style="font-style:italic">(English edition)</span></p>
+      <div class="buy-group">
+        <a class="book-buy" href="https://www.amazon.com/dp/1661660266" target="_blank" rel="noopener">amazon.com</a>
+        <a class="book-buy" href="https://www.amazon.es/dp/1661660266" target="_blank" rel="noopener">amazon.es</a>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <div class="book-cover"><img loading="lazy" src="traducciones/esoterica/03-historia-atlantida.png" alt="La Historia de la Atlántida y la Perdida Lemuria"></div>
+      <div class="book-num">No. 3</div>
+      <h3 class="book-title">La Historia de la Atlántida y la Perdida Lemuria</h3>
+      <p class="book-author">W. Scott Ellis</p>
+      <p class="book-desc">Visión teosófica de los dos continentes perdidos. Scott Ellis rastrea las huellas de la Atlántida y Lemuria en las tradiciones esotéricas, los relatos de diluvios universales y los textos sagrados de civilizaciones separadas por océanos, hallando en todos ellos el mismo recuerdo de un mundo anterior al nuestro.</p>
+      <div class="buy-group">
+        <a class="book-buy" href="https://www.amazon.com/dp/B083M776XK" target="_blank" rel="noopener">amazon.com</a>
+        <a class="book-buy" href="https://www.amazon.es/dp/B083M776XK" target="_blank" rel="noopener">amazon.es</a>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <div class="book-cover"><img loading="lazy" src="traducciones/esoterica/04-sociedades-secretas.png" alt="Las Sociedades Secretas de Todas las Edades y Países"></div>
+      <div class="book-num">No. 4</div>
+      <h3 class="book-title">Las Sociedades Secretas de Todas las Edades y Países</h3>
+      <p class="book-author">Charles William Heckethorn</p>
+      <p class="book-desc">La enciclopedia definitiva del siglo XIX sobre fraternidades ocultas. Heckethorn documenta cientos de sociedades secretas a través de la historia: escuelas de misterios egipcias, templarios, rosacruces, iluminati, masones y decenas más. Una obra monumental sobre el poder que siempre actuó en las sombras.</p>
+      <div class="vol-label">Vol. 1</div>
+      <div class="buy-group">
+        <a class="book-buy" href="https://www.amazon.com/dp/B083RD5DPB" target="_blank" rel="noopener">amazon.com</a>
+        <a class="book-buy" href="https://www.amazon.es/dp/B083RD5DPB" target="_blank" rel="noopener">amazon.es</a>
+      </div>
+      <div class="vol-label">Vol. 2</div>
+      <div class="buy-group">
+        <a class="book-buy unavailable">amazon.com</a>
+        <a class="book-buy unavailable">amazon.es</a>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <div class="book-cover"><img loading="lazy" src="traducciones/esoterica/05-consciencia-cosmica.png" alt="Consciencia Cósmica"></div>
+      <div class="book-num">No. 5</div>
+      <h3 class="book-title">Consciencia Cósmica</h3>
+      <p class="book-author">Richard Maurice Bucke</p>
+      <p class="book-desc">El psiquiatra Richard Maurice Bucke describe la «consciencia cósmica», un estadio evolutivo superior de la mente humana. Analiza a Buda, Cristo, San Pablo, Dante, Blake y Whitman como portadores de esta iluminación espontánea, argumentando que es el siguiente paso en la evolución de la especie.</p>
+      <div class="vol-label">Vol. 1</div>
+      <div class="buy-group">
+        <a class="book-buy" href="https://www.amazon.com/dp/B08465WRLK" target="_blank" rel="noopener">amazon.com</a>
+        <a class="book-buy" href="https://www.amazon.es/dp/B08465WRLK" target="_blank" rel="noopener">amazon.es</a>
+      </div>
+      <div class="vol-label">Vol. 2</div>
+      <div class="buy-group">
+        <a class="book-buy" href="https://www.amazon.com/dp/B09B2CJDKX" target="_blank" rel="noopener">amazon.com</a>
+        <a class="book-buy" href="https://www.amazon.es/dp/B09B2CJDKX" target="_blank" rel="noopener">amazon.es</a>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>

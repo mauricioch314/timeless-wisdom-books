@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca del Éxito — Timeless Wisdom Books</title>
+  <meta name="description" content="Clásicos del éxito, la prosperidad y el Nuevo Pensamiento traducidos al español y editados por Mauricio Chaves-Mesén.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg:     #ffffff;
+      --color-text:   #1a1a1a;
+      --color-muted:  #6b6b6b;
+      --color-accent: #C9A84C;
+      --color-border: #e8e4dc;
+      --font: 'Cormorant Garamond', Georgia, serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--color-bg); color: var(--color-text); font-family: var(--font);
+           min-height: 100vh; padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 5vw, 3rem); }
+    header { text-align: center; margin-bottom: clamp(2rem, 5vw, 3.5rem); }
+    .back-link { display: inline-block; font-size: 13px; letter-spacing: 0.08em;
+      color: var(--color-muted); text-decoration: none; margin-bottom: 1.75rem; }
+    .back-link:hover { color: var(--color-text); }
+    h1 { font-size: clamp(22px, 4vw, 34px); font-weight: 300; letter-spacing: 0.18em; margin-bottom: 0.5rem; }
+    .subtitle { font-size: clamp(13px, 1.6vw, 15px); letter-spacing: 0.07em; color: var(--color-muted); }
+    .intro { max-width: 680px; margin: 0 auto clamp(2rem, 4vw, 2.5rem);
+      font-size: 14px; color: var(--color-muted); line-height: 1.7; text-align: center; }
+    /* Volume sections */
+    .vol-section { max-width: 960px; margin: 0 auto clamp(2rem, 5vw, 3rem); }
+    .vol-header { display: flex; align-items: baseline; gap: 0.75rem;
+      border-bottom: 1px solid var(--color-border); padding-bottom: 0.6rem; margin-bottom: 1.25rem; }
+    .vol-num { font-size: 11px; letter-spacing: 0.16em; color: var(--color-accent); }
+    .vol-title { font-size: clamp(15px, 2vw, 18px); font-weight: 400; letter-spacing: 0.04em; }
+    .vol-buy { display: inline-block; font-family: var(--font); font-size: 11px;
+      letter-spacing: 0.05em; color: var(--color-muted); background: var(--color-border);
+      padding: 3px 10px; text-decoration: none; margin-left: auto;
+      transition: background 150ms ease; }
+    .vol-buy:hover { background: #d8d3c9; color: var(--color-text); }
+    .vol-body { display: grid; grid-template-columns: 120px 1fr; gap: 1.25rem 2rem; align-items: start; }
+    .vol-cover img { width: 120px; display: block; }
+    .vol-cover-placeholder { width: 120px; aspect-ratio: 2/3; background: #f3f1ec;
+      display: flex; align-items: center; justify-content: center; color: #c8c0b4; }
+    .vol-books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem 1.25rem; }
+    .vol-book { display: flex; flex-direction: column; gap: 0.35rem; }
+    .vol-book-cover { width: 100%; aspect-ratio: 2/3; overflow: hidden; background: var(--color-border); }
+    .vol-book-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .vol-book-title { font-size: clamp(12px, 1.4vw, 14px); letter-spacing: 0.02em; line-height: 1.3; }
+    .book-buy { display: inline-block; font-family: var(--font); font-size: 11px;
+      letter-spacing: 0.04em; color: var(--color-muted); background: var(--color-border);
+      padding: 3px 8px; text-decoration: none; margin-top: 0.2rem;
+      transition: background 150ms ease; }
+    .book-buy:hover { background: #d8d3c9; color: var(--color-text); }
+    .book-buy.unavailable { background: #f3f1ec; color: #c0b9ae; cursor: default; pointer-events: none; }
+    .success-list { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1.25rem; }
+    .success-list .vol-book { border: 1px solid var(--color-border); padding: 1.25rem; min-height: 130px; }
+    .success-list .vol-book-title { font-size: 16px; line-height: 1.45; flex: 1; }
+    @media (max-width: 540px) {
+      .vol-body { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="back-link" href="/traducciones">← Traducciones</a>
+    <h1>Biblioteca del Éxito</h1>
+    <p class="subtitle">Los mejores clásicos del éxito, negocios y motivación</p>
+  </header>
+  <p class="intro">Una selección de clásicos individuales sobre éxito, filosofía, carácter y desarrollo personal. Las colecciones dedicadas a cada autor viven ahora en sus propias bibliotecas.</p>
+
+  <section class="vol-section">
+    <div class="vol-header">
+      <span class="vol-num">VOL. 5</span>
+      <span class="vol-title">Wallace D. Wattles</span>
+      <a class="vol-buy" href="https://www.amazon.com/dp/B083GYDM88" target="_blank" rel="noopener">Comprar volumen</a>
+    </div>
+    <div class="vol-body">
+      <div class="vol-cover"><img src="traducciones/exito/vol5-wattles.jpg" alt=""></div>
+      <div class="vol-books-grid">
+        <div class="vol-book">
+          <span class="vol-book-title">La Ciencia de Hacerse Rico</span>
+          <a class="book-buy" href="https://www.amazon.com/dp/B083S1VD7S" target="_blank" rel="noopener">amazon.com</a>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">La Ciencia de Ser Excelente</span>
+          <a class="book-buy" href="https://www.amazon.com/dp/B083S24X1J" target="_blank" rel="noopener">amazon.com</a>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">Un Nuevo Cristo</span>
+          <a class="book-buy" href="https://www.amazon.com/dp/B083S1XW4N" target="_blank" rel="noopener">amazon.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vol-section">
+    <div class="vol-header">
+      <span class="vol-num">VOL. 6</span>
+      <span class="vol-title">Florence Scovel Shinn</span>
+      <a class="vol-buy" href="https://www.amazon.com/dp/B083H2YJYH" target="_blank" rel="noopener">Comprar volumen</a>
+    </div>
+    <div class="vol-body">
+      <div class="vol-cover"><img src="traducciones/exito/vol6-shinn.jpg" alt=""></div>
+      <div class="vol-books-grid">
+        <div class="vol-book">
+          <span class="vol-book-title">El Juego de la Vida y Cómo Jugarlo</span>
+          <a class="book-buy" href="https://www.amazon.com/dp/B083H3RT9S" target="_blank" rel="noopener">amazon.com</a>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">Tu Palabra es Tu Varita Mágica</span>
+          <a class="book-buy" href="https://www.amazon.com/dp/B083H3JVJY" target="_blank" rel="noopener">amazon.com</a>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">La Puerta Secreta al Éxito</span>
+          <a class="book-buy" href="https://www.amazon.com/dp/B083H3YCMG" target="_blank" rel="noopener">amazon.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vol-section">
+    <div class="vol-header">
+      <span class="vol-num">VOL. 7</span>
+      <span class="vol-title">James Allen</span>
+      <a class="vol-buy" href="https://www.amazon.com/dp/B083S1NTF4" target="_blank" rel="noopener">Comprar volumen</a>
+    </div>
+    <div class="vol-body">
+      <div class="vol-cover"><img src="traducciones/exito/vol7-allen.jpg" alt=""></div>
+      <div class="vol-books-grid">
+        <div class="vol-book">
+          <span class="vol-book-title">Como un Hombre Piensa, Así es su Vida</span>
+          <a class="book-buy" href="https://www.amazon.com/dp/B083S1M47X" target="_blank" rel="noopener">amazon.com</a>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">Una Vida de Triunfo</span>
+          <a class="book-buy" href="https://www.amazon.com/dp/B083S1ZMWP" target="_blank" rel="noopener">amazon.com</a>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">Los Ocho Pilares de la Prosperidad</span>
+          <a class="book-buy" href="https://www.amazon.com/dp/B083S1KVKC" target="_blank" rel="noopener">amazon.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vol-section">
+    <div class="vol-header">
+      <span class="vol-num">VOL. 8</span>
+      <span class="vol-title">Ralph Waldo Trine / Genevieve Bernhend</span>
+    </div>
+    <div class="vol-body">
+      <div class="vol-cover-placeholder">·</div>
+      <div class="vol-books-grid">
+        <div class="vol-book">
+          <span class="vol-book-title">En Sintonía con el Infinito</span>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">Las Facultades Superiores</span>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">El Credo del Caminante</span>
+          <a class="book-buy" href="https://www.amazon.com/dp/1693651157" target="_blank" rel="noopener">amazon.com</a>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">Tu Poder Invisible</span>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">Cómo Vivir la Vida ¡Y Amarla!</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vol-section">
+    <div class="vol-header">
+      <span class="vol-num">VOL. 9</span>
+      <span class="vol-title">Charles F. Haanel</span>
+      <a class="vol-buy" href="https://www.amazon.com/dp/B0D3ZQTVQ4" target="_blank" rel="noopener">Comprar volumen</a>
+    </div>
+    <div class="vol-body">
+      <div class="vol-cover"><img src="traducciones/exito/vol9-haanel.jpg" alt=""></div>
+      <div class="vol-books-grid">
+        <div class="vol-book">
+          <span class="vol-book-title">El Sistema de la Llave Maestra</span>
+          <a class="book-buy" href="https://www.amazon.com/dp/B083HJSZSY" target="_blank" rel="noopener">amazon.com</a>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">Química Mental</span>
+          <a class="book-buy" href="https://www.amazon.com/dp/B0D3ZPQ27M" target="_blank" rel="noopener">amazon.com</a>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">La Nueva Psicología</span>
+          <a class="book-buy" href="https://www.amazon.com/-/es/NUEVA-PSICOLOG%C3%8DA-Spanish-CHARLES-HAANEL/dp/B0D3YFK598" target="_blank" rel="noopener">amazon.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vol-section">
+    <div class="vol-header">
+      <span class="vol-num">VOL. 11</span>
+      <span class="vol-title">Varios Autores</span>
+    </div>
+    <div class="vol-body">
+      <div class="vol-cover-placeholder">·</div>
+      <div class="vol-books-grid">
+        <div class="vol-book">
+          <span class="vol-book-title">Oráculo Manual y Arte de la Prudencia — Baltasar Gracián</span>
+          <a class="book-buy" href="https://www.amazon.com/dp/1695001079" target="_blank" rel="noopener">amazon.com</a>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">Los Dólares Me Quieren — Henry Harrison Brown</span>
+          <a class="book-buy" href="https://www.amazon.com/dp/B083S1ZP27" target="_blank" rel="noopener">amazon.com</a>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">¡El Arte de Hacer Dinero! — P.T. Barnum</span>
+          <a class="book-buy" href="https://www.amazon.com/dp/B083HJJTPL" target="_blank" rel="noopener">amazon.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vol-section">
+    <div class="vol-header">
+      <span class="vol-num">VOL. 12</span>
+      <span class="vol-title">Varios Autores</span>
+    </div>
+    <div class="vol-body">
+      <div class="vol-cover-placeholder">·</div>
+      <div class="vol-books-grid">
+        <div class="vol-book">
+          <span class="vol-book-title">Piense y Hágase Rico — Napoleón Hill</span>
+          <a class="book-buy" href="https://www.amazon.es/Piense-H%C3%A1gase-Rico-Traducci%C3%B3n-Collection/dp/1535598093" target="_blank" rel="noopener">amazon.es</a>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">La Mente Creativa y el Éxito — Ernest Holmes</span>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">Tus Fuerzas y Cómo Usarlas — Christian D. Larson</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vol-section">
+    <div class="vol-header">
+      <span class="vol-num">VOL. 13</span>
+      <span class="vol-title">Varios Autores</span>
+    </div>
+    <div class="vol-body">
+      <div class="vol-cover-placeholder">·</div>
+      <div class="vol-books-grid">
+        <div class="vol-book">
+          <span class="vol-book-title">La Confianza en Uno Mismo — Ralph Waldo Emerson</span>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">Acres de Diamantes — Russell Cromwell</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vol-section">
+    <div class="vol-header">
+      <span class="vol-num">VOL. 14</span>
+      <span class="vol-title">Émile Coué</span>
+      <a class="vol-buy" href="https://www.amazon.com/dp/B083HJQRLK" target="_blank" rel="noopener">Comprar volumen</a>
+    </div>
+    <div class="vol-body">
+      <div class="vol-cover-placeholder">·</div>
+      <div class="vol-books-grid">
+        <div class="vol-book">
+          <span class="vol-book-title">Autosugestión Consciente para el Dominio Propio</span>
+          <a class="book-buy" href="https://www.amazon.com/dp/B083HJQRLK" target="_blank" rel="noopener">amazon.com</a>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">Sugestión y Autosugestión — Charles Baudoin</span>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">La Práctica de la Autosugestión por el Método de E. Coué</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vol-section">
+    <div class="vol-header">
+      <span class="vol-num">VOL. 15</span>
+      <span class="vol-title">Filosofía Clásica</span>
+    </div>
+    <div class="vol-body">
+      <div class="vol-cover-placeholder">·</div>
+      <div class="vol-books-grid">
+        <div class="vol-book">
+          <span class="vol-book-title">Lecciones Preliminares de Filosofía — Manuel García Morente</span>
+          <a class="book-buy" href="https://www.amazon.com/dp/1695465458" target="_blank" rel="noopener">amazon.com</a>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">Crítica de la Razón Práctica — Emanuel Kant</span>
+          <a class="book-buy" href="https://www.amazon.com/dp/1074023269" target="_blank" rel="noopener">amazon.com</a>
+        </div>
+        <div class="vol-book">
+          <span class="vol-book-title">Examen de Ingenios para las Ciencias — Juan Huarte de San Juan</span>
+          <a class="book-buy" href="https://www.amazon.com/dp/1697152023" target="_blank" rel="noopener">amazon.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const authorLibraries=['Wallace D. Wattles','Florence Scovel Shinn','James Allen','Charles F. Haanel'];
+    const remaining=[];
+    document.querySelectorAll('.vol-section').forEach(section=>{
+      const author=section.querySelector('.vol-title')?.textContent.trim()||'';
+      if(authorLibraries.includes(author)) return;
+      section.querySelectorAll('.vol-book').forEach(book=>{
+        if(!book.textContent.includes('Piense y Hágase Rico')) remaining.push(book.cloneNode(true));
+      });
+    });
+    document.querySelectorAll('.vol-section').forEach(section=>section.remove());
+    const listing=document.createElement('section');
+    listing.className='vol-section';
+    listing.innerHTML='<div class="vol-header"><span class="vol-title">Libros de la Biblioteca del Éxito</span></div>';
+    const grid=document.createElement('div');
+    grid.className='vol-books-grid success-list';
+    remaining.forEach(book=>grid.appendChild(book));
+    listing.appendChild(grid);
+    document.body.appendChild(listing);
+  </script>
+</body>
+</html>

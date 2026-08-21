@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Series of Lessons in Personal Magnetism - William Walker Atkinson</title>
+  <meta name="description" content="A complete course in personal magnetism, mental influence, and the disciplined use of thought.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#fbfaf7;--paper:#fffdfa;--ink:#1e1c18;--muted:#70685d;--line:#e4d8c5;--gold:#b78b2f;--gold-soft:#f4ead7;--font:'Cormorant Garamond',Georgia,serif}
+    *,*::before,*::after{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.55}
+    a{color:inherit}header{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 42px;border-bottom:1px solid var(--line);background:rgba(255,253,250,.88);position:sticky;top:0;z-index:5;backdrop-filter:blur(8px)}
+    .brand{text-decoration:none;font-size:18px;letter-spacing:.13em;text-transform:uppercase}.nav{display:flex;gap:22px;flex-wrap:wrap}.nav a{text-decoration:none;color:var(--muted);font-size:15px;letter-spacing:.08em}.nav a.active,.nav a:hover{color:var(--gold)}
+    .hero{text-align:center;padding:58px 28px 36px;border-bottom:1px solid var(--line)}.kicker{color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-size:14px;margin:0 0 10px}.hero h1{font-size:clamp(38px,6vw,72px);font-weight:300;letter-spacing:.08em;line-height:1;margin:0 0 18px}.hero p{max-width:850px;margin:0 auto;color:var(--muted);font-size:20px;font-style:italic}
+    .tools{max-width:1180px;margin:0 auto;padding:24px 28px 0;display:grid;grid-template-columns:minmax(300px,380px) 1fr;gap:16px;align-items:center}.search{width:100%;border:1px solid var(--line);background:var(--paper);padding:12px 14px;font:18px var(--font);color:var(--ink)}.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.chips a{text-decoration:none;border:1px solid var(--line);padding:8px 12px;font-size:13px;letter-spacing:.08em;color:var(--muted);background:var(--paper)}.chips a:hover{border-color:var(--gold);color:var(--ink)}
+    main{max-width:1180px;margin:0 auto;padding:18px 28px 74px}.section{padding-top:34px}.section h2{font-size:clamp(24px,3vw,38px);font-weight:300;letter-spacing:.1em;text-align:center;margin:0 0 6px}.section-desc{max-width:760px;margin:0 auto 24px;text-align:center;color:var(--muted);font-size:17px;font-style:italic}
+    .volume-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:22px 0 32px}.volume-card{text-decoration:none;border:1px solid var(--line);background:var(--paper);padding:14px;min-height:112px;display:flex;flex-direction:column;justify-content:space-between}.volume-card:hover{border-color:var(--gold);box-shadow:0 10px 24px rgba(90,62,20,.08)}.volume-card b{color:var(--gold);letter-spacing:.14em;text-transform:uppercase;font-size:12px}.volume-card span{font-size:17px;line-height:1.2}.volume-card small{color:var(--muted);font-size:13px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:30px 22px}.book-card{display:flex;flex-direction:column;min-width:0}.cover-link{display:block;text-decoration:none}.cover{aspect-ratio:2/3;background:#eee4d5;border:1px solid var(--line);overflow:hidden;box-shadow:0 12px 30px rgba(32,22,10,.09);transition:transform .18s ease,box-shadow .18s ease}.cover img{width:100%;height:100%;object-fit:cover;display:block}.cover-link:hover .cover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(32,22,10,.14)}
+    .book-meta{color:var(--gold);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-top:13px}.book-card h3{font-size:20px;line-height:1.18;font-weight:500;margin:4px 0 8px}.book-card p{font-size:15px;color:var(--muted);margin:0 0 12px}.actions{display:flex;flex-direction:column;gap:8px;margin-top:auto}.btn{display:inline-flex;justify-content:center;align-items:center;text-decoration:none;border:1px solid var(--line);background:var(--paper);padding:8px 10px;font-size:14px;letter-spacing:.05em}.btn.primary{border-color:var(--gold);background:var(--gold-soft)}.btn:hover{border-color:var(--gold)}
+    .detail{display:grid;grid-template-columns:minmax(220px,340px) minmax(0,1fr);gap:42px;align-items:start;max-width:1060px;margin:0 auto;padding-top:48px}.detail-cover img{width:100%;height:auto;border:1px solid var(--line);box-shadow:0 18px 40px rgba(32,22,10,.14)}.detail h1{font-size:clamp(34px,5vw,62px);font-weight:300;line-height:1.02;letter-spacing:.04em;margin:0 0 12px}.detail .meta{color:var(--gold);letter-spacing:.13em;text-transform:uppercase;font-size:13px;margin-bottom:20px}.synopsis p{font-size:20px;color:var(--muted);margin:0 0 16px}.detail-actions{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}.panel{border-top:1px solid var(--line);padding-top:22px;margin-top:24px}.panel h2{font-size:26px;font-weight:400;letter-spacing:.08em;margin:0 0 12px}.panel p{font-size:18px;color:var(--muted)}.embedded-preview{max-height:760px;overflow:auto;border:1px solid var(--line);background:var(--paper);padding:24px 26px;box-shadow:inset 0 0 0 1px rgba(183,139,47,.08)}.embedded-preview h2{font-size:21px;font-style:italic;color:var(--gold);letter-spacing:.04em;margin:28px 0 12px}.embedded-preview p{font-size:18px;color:var(--ink);text-align:justify;margin:0 0 13px}.guide-preview{width:100%;min-height:620px;border:1px solid var(--line);background:var(--paper);box-shadow:0 14px 32px rgba(32,22,10,.08)}
+    footer{text-align:center;border-top:1px solid var(--line);padding:30px;color:var(--muted);font-size:15px}
+    @media(max-width:760px){header{position:static;padding:20px 22px;flex-direction:column}.tools{grid-template-columns:1fr}.chips{justify-content:center}.detail{grid-template-columns:1fr;padding-top:30px}.detail-cover{max-width:280px;margin:0 auto}.hero{padding-top:42px}.grid{grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:24px 14px}.book-card h3{font-size:17px}.book-card p{font-size:14px}}
+</style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">Timeless Wisdom Books</a>
+    <nav class="nav">
+      <a class="active" href="biblioteca-atkinson-en.html">W.W. Atkinson</a>
+      <a href="library-en.html">Translations</a>
+    </nav>
+  </header>
+
+  <main class="detail">
+    <aside class="detail-cover"><img src="traducciones/atkinson/books/en/429.jpg" alt="A Series of Lessons in Personal Magnetism"></aside>
+    <article>
+      <div class="meta">429 · Vol. 2 · William Walker Atkinson</div>
+      <h1>A Series of Lessons in Personal Magnetism</h1>
+      <div class="detail-actions"><a class="btn primary free-ebook" href="https://mauriciochavesmesen.com/traducciones/atkinson/ebooks/en/A-Series-of-Lessons-in-Personal-Magnetism.pdf" download>Free Book PDF Download</a><a class="btn" href="#primeras">Read First Pages</a><a class="btn" href="#guia">Study Guide</a></div><p class="library-return" style="margin:10px 0 24px"><a href="biblioteca-atkinson-en.html" style="color:var(--muted);text-decoration:none;letter-spacing:.05em">← Back to Library</a></p>
+      <section class="synopsis">
+        <p>A complete course in personal magnetism, mental influence, and the disciplined use of thought.</p>
+      </section>
+
+      <section class="panel" id="primeras">
+        <h2>First pages</h2>
+        <div class="embedded-preview"><p>PREFACE.</p>
+    <p>In justice to myself, I think it well to state that this work has been somewhat hastily prepared from the notes used by me in certain of my lectures, the lessons given herein practically being the syllabi of the said lectures. In the lectures, and in this work, my one and only purpose has been to acquaint the student with the means of developing, and effectively using, the mighty forces latent within him—Personal Magnetism and Psychic Influence. To this end I have sacrificed all pretensions to literary style, all attempts to secure felicity of diction.</p>
+    <p>I felt that I had a message to deliver, and I endeavored to deliver it promptly, clearly and plainly, without any attempt at “fine writing.” If a homely word seemed to express my thought— I used it. If a slang term or semi-slang phrase seemed to fit in— in it went.</p>
+    <p>I trust that my critics will spare themselves the trouble of pointing out my many defects of style and composition—I fully realize these things. I have subordinated everything else, in my endeavor to make this work plain and practical. This is an explanation, not an apology.</p>
+    <p>With the above understanding between us, I submit this little work to your kind consideration. Whilst fully cognizant of its defects, I still feel that it will be helpful to some of the many who are endeavoring to overcome unfavorable environments; that it may serve as a guide-post, pointing out the path to better things. I feel that it will do its share of the work of removing Fearthought from the minds of men; of replacing “I can&#x27;t&#x27;&#x27;&#x27;&#x27; with “I can and I WILL.” I feel that it must do these things, for it contains within it the germs of a mighty Truth.</p>
+    <p>W. W. A, Chicago, III., December 4, 1900.</p>
+    <h2>LESSON I. SALUTATORY</h2>
+    <p>Views of other writers—Erroneous theories—Vegetarianism—Celibacy— Vital fluid—Deep Breathing—Real progress made by investigation, not by theories—Existence of personal magnetism unquestioned—A self-evident truth—Results, not theories—No pet theories advanced—Accept nothing that you cannot demonstrate.</p>
+    <p>The nearer to the practical men keep—</p>
+    <p>The less they deal in vague and abstract things—</p>
+    <p>The less they deal in huge, mysterious words—</p>
+    <p>The mightier is their power.</p>
+    <p>The simple peasant who observes a truth</p>
+    <p>And from the fact deduces principle,</p>
+    <p>Adds solid treasure to the public wealth.</p>
+    <p>The theorist who dreams a rainbow dream.</p>
+    <p>And calls hypothesis philosophy.</p>
+    <p>At best is but a paper financier</p>
+    <p>Who palms his specious promises for gold.</p>
+    <p>Facts are the basis of philosophy;</p>
+    <p>Philosophy the harmony of facts.</p>
+    <p>—Thomas L, Harris, in “Lyrics of a Golden Age”</p>
+    <p>“Theories are but mighty soap-bubbles, with which the grown-up children of science amuse themselves.”</p>
+    <p>The majority of writers upon this subject have devoted nearly all their efforts, as well as their space, to proving, first, that Personal Magnetism really existed; and, secondly, that the phenomenon was best accounted for by some pet theory of their own. Some attribute the power of influencing men to the use of a vegetarian diet, notwithstanding the fact that some of the most “magnetic” individuals “make graveyards of their stomachs.” Others insist that in celibacy and abstinence from sexual intercourse may be found the secret, notwithstanding the fact that the majority of “magnetic” individuals do not differ in their sexual customs from their less magnetic brothers. Others hold that the “magnetic” force abounds in the air around us, and that, therefore, deep breathing will enable us to absorb great quantities of the vital fluid, charging ourselves with the force in the manner of the storage battery. And so on, each with his little pet theory.</p>
+    <p>Now, I have no fault to find with the systems above mentioned. Although not a strict vegetarian, I sympathize with those of that belief; although not leading a life of celibacy, I see much good in the doctrine of continence, and there can be no two opinions as to the merits of chastity; whilst not accepting the theory of the absorption of “magnetic force” from the earth&#x27;s atmosphere, I am a firm advocate of, and believer in, “deep breathing,” and believe that if the same was universally practiced much sickness and physical weakness would disappear from the earth. All these things are good, but a little reflection will show anyone that they are not the prime factors in the production of the quality known as “Personal Magnetism.” The writers on the subject usually conclude by telling their readers of the wonderful possibilities open to anyone who can acquire this power and learn how to use it. They, however, say little or nothing of how this force may be acquired, that is, beyond stating their theories. They deliver discourses—but do not instruct. They are preachers—not teachers. They dwell upon theories—and neglect facts.</p>
+    <p>The real progress in this branch of scientific research has been made, not by writers or theorists, but by a few earnest investigators who have conducted numberless experiments, and have explored every avenue of information, and who have brought this wonderful subject out of the realms of mere speculation and placed it upon a scientific basis.</p>
+    <p>The writer has been a close student and investigator of this subject for many years, and the present work is an attempt to give to his students some of the fundamental principles derived from the investigations and practical experiments of himself and his co-workers in this field. Our lessons therefore will be confined, so far as is possible, to statements of proven facts, and practical instruction, touching upon theory only when absolutely necessary.</p>
+    <p>In my opinion, I would insult your intelligence if I were to present to you an elaborate argument, the purpose of which would be an attempt to prove the existence of that wonderful force, latent in man, developed by the few, but possible of acquirement by all; that mysterious quality called, for want of a better name— Personal Magnetism.</p>
+    <p>To set out to prove its existence, would be akin to an attempt to convince the average intelligent man of the fact that the magnet influences the needle; that the X rays penetrate the body of man or a still more solid object; that a message can be conveyed by electricity, along a beam of light, or even, by wireless telegraphy, through the air without the need of any other medium. Every intelligent person is aware of the existence of the above mentioned phenomena, and does not need to have the same] demonstrated to him. If he is interested in the subject at all, ne wishes to be taught how to operate these forces, so that he may be able to reproduce the experiments himself. This is equally true of the student of Personal Magnetism. He has long since learned that such a force exists. He sees it around him every day, and knows of the wonders that are accomplished by its aid. He, possibly, is aware that he has developed the force to a: certain degree, and what he wants, in any event, is to become acquainted with the means whereby he can fully develop and intelligently use the force latent within him. I, therefore, shall make no attempt to demonstrate the existence of this force, believing it to be self-evident.</p>
+    <p>I also intend to avoid a tiresome discussion of the numerous theories which have been advanced to account for the phenomenon of Personal Magnetism. I have no pet theory to advance. I will endeavor to teach you how to obtain results, and you can then read up on the subject of theories, or possibly formulate a new theory of your own. I will state briefly my own conception of the cause underlying the phenomena alluded to in this work, but I shall not attempt to force my views upon you. You are at liberty to accept or reject any theory, as the result in no way depends upon any special form of belief. Many of those who have obtained the best results, have discarded one theory after another, and now say that they do not attempt to explain the real cause underlying the results, being content to work on, without a dogmatic theory, so long as they know how to obtain the results.</p>
+    <p>With this explanation, I will leave the land of theory and enter into the realm of practice, and will endeavor to so instruct you along the lines of the development and use of this mighty force, that you may reproduce the results already obtained by others, and perhaps may become investigators and leaders in the work of blazing the way through the woods of superstition and mystery with which the subject has been surrounded so long. I will ask you to accept nothing that you cannot prove to your own satisfaction, by your own experiments, after you have acquired a working knowledge of the subject.</p>
+    <p>In our next lesson we will take up the subject of the nature of the force.</p></div>
+      </section>
+      <section class="panel" id="guia">
+        <h2>Study Guide</h2>
+        <p>Preview the study guide below, or download the PDF for offline reading.</p><iframe class="guide-preview" src="https://mauriciochavesmesen.com/traducciones/atkinson/guides/429-study-guide.pdf" title="Study guide preview"></iframe><p><a class="btn primary" href="https://mauriciochavesmesen.com/traducciones/atkinson/guides/429-study-guide.pdf" download>Free Study Guide Download</a></p>
+      </section>
+    </article>
+  </main>
+  <footer>© Timeless Wisdom Books · <a href="library-en.html">Translations</a></footer>
+</body>
+</html>
